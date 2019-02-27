@@ -1,0 +1,108 @@
+﻿/* Defaults for body */
+body
+{
+	font-family:Arial;
+	font-size:90%;
+}
+a
+{
+    color:#0000ff;
+}
+/* Section headers */
+h2
+{
+    font-size:110%;
+    font-weight:bold;
+    padding:0;
+    margin:10px 0 0 0;
+}
+h3
+{
+    font-size:100%;
+    font-weight:bold;
+    padding:0;
+    margin:10px 0 0 0;
+}
+/* Page header */
+.ph
+{
+    background-repeat: no-repeat;
+	background-image: url(logo.gif);
+	height: 122px;
+    padding-bottom: 20px;
+    width:100%;
+}
+
+/* Required field indicator */
+span.required
+{
+    font-size:medium;
+    color:#F60;
+}
+/* Buttons */
+input.button-login
+{
+	cursor: pointer;
+	width:80px;
+	height:35px;
+	border: solid 0px #ffffff;
+	background: #ffffff url(login.gif) no-repeat scroll center center;
+	z-index:2;
+}
+input.button-submit
+{
+	cursor: pointer;
+	width:101px;
+	height:35px;
+	border: solid 0px #ffffff;
+	background: #ffffff url(submit.gif) no-repeat scroll center center;
+	z-index:2;
+}
+
+/* Validation summary error */
+span.error
+{
+    display:block;
+    margin-bottom:5px;
+    padding:15px 0 15px 45px;
+    color:#FFF;
+    background-color:#F60;
+    background-image:url(iconLG_Error.gif);
+    background-repeat:no-repeat;
+    background-position:center left;
+}    
+/* Validation summary info */
+span.info
+{
+    display:block;
+    margin-bottom:5px;
+    padding:15px 0 15px 45px;
+    color:#00F;
+    border:solid 1px #00F;
+    background-color:#FFF;
+    background-image:url(iconLG_Info.gif);
+    background-repeat:no-repeat;
+    background-position:center left;
+}
+/* Validation error msg */
+span.validate-error
+{
+    color:#F60;
+    margin-left:8px;
+}
+/* Validation error icon */
+div.validate-error-icon
+{
+    width:24px;
+    height:22px;
+    display:inline-block;
+    vertical-align:middle;
+    background-repeat: no-repeat;
+	background-image: url(iconSM_errorc.gif);
+}
+
+/* Institution selector grid */
+.grid-row a
+{
+    color:#0000ff ! important;
+}
