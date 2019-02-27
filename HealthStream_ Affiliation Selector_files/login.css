@@ -1,0 +1,307 @@
+/* Minification failed. Returning unminified contents.
+: run-time error CSS1036: Expected expression, found ''
+: run-time error CSS1036: Expected expression, found ''
+: run-time error CSS1036: Expected expression, found ''
+: run-time error CSS1036: Expected expression, found ''
+ */
+body {
+    margin: 0;
+    padding: 10px
+}
+img.bg {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0
+}
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040
+}
+.login-window {
+    position: relative;
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    -moz-box-shadow: 0 0 20px #000;
+    -webkit-box-shadow: 0 0 20px #000;
+    box-shadow: 0 0 20px #000;
+    font: 14px"Open Sans", Helvetica, Arial, sans-serif;
+    color: #555;
+    text-align: left
+}
+.login-window h2 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 0
+}
+.login-window * {
+    outline: none;
+    box-sizing: border-box
+}
+.login-window .modal-header {
+    background: #fff;
+    padding: 10px 20px 0;
+    border-bottom: 1px solid #ddd
+}
+.login-window .branding {
+    height: 80px;
+    margin-bottom: 10px
+}
+.login-window .nav-tabs {
+    position: relative;
+    z-index: 100;
+    margin-bottom: -1px
+}
+.login-window .nav-tab {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-bottom-color: #ddd;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1;
+    color: #555;
+    text-decoration: none
+}
+.login-window .nav-tab.selected {
+    border-color: #ddd;
+    border-bottom-color: #fff
+}
+.login-window .nav-link {
+    margin: 30px 0 10px
+}
+.login-window .nav-link a {
+    color: #09c
+}
+.login-window .modal-body {
+    padding: 20px
+}
+.login-window .tab-pane {
+    display: none
+}
+.login-window .tab-pane.selected {
+    display: block
+}
+.login-window .tab-pane.tab-pane-scroll {
+    margin: -20px;
+    padding: 20px;
+    max-height: 450px;
+    overflow: auto
+}
+.login-window .alert {
+    display: none;
+    border: 1px solid #ddd;
+    background: #eee;
+    border-radius: 4px;
+    padding: 12px;
+    line-height: 1.2;
+    margin-bottom: 20px
+}
+.login-window .alert.active {
+    display: block
+}
+.login-window .alert-info {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #007aa3
+}
+.login-window .alert-error {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442
+}
+.login-window .alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d
+}
+.login-window .form-group {
+    position: relative;
+    margin-bottom: 20px
+}
+.login-window .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px
+}
+.login-window .affiliate-group h2 {
+    margin: 0
+}
+.login-window .affiliate-group+.affiliate-group {
+    margin-top: 20px
+}
+.login-window .wysiwyg {
+    line-height: 1.4
+}
+.login-window input.form-control {
+    display: block;
+    width: 100%;
+    height: 36px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
+    vertical-align: middle;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+}
+.login-window input.form-control {
+    *height: 24px;
+    *width: 95.5%
+}
+.login-window .nav-password {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    text-align: right
+}
+.login-window .nav-password a {
+    font-size: 13px;
+    color: #09c;
+    text-decoration: none
+}
+.login-window .nav-password a+a {
+    margin-left: 10px
+}
+.login-window .reset-or {
+    font-weight: bold;
+    margin: 10px;
+    text-align: center
+}
+.login-window .slat {
+    background: #f3f3f3;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-left: 3px solid #ccc
+}
+.login-window .slat.selected {
+    border-color: #ccc;
+    background: #ccc
+}
+.login-window label.radio {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 25px
+}
+.login-window label.radio input[type="radio"] {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0
+}
+.login-window label.checkbox {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 25px
+}
+.login-window label.checkbox input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0
+}
+.login-window .help-block {
+    display: none;
+    font-size: 13px;
+    margin-top: 5px
+}
+.login-window .has-error {
+    color: #a94442
+}
+.login-window .has-error .form-control {
+    border-color: #a94442
+}
+.login-window .has-error .help-block {
+    display: block
+}
+.login-window .modal-actions {
+    margin-top: 20px
+}
+.login-window .button {
+    padding: 10px 16px;
+    font-size: 16px;
+    line-height: 1.33;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    text-decoration: none
+}
+.login-window .button+.button {
+    margin-left: 5px
+}
+.login-window .button-primary {
+    background-image: -webkit-linear-gradient(top, #5cb85c 0, #419641 100%);
+    background-image: linear-gradient(to bottom, #5cb85c 0, #419641 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff419641', GradientType=0);
+    filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    border: 1px solid #3e8f3e;
+    background-color: #5cb85c;
+    color: #fff;
+    text-shadow: 1px 1px 0 #357935;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075)
+}
+.login-window .button-default {
+    background-image: -webkit-linear-gradient(top, #fff 0, #e0e0e0 100%);
+    background-image: linear-gradient(to bottom, #fff 0, #e0e0e0 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+    filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    border: 1px solid #dbdbdb;
+    text-shadow: 0 1px 0 #fff;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+    color: #999
+}
+.login-window .modal-footer {
+    padding: 19px 20px 20px;
+    background-color: #eee;
+    border-top: 1px solid #e5e5e5;
+    font-size: 12px
+}
+@media screen and (max-width: 1024px) {
+    img.bg {
+        left: 50%;
+        margin-left: -512px
+    }
+}
+@media screen and (max-width: 640px) {
+    .login-window {
+        margin: auto
+    }
+}
+@media screen and (max-width: 480px) {
+    .login-window .nav-tab {
+        font-size: 14px
+    }
+}
+
