@@ -1,0 +1,210 @@
+.no-focus {
+    .focus {
+        display: none;
+    }
+    .site-header {
+        border-bottom: 5px solid #09c;
+    }
+}
+
+.skills-self-assessment {
+    h1,
+    h2,
+    h3 {
+        font-weight: 500;
+    }
+    h2.question-count {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 300;
+    }
+
+    .question-group-header {
+        margin-bottom: 25px;
+        border-bottom: 2px dotted #efefef;
+    }
+    .section > h1 {
+        font-weight: 500;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+    }
+
+
+    .section-progress {
+        background-color: white;
+        width: 100%;
+    }
+}
+
+@media ( min-width: @screen-md ) {
+    .section-progress.is-sticky {
+        position: fixed;
+        top: 100px;
+        width: 255px;
+        margin-top: 0;
+        z-index: 5;
+    }
+}
+
+.behavioral-assessment {
+    .question-count {
+        font-weight: 400;
+        font-size: 24px;
+    }
+
+    .answers + .question-header {
+        margin-top: 25px;
+    }
+}
+
+.vingette-warning {
+    li {
+        list-style: none;
+        margin: 15px auto;
+        i {
+            margin-right: 10px;
+
+            vertical-align: middle;
+        }
+    }
+}
+
+.judgment-assessment {
+
+    &.section-box {
+        background: #333;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: white;
+        font-weight: normal;
+    }
+
+
+            .analysis {
+                padding: 0
+            }
+
+            .analysis__box {
+                background-color: white;
+                border-radius: 4px;
+                min-height: 100px;
+                opacity: .7;
+                margin: 20px 10px 10px 0;
+                padding: 0 7px 7px;
+                cursor: pointer;
+            }
+
+            .analysis__box.active {
+                opacity: 1;
+            }
+
+            .analysis__box h4 {
+                color: #555 !important;
+                padding: 10px;
+                border-bottom: 1px solid #333;
+            }
+
+            .padding-0 {
+                padding-right: 0;
+                padding-left: 0;
+            }
+
+
+            .chat {
+                background-color: #ebebeb;
+                height: 600px;
+                position: relative;
+                padding: 10px;
+                padding-bottom: 70px;
+                overflow:hidden;
+                overflow-y:scroll;
+            }
+
+            .chat__message__wrapper {
+                margin: 10px auto;
+            }
+
+            .chat__message {
+                border-radius: 5px;
+                width: auto;
+                max-width: 45%;
+                padding: 10px;
+                text-align: left;
+
+            }
+
+            .chat__message p {
+
+                margin-bottom: 0
+            }
+
+            .chat__message--user {
+                background-color: #9B9B9B;
+                margin-left: auto;
+                margin-right: 0;
+                color: white;
+            }
+
+            .chat__message--system {
+
+                background-color: #37A2C5;
+                color: white;
+            }
+
+            .chat__input-block {
+                background-color: #D8D8D8;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                padding: 7px;
+                left: 0;
+
+
+            }
+
+            .chat__message--system .chat__message__arrow {
+                width: 0;
+                height: 0;
+                border: 0 solid transparent;
+                border-left-width: 0px;
+                border-right-width: 30px;
+                border-top: 21px solid #37A2C5;
+                position: relative;
+                top: 1px;
+                left: -10px;
+                float: left;
+            }
+
+            .chat__message--user .chat__message__arrow {
+                width: 0;
+                height: 0;
+                border: 0 solid transparent;
+                border-left-width: 30px;
+                border-right-width: 0px;
+                border-top: 21px solid #9B9B9B;
+                position: relative;
+                top: 1px;
+                float: right;
+                right: -10px;
+            }
+
+            .vignette-summary {
+                background-color: #757474;
+                min-height: 600px;
+                padding: 10px;
+                color: white;
+            }
+
+            .timer {
+                color: white;
+            }
+
+            .padding-0 {
+                padding: 0;
+            }
+}

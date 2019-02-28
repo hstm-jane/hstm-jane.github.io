@@ -1,0 +1,513 @@
+/** Wizard Summary Tabs Left **/
+
+
+/**   Davis Dolezal - 8/13  **/
+
+
+/** LESS Variables **/
+
+@wizard-tab-pane: 630px;
+@wizard-tabs-border-bottom: 0;
+@wizard-display-none: none;
+@wizard-display-block: block;
+
+/* custom inclusion of right, left and below tabs */
+
+
+/* need to change css styles to less variables */
+
+.tabs-below > .nav-tabs,
+.tabs-right > .nav-tabs,
+.tabs-left > .nav-tabs {
+    border-bottom: @wizard-tabs-border-bottom;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+    display: @wizard-display-none;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+    display: @wizard-display-block;
+}
+
+.tabs-below > .nav-tabs {
+    border-top: 1px solid #ddd;
+}
+
+.tabs-below > .nav-tabs > li {
+    margin-top: -1px;
+    margin-bottom: 0;
+}
+
+.tabs-below > .nav-tabs > li > a {
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+}
+
+.tabs-below > .nav-tabs > li > a:hover,
+.tabs-below > .nav-tabs > li > a:focus {
+    border-top-color: #ddd;
+    border-bottom-color: transparent;
+}
+
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+    border-color: transparent #ddd #ddd #ddd;
+}
+
+.tabs-left > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+    float: none;
+}
+
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+    min-width: 74px;
+    margin-right: 0;
+    margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs > li > a {
+    margin-right: -1px;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    z-index: 1;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+    border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+    z-index: 1;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+    border-color: #ddd transparent #ddd #ddd;
+    *border-right-color: #ffffff;
+    z-index: 1;
+}
+
+.tabs-right > .nav-tabs {
+    float: right;
+    margin-left: 19px;
+    border-left: 1px solid #ddd;
+}
+
+.tabs-right > .nav-tabs > li > a {
+    margin-left: -1px;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+    border-color: #eeeeee #eeeeee #eeeeee #dddddd;
+}
+
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+    border-color: #ddd #ddd #ddd transparent;
+    *border-left-color: #ffffff;
+}
+
+
+/** Pager Buttons For Wizard **/
+
+.pager {
+    padding-left: 0;
+    margin: 28px 0;
+    /* margin: 8px -50px; */
+    list-style: none;
+    text-align: center;
+}
+
+.pager li {
+    display: inline;
+}
+
+.pager li > a,
+.pager li > span {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 15px;
+}
+
+.pager li > a:hover,
+.pager li > a:focus {
+    text-decoration: none;
+    background-color: #eeeeee;
+}
+
+.pager .next > a,
+.pager .next > span {
+    float: right;
+}
+
+.pager .previous > a,
+.pager .previous > span {
+    float: left;
+}
+
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+    color: #BABABA;
+    background-color: #ffffff;
+    cursor: not-allowed;
+}
+
+.clearfix:before,
+.clearfix:after,
+.pager:before,
+.pager:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after,
+.pager:after {
+    clear: both;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+wizard-content-box {
+    width: 79.333333%;
+}
+
+.pp-status-btns {
+    margin-top: 0.38em;
+}
+
+.a-select {
+    color: green;
+}
+
+.resource-picker-add-area {
+    cursor: pointer;
+}
+
+.resource-picker .slat .active {
+    cursor: pointer;
+    border-left-color: blue !important;
+}
+
+.tabs-left>.nav-tabs {
+    margin-left: 12px !important;
+}
+
+.event-well {
+    background-color: rgba(0, 0, 0, 0.02);
+    background-color: #f4f4f4;
+}
+
+.save-continue {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.text-disabled {
+    color: #B2B2B2;
+}
+
+.numberCircle {
+    border-radius: 50%;
+    behavior: url(PIE.htc);
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border: 1px solid rgb(0, 153, 204);
+    color: rgb(0, 153, 204);
+    text-align: center;
+    font: 31px Arial, sans-serif;
+    display: inline-block;
+}
+
+.rules-title {
+    margin-top: 3px !important;
+    margin-left: 57px;
+    color: rgb(158, 158, 158);
+}
+
+.rhr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px dotted #C3C3C3;
+}
+
+.section-box {
+    // min-height: 565px;
+}
+
+.table-input {
+    margin-left: 238px !important;
+}
+
+.next-top {
+    margin-top: -33px;
+    margin-right: 86px;
+    list-style: none;
+}
+
+.event-well {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.pp-status-btns {
+    margin-top: 0.38em;
+}
+
+.a-select {
+    color: green;
+}
+
+.text-disabled {
+    color: #B2B2B2;
+}
+
+.numberCircle {
+    border-radius: 50%;
+    behavior: url(PIE.htc);
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border: 1px solid rgb(0, 153, 204);
+    color: rgb(0, 153, 204);
+    text-align: center;
+    font: 31px Arial, sans-serif;
+    display: inline-block;
+}
+
+.rules-title {
+    margin-top: 3px !important;
+    margin-left: 57px;
+    color: rgb(158, 158, 158);
+}
+
+.rhr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px dotted #C3C3C3;
+}
+
+.rth-table tbody tr {
+    background-color: #fff;
+}
+
+#masthead {
+    min-height: 250px;
+}
+
+#masthead h1 {
+    font-size: 30px;
+    line-height: 1;
+    padding-top: 20px;
+}
+
+#masthead .well {
+    margin-top: 8%;
+}
+
+@media screen and (min-width: 768px) {
+    #masthead h1 {
+        font-size: 50px;
+    }
+}
+
+.affix-top,
+.affix {
+    position: static;
+}
+
+.er-top-link {
+    background: #fff;
+    border: none !Important;
+}
+
+@media (min-width: 991px) {
+    #sidebar.affix-top {
+        position: static;
+        margin-top: 19px;
+        width: 154px;
+    }
+    #sidebar.affix {
+        position: fixed;
+        top: 50px;
+        width: 150px;
+    }
+}
+
+.nav-stacked>li+li {
+    margin-top: 4px;
+    margin-left: 0;
+}
+
+.wizard-tabs>li.active>a,
+.wizard-tabs>li.active>a:hover,
+.wizard-tabs>li.active>a:focus {
+    color: #555;
+    border-right: 1px solid #FFF;
+    border-bottom-color: rgba(219, 219, 219, 1);
+    cursor: default;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.wizard-tabs {
+    border-bottom: none
+}
+
+.wizard-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.428571429;
+    border: 1px solid #ddd;
+    border-radius: 4px 4px 4px 4px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+}
+
+.wizard-tabs>li>a:hover {
+    border-color: #E2E2E2 #E2E2E2 #E2E2E2;
+}
+
+.nav>li>a:hover,
+.nav>li>a:focus {
+    text-decoration: none;
+    background-color: #F4F4F4;
+}
+
+.cb-padding {
+    margin-top: 28px;
+}
+
+.pad-bot-1 {
+    padding-bottom: 1px;
+}
+
+.pad-top-5 {
+    padding-top: 5px;
+}
+
+.pad-bot-5 {
+    padding-bottom: 5px;
+}
+
+.pad-bot-15 {
+    padding-bottom: 15px;
+}
+
+.pad-bot-20 {
+    padding-bottom: 20px;
+}
+
+.pad-bot-22 {
+    padding-bottom: 25px;
+}
+
+.pad-top-28 {
+    padding-top: 28px;
+}
+
+.pad-top-25 {
+    padding-top: 25px;
+}
+
+.pad-top-10 {
+    padding-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .reduce-width-19 {
+        width: 19%;
+    }
+    .lg-screen-margin {
+        margin-left: -15px;
+    }
+    .lg-screen-margin-right {
+        padding-left: ;
+    }
+}
+
+@media (max-width: 768px) {
+    .reduce-width-24 {
+        width: 24%;
+    }
+    .md-screen-margin-left {
+        margin-left: 2.75em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .md-screen-margin-left {
+        margin-left: 3.8em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .reduce-width-10 {
+        width: 10.666667%;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-collapsing-tabs {}
+    .section-tabs {
+        margin-top: 300px;
+    }
+    .tab-content>.tab-pane {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 990px) {
+    .wizard-collapse-content {
+        width: 100%;
+        margin-left: 0%;
+    }
+    .tabs-left > .nav-tabs {
+        margin-right: 19px;
+        border-right: 1px solid #ddd;
+    }
+    .nav-collapsing-tabs {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+}
+
+@media (min-width: 991px) {
+    .wizard-collapse-content {
+        margin-left: 0%;
+        width: 83.33333333333334%;
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .tabs-left > .nav-tabs {
+        float: left;
+        margin-right: 19px;
+        border-right: 1px solid #ddd;
+    }
+}

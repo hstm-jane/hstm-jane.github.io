@@ -1,0 +1,53 @@
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-30360364-5', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <script src="/scripts/jquery.js"></script>
+    <script src="/scripts/bootstrap.plugins.js"></script>
+    <script src="/scripts/bootstrap-datepicker.js"></script>
+    <script src="/scripts/bootstrap-timepicker.js"></script>
+    <script src="/scripts/charts.js"></script>
+    <script src="/scripts/gritter.js"></script>
+    <script src="/scripts/select2.js"></script>
+    <script src="/scripts/slick.js"></script>
+    <script src="/scripts/tinysort.js"></script>
+    <script src="/scripts/healthstream.js"></script>
+    <script src="/scripts/healthstream.jquery.js"></script>
+    <script src="/scripts/healthstream.utilities.equalize.js"></script>
+    <script src="/scripts/healthstream.utilities.applauncher.js"></script>
+    <script src="/scripts/healthstream.utilities.limitHeight.js"></script>
+    <script src="/scripts/healthstream.utilities.toggleText.js"></script>
+    <script src="/scripts/healthstream.utilities.growl.js"></script>
+    <script src="/scripts/healthstream.utilities.interrupt.js"></script>
+    <script src="/scripts/healthstream.focusbar.js"></script>
+    <script src="/scripts/healthstream.stickybar.js"></script>
+    <script src="/scripts/healthstream.filtermini.js"></script>
+    <script src="/scripts/healthstream.checklist.js"></script>
+    <script src="/scripts/healthstream.checkable.js"></script>
+    <script src="/scripts/prototype.validation/formValidation.min.js"></script>
+    <script src="/scripts/prototype.validation/framework/bootstrap.min.js"></script>
+
+
+
+<!-- prototype only - for sitemap filtering-->
+<script>
+	$('.filter-input-box').keyup(function() {
+
+		var searchTerm = this.value.toLowerCase();
+
+		//For each checkbox in the filter hide or show depending on the input text
+		$(this).parents('.modal-body').find('.prototype-directory a').each(function() {
+			var inputText = $(this).text(),
+				valThis = inputText.toLowerCase();
+
+			(valThis.indexOf(searchTerm) > -1) ? $(this).closest("tr").show(): $(this).closest("tr").hide();
+		});
+	});
+</script>

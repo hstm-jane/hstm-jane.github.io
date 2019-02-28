@@ -1,0 +1,62 @@
+.slat-manage {
+    padding: 5px 0 5px 30px;
+    position: relative;
+
+    .control-checkbox {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+
+    .title {
+        font-size: @font-size-large;
+        font-weight: 400;
+    }
+
+    input[maxlength="2"] {
+        display: inline-block;
+        width: 40px;
+        text-align: center;
+    }
+
+    label {
+        font-weight: 400;
+        margin: 0;
+        display: inline-block;
+
+        @media (max-width: @screen-xs-max) {
+            margin: 10px 0;
+        }
+    }
+}
+
+
+.slat-attention > .slat-manage .title {
+    color: #fc7b00;
+    font-weight: 600;
+}
+
+.list-manage-controls {
+    margin: 10px 0 !important;
+
+    .control-set {
+        padding: 10px 0;
+    }
+    .control-set-pagination {
+        text-align: right;
+
+        ul {
+            text-align: left;
+        }
+    }
+    .control-rows {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    @media (max-width: @screen-xs-max) {
+        .control-set {
+            text-align: center;
+        }
+    }
+}

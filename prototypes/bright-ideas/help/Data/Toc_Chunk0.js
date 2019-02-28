@@ -1,0 +1,1 @@
+define({'/Content/Student/Courses/Completing_Courses.htm':{i:[3],t:['Completing Courses'],b:['']},'/Content/Student/Courses/Resuming_Courses.htm':{i:[4],t:['Resuming Courses'],b:['']},'/Content/Student/General/Student_Intro_HLC.htm':{i:[1],t:['Welcome to the HealthStream Learning Center (HLC)'],b:['']},'___':{i:[0,2],t:['Sample Chapter 1','Sample Chapter 2'],b:['','']}});

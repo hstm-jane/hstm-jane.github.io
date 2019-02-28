@@ -1,0 +1,163 @@
+.bulk-assign{
+    .section-main{
+        min-height: 361px;
+    }
+    .alert-info{
+        margin: 10px 0;
+    }
+}
+
+.select_assignment-method{
+    .form-radio {
+        opacity: 0;
+    }
+    .assessment-group__box{
+        min-width: 250px;
+    }
+}
+
+.assessment-groups .assessment-group .assessment-group__box{
+    display: table;
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #f3f3f3;
+    vertical-align: middle;
+    transition: all .2s ease;
+    box-shadow: 0.5px 0.5px 1px rgba(0,0,0,.2);
+}
+
+.assessment-groups .assessment-group .assessment-group__box.active{
+    background: #e3e3e3;
+    box-shadow: 0px 0px 0px 2px #09c inset;
+    -webkit-box-shadow: 0px 0px 0px 2px #09c inset;
+    -moz-box-shadow: 0px 0px 0px 2px #09c inset;
+}
+
+#assessmentStudentGroupsHeader,
+#groupedByAssessmentHeader{
+    margin-left: 15px;
+    text-decoration: none;
+    h5{
+        font-size: 16px; 
+        color: #5bc0de;
+        font-weight: 600;
+        margin-top: 15px;
+    }
+    small{
+        float: left;
+        font-size: 14px;
+        font-style: italic;
+    }
+}
+
+.dataTables_filter{
+    margin-top: 10px;
+}
+
+
+#searchStudentGroupsListTable_filter{
+    margin-top: 10px;
+}
+
+#groupedByAssessmentListTable_filter{
+    input{
+        width: 250px;
+    }
+}
+
+.select2{
+    width: 250px;
+    margin-right: 10px !important;
+}
+
+.assessment-group--student-groups{
+    .assessment-group__box{
+        small{
+            color: #777;
+        }
+        .assessment-group__total{
+            padding: 10px!important;
+        }
+    }
+    .box-disabled{
+        background:#fff!important;
+        opacity: .6;
+        pointer-events: none;
+    }
+}
+
+.card-disabled{
+    opacity: 0.6;
+    background-color: white!important;
+}
+
+.select_assessment .assessment-groups-list{ 
+    .table tr td, 
+    .table tr th{
+        text-align: left;
+    }
+    .table tr td.checkable-dt, 
+    .table tr th.checkable-dt{
+        padding: 5px 10px!important;
+    }
+    .row-checked{
+        background-color: #19a3d1!important;
+        color:white;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .bulk-assign .assessment-groups label{
+        width: 100%;
+        margin-bottom: -5px;
+    }
+    .bulk-assign .assessment-groups .assessment-group .assessment-group--assign-method {
+        float: left;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    #groupedByAssessmentListTable_filter{
+        text-align: right;
+        padding-right: 10px;
+        margin-top: 0!important;  
+    }
+    #groupedByAssessmentHeader small{
+        margin-top: 10px;
+    }
+    #searchStudentGroupsListTable_filter{
+        text-align: right;
+    }
+}
+
+.checkable-dt{
+    padding-right: 0!important;
+    margin: 0 20px!important;
+}
+
+section.submit-btn{
+    padding-bottom: 60px;
+    margin-top: -20px;
+    .btn-success{
+        width: 250px;
+        margin-right: 20px;
+    }
+}
+
+.configure_assignments{
+    .form-radio {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        margin: 0px 30px;
+    }
+}
+
+.assessment-config__label {
+    font-weight: 300;
+    padding: 20px 40px;
+    display: table-cell;
+    font-size: 16px;
+    vertical-align: middle;
+}

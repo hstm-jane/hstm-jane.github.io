@@ -1,0 +1,93 @@
+.site-footer {
+
+    .links {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 13px;
+
+        ul,
+        .section {
+            margin-bottom: 0px;
+        }
+
+        li {
+            margin-bottom: 3px;
+        }
+
+        .support {
+            font-size: @font-size-base;
+
+            @media (max-width:@screen-sm-max) {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .legal {
+        margin-bottom: 50px;
+        .divider {
+            border-top: 1px solid @theme-neutral-5;
+            margin-bottom: 20px;
+        }
+        .company {
+            font-size: @font-size-large;
+            font-weight: 600;
+        }
+        .logo {
+            width: 250px;
+            height: 44px;
+
+            img {
+                max-width: 250px;
+                max-height: 44px;
+            }
+        }
+        .copyright {
+            font-size: @font-size-small;
+            color: @theme-neutral-6;
+        }
+        .build {
+            margin-top: 5px;
+            font-size: 10px;
+            color: @theme-neutral-6;
+        }
+    }
+
+    &.site-footer-min {
+        .focus-promo,
+        .links {
+            display: none;
+        }
+    }
+}
+.site-palette {
+    display: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+    li {
+        float: left;
+        margin: 1px;
+        .square(20px);
+    }
+    #theme-neutral-1 { background: @theme-neutral-1; }
+    #theme-neutral-2 { background: @theme-neutral-2; }
+    #theme-neutral-3 { background: @theme-neutral-3; }
+    #theme-neutral-4 { background: @theme-neutral-4; }
+    #theme-neutral-5 { background: @theme-neutral-5; }
+    #theme-neutral-6 { background: @theme-neutral-6; }
+    #theme-neutral-7 { background: @theme-neutral-7; }
+    #theme-neutral-8 { background: @theme-neutral-8; }
+    #theme-neutral-9 { background: @theme-neutral-9; }
+    #theme-neutral-10 { background: @theme-neutral-10; }
+    #theme-primary-lightest { background: @theme-primary-lightest; }
+    #theme-primary-lighter { background: @theme-primary-lighter; }
+    #theme-primary-light { background: @theme-primary-light; }
+    #theme-primary { background: @theme-primary; }
+    #theme-primary-dark { background: @theme-primary-dark; }
+    #theme-primary-darker { background: @theme-primary-darker; }
+    #theme-primary-darkest { background: @theme-primary-darkest; }
+    #theme-accent { background: @theme-accent; }
+    #theme-focus-btn { background: @theme-focus-btn; }
+}

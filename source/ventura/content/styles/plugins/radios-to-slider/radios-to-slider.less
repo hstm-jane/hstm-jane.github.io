@@ -1,0 +1,108 @@
+@color_1: #BEC1C2;
+@body_color: #333333;
+@background_color_1: #e0e0e0;
+@background_color_2: #fff;
+@background_color_3: #0977B5;
+@background_color_4: #26B7FB ;
+
+/* Levels */
+/* Labels */
+/* Slider bar */
+/* Slider Knob */
+.radios-to-slider {
+	background-color: @background_color_1;
+	display: block;
+	position: relative;
+	margin: -60px auto 10px auto;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-o-box-sizing: content-box;
+	box-sizing: content-box;
+	.slider-level {
+		background-color: @background_color_2;
+		cursor: pointer;
+		position: absolute;
+		display: block;
+	}
+	.slider-level.slider-lower-level {
+		opacity: 0.2;
+	}
+	.slider-bar {
+		background-color: @background_color_3;
+		float: left;
+		height: 100%;
+		width: 0;
+		pointer-events: none;
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 0;
+		min-width: 32px !important;
+	}
+}
+.radios-to-slider.medium {
+	height: 22px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-o-border-radius: 25px;
+	border-radius: 25px;
+	padding: 5px;
+	.slider-level {
+		width: 22px;
+		height: 22px;
+		-webkit-border-radius: 22px;
+		-moz-border-radius: 22px;
+		-o-border-radius: 22px;
+		border-radius: 22px;
+		z-index: 2;
+	}
+	.slider-label {
+		top: 50px;
+		width: 80px;
+		margin-left: -15px;
+		color: @body_color;
+		text-align: left;
+	}
+	.slider-bar {
+		-webkit-border-radius: 22px;
+		-moz-border-radius: 22px;
+		-o-border-radius: 22px;
+		border-radius: 22px;
+	}
+	.slider-knob {
+		width: 32px;
+		height: 32px;
+		-webkit-border-radius: 25px;
+		-moz-border-radius: 25px;
+		-o-border-radius: 25px;
+		border-radius: 25px;
+	}
+}
+.slider-label {
+	position: absolute;
+	display: block;
+	cursor: pointer;
+	color: @body_color;
+	text-align: left;
+	margin-left: -15px;
+}
+
+.slider-label-disabled {
+	cursor: not-allowed;
+	opacity: 0.5; 
+	font-style: italic;
+}
+
+.slider-label-active {
+	font-weight: bold;
+}
+.slider-bar.transition-enabled {
+	-webkit-transition: .2s;
+	-moz-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+}
+.slider-knob {
+	float: right;
+	background-color: @background_color_4;
+}

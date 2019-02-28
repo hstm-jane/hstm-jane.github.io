@@ -1,0 +1,81 @@
+/*
+A wrapper for statements, and eventually slats, that allows them to be checked via a control on the left side of the container.
+*/
+
+.checkable {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 7px;
+
+    > .select {
+
+        label {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            background-color: darken(@theme-neutral-1,10%);
+            margin: 0;
+            cursor: pointer;
+            text-align: center;
+            padding-top: 12px;
+            overflow: hidden;
+        }
+
+        .icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url('@{imagePath}/qa-sprite.png') center -60px no-repeat;
+
+            @media (max-width:@screen-xs-max) {
+               position: absolute;
+               top: 50%;
+               left: 5px;
+               margin-top: -10px;
+            }
+        }
+
+        .checkbox {
+            position: absolute;
+            right: 100%;
+            outline: none;
+        }
+    }
+
+    &.checkable-disabled {
+        > .select label {
+            pointer-events: none;
+            span {
+                opacity: .3;
+            }
+        }
+    }
+
+    &.checkable-checked {
+        > .select label {
+            background-color: @theme-neutral-6;
+            span {
+                background-position: center -90px;
+            }
+        }
+    }
+
+    &.checkable-single {
+        > .select .icon {
+            background-position: center 0;
+        }
+
+        &.checkable-checked > .select .icon {
+            background-position: center -30px;
+        }
+    }
+
+    > .statement,
+    > .assessment,
+    > .slat {
+        border-left: none !important;
+    }
+
+}

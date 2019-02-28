@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+        ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>hStream Alert | HealthStream</title>
+    <!-- Styles
+        ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/content/styles/healthstream.bootstrap.css?cache=1508080580">
+    <link rel="stylesheet" type="text/css" href="/content/styles/healthstream.plugins.css?cache=1508080580">
+    <link rel="stylesheet" type="text/css" href="/content/styles/healthstream.app.css?cache=1508080580">
+    <link rel="stylesheet" type="text/css" href="/content/styles/healthstream.prototype.css?cache=1508080580">
+    <!-- <link rel="stylesheet" type="text/css" href="/content/styles/healthstream.hstream.css?cache=1508080580"> -->
+    <link rel="stylesheet" type="text/css" href="hstream-assets/css/panels.css">
+    <link rel="stylesheet" type="text/css" href="hstream-assets/css/opentip.css">
+    <link rel="stylesheet" type="text/css" href="hstream-assets/css/hstream-validate.css">
+    <!-- IE 7/8 Handling
+        ================================================== -->
+    <script>
+    if (document.documentMode < 8) {
+        location.href = "unsupported-browser.php";
+    } else if (document.documentMode == 8) {
+        var html = document.getElementsByTagName('html')[0];
+        html.className = 'ie ie8' + html.className;
+        var ie8docmode = document.createElement('script');
+        ie8docmode.setAttribute('src', '/scripts/respond.js');
+        document.getElementsByTagName('head')[0].appendChild(ie8docmode);
+        var ie8styles = document.createElement('link');
+        ie8styles.setAttribute('rel', 'stylesheet');
+        ie8styles.setAttribute('type', 'text/css');
+        ie8styles.setAttribute('href', '/content/styles/healthstream.ie8.css');
+        document.getElementsByTagName('head')[0].appendChild(ie8styles);
+    } else {
+        var icons = document.createElement('link');
+        icons.setAttribute('rel', 'stylesheet');
+        icons.setAttribute('type', 'text/css');
+        icons.setAttribute('href', '/content/styles/healthstream.icons.css');
+        document.getElementsByTagName('head')[0].appendChild(icons);
+    }
+    </script>
+    <!-- Feature Detection Using Modernizr
+        ================================================== -->
+    <script src="/scripts/modernizr.js"></script>
+    <style>
+    @media (max-width: 991px)
+    {
+        .site-header .branding img {
+            max-height: 44px;
+            max-width: 100px;
+        }
+        .site-header .branding .logo-text {
+            font-size:18px !important;
+            padding-top:13px;
+                    }
+    }
+    </style>
+
+</head>
+
+<body>
+    <div class="site-header hstream-validate-header">
+        <div class="container">
+            <a href="#" class="trigger-open trigger-open-header"><i class="fa fa-bars"></i><span>Menu</span></a>
+            <div class="branding" style="">
+                <div class="logo">
+                    <a href="/">
+                        <img src="content/images/hstream-logo.png" alt="hStream Validate" class="logo-large">
+                        <img src="content/images/hstream-logo.png" alt="hStream Validate" class="logo-small">
+                    </a>
+                </div>
+                <div class="logo-text">
+                    <span>Validate</span>
+                </div>
+            </div>
+            <!-- /nav-account -->
+        </div>
+        <!-- /container -->
+    </div>
+    <div class="layout hstream-validate">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-6">
+                            <!-- START widget-->
+                            <a href="hstream-validate-detail.html">
+                            <div class="panel panel-primary">
+                                <div class="panel-body">
+                                    <div class="alert-header clearfix">
+                                        <div class="alert-title pull-left">OIG Alerts</div>
+                                        <div class="alert-count pull-right">
+                                            <div class="alert-value">166</div>
+                                            <div class="alert-type">Total Alerts</div>
+                                        </div>
+                                    </div>
+                                    <div class="flags">
+                                        <div class="flag red-flag ">
+                                            <div class="name">First Name, Last Name, NPI, DOB match</div>
+                                            <div class="value">3</div>
+                                        </div>
+                                        <div class="flag orange-flag ">
+                                            <div class="name">First Name, Last Name, NPI match</div>
+                                            <div class="value">22</div>
+                                        </div>
+                                        <div class="flag yellow-flag ">
+                                            <div class="name">First Name, Last Name match</div>
+                                            <div class="value">163</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-footer clearfix">
+                                    <a href="#" class="pull-right help-hover" id="oig-tooltip" >How can I improve results?</a>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <!-- START widget-->
+                            <div class="panel panel-primary panel-alert-oig">
+                                 <div class="panel-body">
+                                    <div class="alert-header clearfix">
+                                        <div class="alert-title pull-left">SAM Alerts</div>
+                                        <div class="alert-count pull-right">
+                                            <div class="alert-value">76</div>
+                                            <div class="alert-type">Total Alerts</div>
+                                        </div>
+                                    </div>
+                                    <div class="flags">
+                                        <div class="flag red-flag ">
+                                            <div class="name">First Name, Last Name, NPI, DOB match</div>
+                                            <div class="value">6</div>
+                                        </div>
+                                        <div class="flag orange-flag ">
+                                            <div class="name">First Name, Last Name, NPI match</div>
+                                            <div class="value">41</div>
+                                        </div>
+                                        <div class="flag yellow-flag ">
+                                            <div class="name">First Name, Last Name match</div>
+                                            <div class="value">29</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-footer clearfix">
+                                    <a href="#" class="pull-right help-hover" id="sam-tooltip">How can I improve results?</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <!-- START widget-->
+                            <div class="panel panel-primary">
+                                 <div class="panel-body">
+                                    <div class="alert-header clearfix">
+                                        <div class="alert-title pull-left">Open Payment Alerts</div>
+                                        <div class="alert-count pull-right">
+                                            <div class="alert-value">0</div>
+                                            <div class="alert-type">Total Alerts</div>
+                                        </div>
+                                    </div>
+                                    <div class="flags">
+                                        <div class="flag red-flag ">
+                                            <div class="name">First Name, Last Name, NPI, DOB match</div>
+                                            <div class="value">0</div>
+                                        </div>
+                                        <div class="flag orange-flag ">
+                                            <div class="name">First Name, Last Name, NPI match</div>
+                                            <div class="value">0</div>
+                                        </div>
+                                        <div class="flag yellow-flag ">
+                                            <div class="name">First Name, Last Name match</div>
+                                            <div class="value">0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-footer clearfix">
+                                    <a href="#" class="pull-right help-hover" id="openpayments-tooltip">How can I improve results?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- col -->
+        </div>
+        <!-- row -->
+    </div>
+    <!-- /container -->
+    </div>
+    <!-- /layout -->
+    <div class="site-footer ">
+        <div class="focus focus-promo">
+            <div class="container">
+            </div>
+        </div>
+        <div class="container">
+            <div class="legal">
+                 <div class="divider"></div>
+                <div class="logo"><img src="./content/images/logo-healthstream-small.png" alt="HealthStream"></div>
+                <div class="copyright">Copyright &copy; 2017 HealthStream, Inc. All Rights Reserved.</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tooltip-help-content" class="tooltip-content">
+        <div class="tooltip-container">
+        <p>To decrease possibilities of false positives, please
+        provide birthdates and/or NPIs.</p>
+            <div class="help-item">
+             <span class="help-value">34%</span> of your providers are missing birth dates.
+            </div>
+            <div class="help-item">
+             <span class="help-value">98%</span> of your proviers are missing NPIs.
+            </div>
+        </div>
+    </div>
+    <script src="/scripts/jquery.js"></script>
+    <script src="/scripts/bootstrap.plugins.js"></script>
+    <script src="/scripts/healthstream.js"></script>
+    <script src="/scripts/healthstream.jquery.js"></script>
+    <script src="hstream-assets/js/opentip-jquery.min.js"></script>
+    <script>
+    $(function() {
+        Opentip.styles.alertToolTip = {
+          target: true,
+          stem: true,
+          background: "#ffffff",
+          borderRadius:10,
+          shadowBlur: 5,
+          borderWidth: 1,
+          borderColor: "#ddd",
+          stemLength:10,
+          tipJoint: "middle left",
+          stemBase:15
+        };
+        Opentip.styles.alertToolTipOpenLeft = {
+          extends: "alertToolTip",
+          tipJoint: "middle right",
+        };
+
+        var tooltipContent = function() { return document.getElementById("tooltip-help-content").innerHTML; };
+        new Opentip("#oig-tooltip", tooltipContent,  "How can I improve results?", { style: "alertToolTip" });
+        new Opentip("#sam-tooltip", tooltipContent,  "How can I improve results?", { style: "alertToolTip" })
+        new Opentip("#openpayments-tooltip", tooltipContent,  "How can I improve results?", { style: "alertToolTipOpenLeft" })
+
+
+        })
+    </script>
+
+</body>
+
+</html>

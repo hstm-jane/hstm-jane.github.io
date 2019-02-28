@@ -1,0 +1,153 @@
+.ubp-header {
+    border-top: 3px solid @theme-primary;
+    background-color: #fff;
+    padding: 10px 0;
+
+    .ubp-logo {
+        width: 300px;
+        height: 80px;
+        line-height: 80px;
+
+        img {
+            max-width: 300px;
+            max-height: 80px;
+        }
+    }
+}
+.ubp-container {
+    width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+.ubp-content {
+    border-top: 5px solid @theme-primary-darker;
+    background-color: @theme-primary;
+    overflow: hidden;
+
+    .ubp-container {
+        background: url('@{imagePath}/error-unsupported.png') center left no-repeat;
+    }
+}
+
+.ubp-content-ie {
+    .ubp-container {
+        background: url('@{imagePath}/ubp-background.png') center left no-repeat;
+    }
+}
+
+.ubp-message {
+    padding: 30px 0px 30px;
+    width: 500px;
+    text-align: left;
+    color: #fff;
+    margin-left: 350px;
+
+    h1 {
+        line-height: 1.2;
+        color: #fff;
+        margin: 0 0 20px;
+    }
+    h2 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    li {
+        width: 90%;
+        vertical-align: top;
+    }
+
+    a,
+    a:visited {
+        color: #fff;
+        text-decoration: underline;
+
+        &:hover {
+            color: @theme-primary-lightest;
+        }
+    }
+
+    .ubp-exit {
+        border: 2px solid @theme-focus-btn-border;
+        box-shadow: 0 0 3px rgba(0,0,0,.3);
+        margin: 20px 0 0;
+
+        &:hover {
+            border-color: @theme-focus-btn-border;
+        }
+
+        i {
+            font-size: 90%;
+        }
+    }
+}
+.ubp-footer {
+    margin-top: 20px;
+    .ubp-divider {
+        border-top: 1px solid @theme-neutral-5;
+        margin: 20px 0;
+        display: none;
+    }
+
+    .ubp-logo {
+        width: 250px;
+        height: 44px;
+
+        img {
+            max-width: 250px;
+            max-height: 44px;
+        }
+    }
+
+    .ubp-copyright {
+        font-size: 13px;
+        color: @theme-neutral-6;
+    }
+}
+
+.ubp-detect {
+    .ubp-container {
+        background: url('@{imagePath}/ubp-background.png') 50px center no-repeat;
+    }
+    .ubp-message {
+        margin-left: 300px;
+    }
+    .ubp-examples {
+        margin: 0 0 20px;
+    }
+    .ubp-example-label {
+        height: 50px;
+        padding-left: 20px;
+        padding-right: 10px;
+        background: url('@{imagePath}/ubp-example.png') 0 0 no-repeat;
+        margin: 0 10px 10px 0;
+        color: #333;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.1;
+        text-align: right;
+    }
+    .ubp-example-pass,
+    .ubp-example-fail {
+        height: 50px;
+        padding-right: 45px;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1.1;
+        color: #333;
+    }
+    .ubp-example-pass {
+        background: url('@{imagePath}/ubp-example-pass.png') 100% 0 no-repeat;
+    }
+    .ubp-example-fail {
+        background: url('@{imagePath}/ubp-example-fail.png') 100% 0 no-repeat;
+    }
+    .ubp-divider {
+        width: 10px;
+    }
+    .ubp-description {
+        font-size: 16px;
+        font-weight: 600;
+    }
+}

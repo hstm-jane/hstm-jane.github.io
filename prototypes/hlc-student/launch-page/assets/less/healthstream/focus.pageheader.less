@@ -1,0 +1,346 @@
+.focus-pageheader {
+    position: relative;
+    padding: 0 15px;
+    z-index: 300;
+
+    .meta {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: #fff;
+
+        > li {
+            display: inline-block;
+            margin: 2px 10px 2px 0;
+        }
+        .meta-type {
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: @theme-primary-darker;
+            border-radius: 4px;
+            background-color: mix(#fff,@theme-primary,60%);
+            padding: 3px 5px;
+            line-height: 1;
+            text-shadow: none;
+        }
+
+        .meta-label {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+        .meta-label + .meta-value {
+            margin-left: 5px;
+        }
+        a.meta-value {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px dotted @theme-primary-lightest;
+
+            &:hover {
+                color: mix(#fff,@theme-primary,80%);
+                border-bottom: 1px solid @theme-primary-lightest;
+            }
+        }
+    }
+
+    @media (min-width: @screen-sm) {
+        .meta .meta-visible-xs {
+            display: none;
+        }
+    }
+    @media (max-width: @screen-xs-max) {
+        .meta .meta-hidden-xs {
+            display: none;
+        }
+    }
+
+    .fph-table {
+        display: table;
+        width: 100%;
+        height: 80px;
+        max-width: 1140px;
+        margin: auto;
+    }
+    .fph-row {
+        display: table-row;
+    }
+    .fph-cell {
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+    }
+
+
+    .fph-separator {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        border-top: 1px solid mix(#fff,@theme-primary,27%);
+        #gradient .vertical(mix(#fff,@theme-primary,15%), mix(#fff,@theme-primary,25%),0%,100%);
+    }
+
+    .fph-cell-icon {
+        width: 100px;
+        text-align: center;
+        vertical-align: top;
+        padding-top: 8px;
+    }
+
+    .fph-icon {
+        display: inline-block;
+        .square(75px);
+        border: 2px solid mix(#fff,@theme-primary,40%);
+        background: @theme-primary;
+        .box-shadow(inset 0 0 30px mix(#000,@theme-primary,20%));
+        border-radius: 50%;
+
+        i {
+            color: #fff;
+            line-height: 75px;
+            font-size: 42px;
+            text-shadow: 0 0 3px @theme-primary-darkest;
+        }
+    }
+    .fph-icon-label {
+        position: relative;
+        top: -13px;
+        z-index: 101;
+        text-align: center;
+        margin-bottom: -5px;
+
+        span {
+            display: inline-block;
+            background-color: mix(#fff,@theme-primary,70%);
+            color: @theme-primary-darker;
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 7px;
+            border-radius: 5px;
+            border-bottom: 1px solid @theme-primary-dark;
+            box-shadow: 0 0 3px rgba(0,0,0,.3);
+            // text-shadow: 1px 1px 0 @theme-primary-dark;
+        }
+    }
+
+    .fph-cell-text {
+        padding-left: 15px;
+    }
+    .fph-primary {
+        padding: 10px 0;
+        text-shadow: 1px 1px 0 @theme-primary-darker;
+
+        h1 {
+            color: #fff;
+            margin: 0;
+            line-height: 1.2;
+        }
+    }
+    .fph-secondary {
+        padding: 7px 0;
+        text-shadow: 1px 1px 0 @theme-primary-dark;
+    }
+
+    .fph-cell-button {
+        width: 150px;
+        padding: 0 25px 0 15px;
+        text-align: right;
+
+        .btn-focus {
+            display: block;
+            width: 100%;
+            text-align: center;
+            border: 2px solid @theme-focus-btn-border;
+            padding: 8px 15px;
+            font-size: 18px;
+            .box-shadow(0 1px 7px rgba(0,0,0,.3));
+            text-shadow: 1px 1px 0 darken(@theme-focus-btn,20%);
+            border-radius: 7px;
+
+            i {
+                font-size: 16px;
+                margin-left: 2px;
+            }
+        }
+    }
+
+    .fph-cell-supporting {
+        padding: 3px 0;
+        width: percentage((3 / @grid-columns));
+    }
+
+    .fph-chart-holder {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background: @theme-primary;
+        margin: auto;
+        text-align: center;
+        overflow: hidden;
+
+        canvas {
+            margin: -4px 0 0 -4px;
+        }
+
+        figcaption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            font-size: 26px;
+            font-weight: 300;
+            line-height: 98px;
+            border-radius: 50%;
+            color: #fff;
+            text-shadow: 1px 1px 0 @theme-primary-darker;
+        }
+    }
+
+    .fph-cell-search-label {
+        width: percentage((3 / @grid-columns));
+        padding: 10px 15px 15px;
+        h1 {
+            color: #fff;
+            margin: 0;
+        }
+    }
+    .fph-cell-search-input {
+        padding: 10px 0 15px;
+        .input-group {
+            background: #fff;
+            border: 2px solid #fff;
+            border-radius: 7px;
+
+            .form-control {
+                border: none;
+                .box-shadow(inset 0 0 8px rgba(0,0,0,.3));
+            }
+            .btn {
+                border: none;
+                height: 44px;
+            }
+        }
+    }
+
+    @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+        .fph-cell-text {
+            padding: 0;
+        }
+        .fph-cell-button {
+            padding: 0 0 0 15px;
+        }
+        .fph-cell-icon + .fph-cell-text {
+            padding-left: 15px;
+        }
+        .fph-cell-supporting {
+            display: none;
+        }
+    }
+    @media (max-width: @screen-xs-max) {
+        .fph-table,
+        .fph-row,
+        .fph-cell {
+            display: block;
+            width: auto;
+            height: auto;
+            padding: 0;
+        }
+        .fph-cell-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+        }
+        .fph-icon {
+            .square(50px);
+            border-width: 2px;
+
+            i {
+                font-size: 30px;
+                line-height: 54px;
+            }
+        }
+        .fph-icon-label {
+            display: none;
+        }
+        .fph-cell-text {
+            padding: 0;
+        }
+        .fph-primary {
+            padding-right: 55px;
+            padding-bottom: 13px;
+            h1 {
+                font-size: 24px;
+            }
+            .meta {
+                margin-top: 5px;
+            }
+        }
+        .fph-secondary {
+            margin-top: -5px;
+        }
+        .fph-cell-button {
+            padding: 0 15px 15px;
+            margin: 0 -15px;
+
+            .btn-focus {
+                font-size: 16px;
+                padding: 6px 10px;
+
+                i {
+                    font-size: 14px;
+                }
+            }
+        }
+        .fph-cell-supporting {
+            display: none;
+        }
+        .fph-cell-search-label {
+            padding: 10px 0 0;
+            h1 {
+                font-size: 24px;
+            }
+        }
+        .fph-cell-search-input {
+            padding: 10px 0 15px;
+        }
+
+        .fph-cell-search-input {
+            .input-group {
+                .form-control {
+                    padding: 5px 10px;
+                    height: 34px;
+                    font-size: 14px;
+                }
+                .btn {
+                    border: none;
+                    height: 34px;
+
+                    i {
+                        font-size: 16px;
+                        line-height: 1;
+                        height: 34px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ie8 .focus-pageheader {
+    .fph-icon {
+        border: none;
+        background: none;
+    }
+    .fph-chart-holder {
+        background: none;
+        color: #fff;
+        border: 0;
+    }
+}

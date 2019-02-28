@@ -1,0 +1,301 @@
+.question-group + .question-group {
+    margin-top: 40px;
+    border-top: 1px solid @theme-neutral-5;
+}
+
+.question-group-header {
+    padding-top: 10px;
+    margin-bottom: 40px;
+}
+
+.question {
+    margin: 0 0 40px;
+    .clearfix();
+
+    select {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 100px;
+        box-sizing: border-box;
+    }
+
+    .label {
+        padding: 4px 7px;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        vertical-align: middle;
+        margin-top: -4px;
+
+        &.label-warning {
+            display: none;
+        }
+    }
+
+    &.error {
+        h2,
+        h2 small {
+            color: @theme-accent;
+        }
+        .label-warning {
+            display: inline-block;
+        }
+    }
+}
+
+.question-header {
+    margin-bottom: 14px;
+
+    small {
+        margin-right: 15px;
+    }
+
+    .label-correct {
+        background: @theme-pass;
+    }
+
+    .label-incorrect {
+        background: @theme-fail;
+    }
+}
+
+.question-instructions {
+    font-style: italic;
+    color: @theme-neutral-6;
+    margin-top: 10px;
+}
+
+.answer {
+    position: relative;
+    display: block;
+    padding: 10px;
+    margin-top: 10px;
+    border-left: 2px solid @theme-neutral-5;
+    background-color: @theme-neutral-1;
+    min-height: 30px;
+    font-weight: inherit;
+    .transition( background-color 100ms linear);
+
+    &:nth-child(2n+1){
+        background-color: @theme-neutral-2;
+    }
+
+    &.answer-correct,
+    &.answer-incorrect,
+    &.answer-missed,
+    &.answer-space {
+        padding-left: 40px;
+    }
+
+    &.answer-correct .answer-icon,
+    &.answer-incorrect .answer-icon,
+    &.answer-missed .answer-icon {
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        width: 20px;
+        height: 20px;
+        background-image: url('@{imagePath}/qa-sprite.png');
+        background-repeat: no-repeat;
+    }
+
+    &.answer-correct .answer-icon {
+        background-position: 0 -120px;
+    }
+
+    &.answer-incorrect .answer-icon {
+        background-position: 0 -150px;
+    }
+    &.answer-missed .answer-icon {
+        background-position: 0 -180px;
+    }
+
+}
+label.answer {
+    padding-left: 40px;
+    overflow: hidden;
+    cursor: pointer;
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        position: absolute;
+        left: -999px;
+    }
+
+    .answer-icon {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
+        background: url('@{imagePath}/qa-sprite.png') 0 0 no-repeat;
+    }
+    .answer-icon-square {
+        background-position: 0 -60px;
+    }
+
+    &:hover {
+        background-color: @theme-neutral-4;
+    }
+
+    &.selected,
+    &.selected:hover {
+        background-color: @theme-neutral-5;
+        .answer-icon {
+            background-position: 0 -30px;
+        }
+        .answer-icon-square {
+            background-position: 0 -90px;
+        }
+    }
+
+}
+
+.answer-match {
+    display: table;
+    width: 100%;
+}
+.answer-row {
+    display: table-row;
+}
+.answer-col {
+    display: table-cell;
+    vertical-align: middle;
+
+    select {
+        margin-left: 20px;
+        margin-bottom: 0;
+        width: 150px;
+        float: right;
+    }
+
+    @media (max-width: 479px) {
+        display: block;
+        select {
+            margin-left: 0;
+            margin-top: 10px;
+            width: 100%;
+            float: none;
+        }
+    }
+}
+.ie8 .answer-match,
+.ie8 .answer-match .answer-row,
+.ie8 .answer-match .answer-col {
+    display: block;
+    width: auto;
+}
+.ie8 .answer-match .answer-col select {
+    width: 100%;
+    float: none;
+    margin: 10px 0 0;
+}
+
+.answer-exp-group {
+    margin: 5px 0;
+
+    + .answer-exp-group {
+        margin-top: 20px;
+    }
+}
+.answer-exp-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.answers-likert {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    .answer {
+        word-wrap: break-word;
+    }
+
+    .answer-likert {
+        position: relative;
+        margin-left: -40px;
+        padding-left: 40px;
+        // this is some garbage hack just for Firefox.
+    }
+
+    @media (max-width: @screen-lg) {
+        .answer {
+            display: block;
+        }
+    }
+
+    &.answers-likert-stacked .answer {
+        display: block;
+    }
+}
+
+.results-header {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid @theme-neutral-4;
+
+    &.results-passed .results-icon-passed {
+        color: @theme-pass;
+        display: block;
+    }
+    &.results-failed .results-icon-failed {
+        color: @theme-fail;
+        display: block;
+    }
+
+    &.results-header-noborder {
+        border: none;
+    }
+
+}
+.results-header-inner {
+    display: table-row;
+}
+.results-header-icon {
+    display: table-cell;
+    font-size: 64px;
+    line-height: 1;
+    padding: 30px 0;
+
+    i {
+        display: none;
+    }
+}
+.results-header-message {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 30px 20px;
+    width: 100%;
+    h2 {
+        margin: 0;
+        line-height: 1.2;
+    }
+    h2 + p {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: @screen-xs) {
+    .results-header,
+    .results-header-inner,
+    .results-header-icon,
+    .results-header-message {
+        display: block;
+        padding: 0;
+    }
+
+    .results-header-icon {
+        float: left;
+        margin: 0 15px 10px 0;
+        font-size: 48px
+    }
+
+    .results-header-inner {
+        margin: 30px 0 50px;
+    }
+}

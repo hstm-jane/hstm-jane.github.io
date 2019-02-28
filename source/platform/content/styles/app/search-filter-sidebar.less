@@ -1,0 +1,67 @@
+// ******** filter-Panels.less *********** //
+
+// Variables
+// --------------------------------------------------
+
+// Filter panel
+
+@none: none;
+@transparent: transparent;
+@filter-link-color: #0099cc; // panel titles
+@filter-panel-border-bottom: 1px solid #eeeeee;
+@white: #ffffff;
+@filter-panel-body-padding: 5px 0px 50px;
+@filter-panel-title-hover: #006080;
+@filter-layout-search-group: 5px 0 0;
+
+// Radio btns
+@radio-btn-padding: 21px;
+
+
+// Styles
+// --------------------------------------------------
+
+
+.panel{
+  border: @none;
+  -webkit-box-shadow: @none;
+    box-shadow: @none;
+}
+.panel-group .panel-heading + .panel-collapse .panel-body {
+    border-top: @none;
+}
+.panel-heading > .panel-title > a:hover, a:focus {
+        color: @filter-panel-title-hover;
+        text-decoration: @none;
+
+}
+.panel-default{
+  border-color: @white;
+  border-bottom: @filter-panel-border-bottom;
+}
+.panel-default > .panel-heading {
+    color: @filter-link-color;
+    background-color: @transparent;
+    border-bottom: @none;
+}
+.panel-title {
+  > a {
+    color: @filter-link-color;
+  }
+}
+.panel-body {
+    padding: @filter-panel-body-padding;
+}
+
+.layout-search .section-refinement-group {
+    padding: @filter-layout-search-group;
+}
+.radio, .checkbox {
+
+    padding-left: @radio-btn-padding;
+
+}
+.btn-spacing-top{
+    margin-top: 10px;
+}
+

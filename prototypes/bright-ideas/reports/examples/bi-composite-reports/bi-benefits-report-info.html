@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Composite Reports | Summary | HealthStream</title>
+    <!-- Styles
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="http://hstm-reports.sturdy.io/assets/css/reports.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- IE 8 Handling
+    ================================================== -->
+    <script>
+    if (document.documentMode == 8) {
+        var html = document.getElementsByTagName('html')[0];
+        html.className = 'ie ie8' + html.className;
+        var ie8docmode = document.createElement('script');
+        ie8docmode.setAttribute('src', '../../assets/js/respond.js');
+        document.getElementsByTagName('head')[0].appendChild(ie8docmode);
+    }
+    </script>
+    <!--[if IE 8]>
+        <script src="../../assets/js/modernizr.js"></script>
+    <![endif]-->
+        <style>
+    .report-tables table.completion-grid tr th:first-child + th {
+    min-width: 255px;
+}
+.report-tables table.completion-grid tr th:first-child + th + th + th + th {
+    min-width: 255px;
+}
+</style>
+</head>
+
+<body>
+    <!-- PRINT LOGO -->
+    <div class="print-logo-header"><img src="../../assets/img/hsLogo.gif"></div>
+    <!-- /PRINT LOGO -->
+    <!-- PAGE HEADER -->
+    <div class="focus focus-pageheader">
+        <div class="fph-separator"></div>
+        <div class="fph-table">
+            <div class="fph-row">
+                <div class="fph-cell fph-cell-icon">
+                    <div class="fph-icon">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="fph-icon-label">
+                        <span>Report</span>
+                    </div>
+                </div>
+                <div class="fph-cell fph-cell-text">
+                    <div class="fph-primary">
+                        <h1>Bright Ideas Benefits Report</h1>
+                    </div>
+                    <div class="fph-secondary">
+                        <ul class="meta">
+                            <li><span class="meta-label">Report Generated:</span><span class="meta-value">Mar 3, 2015, 7:11 pm ET</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- PRINT AND EXPORT OPTIONS -->
+                <div class="fph-cell fph-cell-button">
+                    <div class="btn-group" role="group">
+                        <a href="#" class="btn btn-focus btn-print">Print</a>
+                        <a href="#" class="btn btn-focus btn-export dropdown-toggle" data-toggle="dropdown">Export <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            <li>
+                                <a href="#">PDF</a>
+                            </li>
+                            <li>
+                                <a href="#">CSV</a>
+                            </li>
+                            <li>
+                                <a href="#">Excel</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /PRINT AND EXPORT OPTIONS -->
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- /PAGE HEADER -->
+    <div class="layout layout-min">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="section section-main section-box">
+                        <!-- REPORT SETTINGS -->
+                        <div class="report-settings" style="display: none">
+                            <h3>Report Settings</h3>
+                            <ul class="list-unstyled">
+                                <li><b>Submitter Department:</b> 100000 - Nursing Services</li>
+                                <li><b>Estimated Cost Savings Range:</b> 1345.00 - 2000.00</li>
+                                <li><b>Actual Cost Savings Range:</b> 1345.00 - 2000.00</li>
+                                <li><b>Estimated Time Savings Range:</b> 127.00 - 200.00</li>
+                                 <li><b>Actual Time Savings Range:</b> 127.00 - 200.00</li>
+                                 <li><b>Number of Ideas: </b> Yes</li>
+                            </ul>
+                        </div>
+                        <a class="btn btn-default btn-settings" href="#" data-labels="View Report Settings|Hide Report Settings">View Report Settings</a>
+                        <!-- /REPORT SETTINGS -->
+                        <article>
+                            <!-- REPORT GROUP HEADER -->
+                            <header>
+                                <!-- ADDITIONAL INFO AREA -->
+                                <div class="additional-info">
+                                    <h4>Premier Health Partners Group</h4>
+                                    <h1>Bright Ideas Benefits Report</h1>
+                                    <div class="info-header-text-block">
+                                        <b>Due Submitted Range:</b> Mar 4, 2014 through Mar 3, 2015
+                                    </div>
+                                    <div class="info-header-text-block">
+                                        <b>Data as of:</b> Mar 3, 2015, 1:00 am ET
+                                    </div>
+                                    <div class="info-header-text-block">
+                                        <b>Report Generated:</b> Mar 3, 2015, 7:11 pm ET
+                                    </div>
+                                    <div class="additional-data">
+                                        <ul class="scores pull-left">
+                                            <li>
+                                                <h4></h4>
+                                            </li>
+                                            <li>Days To Close:</li>
+                                            <li class="text-align-right">5</li>
+                                            <li>Num of Days Open:</li>
+                                            <li class="text-align-right">62</li>
+                                            <li>Days Overdue:</li>
+                                            <li class="text-align-right">0</li>
+                                        </ul>
+                                        <ul class="pull-right">
+                                            <li>
+                                                <div class="btn-group drill-down-button" role="group">
+                                                    <a href="./bi-benefits-report.html" class="btn btn-sm btn-default"><i class="fa fa-caret-left"></i> Go to Summary</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /additional data -->
+                                </div>
+                                <!-- /ADDITIONAL INFO AREA -->
+                            </header>
+                            <!-- /REPORT GROUP HEADER -->
+                            <!-- REPORT GROUP TABLE AREA -->
+                            <section class="report-tables">
+                                <div class="table-wrapper">
+                                    <table class="completion-grid">
+                                        <tr class="title">
+                                            <td colspan="32" class="linked">
+                                                <h2><a href="./bi-benefits-report.html">Bright Ideas Benefits Report</a></h2>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row stripe">
+                                            <th>Ideas Number
+                                            </th>
+                                            <th>Brief Description</th>
+                                            <th>
+                                                Date Submitted
+                                            </th>
+                                            <th>
+                                                Submitter Name
+                                            </th>
+                                            <th>
+                                                Submitter Department
+                                            </th>
+                                            <th>
+                                                Status
+                                            </th>
+                                            <th>
+                                                Assigned To/Responsible Name
+                                            </th>
+                                            <th>
+                                                Delegated Name
+                                            </th>
+                                            <th>
+                                                Delegated Department
+                                            </th>
+                                            <th>
+                                                Safety Idea
+                                            </th>
+                                            <th>
+                                                Cost Savings Idea
+                                            </th>
+                                            <th>
+                                                Time Savings Idea
+                                            </th>
+                                            <th>
+                                                Due Date
+                                            </th>
+                                            <th>
+                                                Target Implementation Date
+                                            </th>
+                                            <th>
+                                                Estimated Cost Savings
+                                            </th>
+                                            <th>
+                                                Actual Cost Savings
+                                            </th>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>
+                                                12345678910
+                                            </td>
+                                            <td>This idea will increase safety for healthcare departments globally across the market. The idea is to increase health for all patients that are between the ages of 49 and 109. </td>
+                                            <td>11/11/2015</td>
+                                            <td>Bill Mclongname</td>
+                                            <td>1000000 - Nursing Information Services</td>
+                                            <td>Open</td>
+                                            <td>bmclongname</td>
+                                            <td>125673 Dept Name</td>
+                                            <td>Ron Tabbit</td>
+                                            <td>NA</td>
+                                            <td>Yes</td>
+                                            <td>Yes</td>
+                                            <td>11/11/2015</td>
+                                            <td>11/11/2015</td>
+                                            <td>1125.67</td>
+                                            <td>3456.34</td>
+                                        </tr>
+                                        <tr class="totals">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </section>
+                            <section class="report-tables">
+                                <!-- REPORT TOTALS -->
+                                <div class="table-wrapper">
+                                    <table class="report-totals">
+                                        <tr class="title icon">
+                                            <td colspan="32">
+                                                <h2>REPORT TOTALS</h2></td>
+                                        </tr>
+                                        </tr>
+                                        <tr class="table-row stripe">
+                                            <th>
+                                                Estimated Cost Savings
+                                            </th>
+                                            <th>
+                                                Actual Cost Savings
+                                            </th>
+                                            <th>
+                                                Days To Close/Implement
+                                            </th>
+                                            <th>
+                                                Number of Days Open/WRP
+                                            </th>
+                                            <th>
+                                                Days Overdue
+                                            </th>
+                                        </tr>
+                                                                             <tr class="table-row">
+                                            <td>1125.67</td>
+                                            <td>3456.34</td>
+                                            <td>5</td>
+                                            <td>62</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr class="totals">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </section>
+                            <!-- /REPORT GROUP TABLE AREA -->
+                            <!-- OPTIONAL DETAILED APPENDIX -->
+                           <!-- <div class="appendix">
+                                <h3>Report Criteria</h3>
+                                <p><b>To Be Determined:</b> NA</p>
+                            </div> --> 
+                            <!-- /OPTIONAL DETAILED APPENDIX -->
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PAGE FOOTER -->
+    <div class="site-footer">
+        <div class="container">
+            <div class="row legal">
+                <div class="col-md-12">
+                    <div class="divider"></div>
+                    <div class="logo"><img src="../../assets/img/logo-healthstream.png" alt="HealthStream"></div>
+                    <div class="copyright">Copyright &copy; 2015 HealthStream, Inc. All Rights Reserved.</div>
+                    <div class="build">Build: 13.01.28.895.8 | O:STS2 | S:192.231.71.2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /PAGE FOOTER -->
+    <!-- SCRIPT LIBRARIES -->
+    <script src="../../assets/js/jquery.js"></script>
+    <script src="../../assets/js/reports.js"></script>
+    <!-- /SCRIPT LIBRARIES -->
+    <!-- FOR DEVELOPER TOOLTIP NOTES ONLY - NOT BE BE ON FINAL PAGE -->
+    <script src="../../assets/js/tooltip.js"></script>
+    <script>
+    $(function() {
+        $("[data-toggle='tooltip']").tooltip();
+    });
+    </script>
+    <!-- FOR DEVELOPER NOTES ONLY - NOT BE BE ON FINAL PAGE -->
+</body>
+
+</html>

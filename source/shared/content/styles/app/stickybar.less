@@ -1,0 +1,55 @@
+.stickybar {
+    border-top: 1px solid @theme-neutral-3;
+    padding: 15px 0;
+
+    .stickybar-outer {
+        display: table;
+        width: 100%;
+    }
+    .stickybar-inner {
+        display: table-row;
+    }
+    .stickybar-left {
+        display: table-cell;
+        text-align: left;
+    }
+    .stickybar-right {
+        display: table-cell;
+        text-align: right;
+    }
+
+    .btn {
+        margin-top: 5px;
+    }
+
+    &.sticky {
+        .stickybar-floater {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #000;
+            background-color: rgba(0,0,0,.6);
+            z-index: 10000;
+        }
+        .stickybar-outer {
+            max-width: 1140px;
+            margin: auto;
+            padding: 0 15px 5px;
+        }
+        .btn,
+        .btn-group {
+            box-shadow: 0 0 2px rgba(0,0,0,.3);
+        }
+    }
+
+    @media print {
+        display: none;
+    }
+}
+
+body.modal-open .stickybar.sticky,
+body.stickybar-hide .stickybar.sticky {
+    display: none;
+}
+

@@ -1,0 +1,37 @@
+<div class="layout layout-assessment layout-statement">
+    <div class="container">
+        <section class="section section-main section-box">
+             <div class="assessment-header">
+                <div class="assessment-return"><a href="{referURL}"><i class="fa fa-fw fa-chevron-left"></i>Return to Assessment Summary</a></div>
+            </div>
+            
+            <h2 class="statement-title">{title}<button class="btn btn-default btn-sm pull-right btn-hide-peer-comments-statement">Hide Peer Comments</button></h2>             
+            {additionalRatings}
+            <div class="row">
+                <div class="col-md-8 col-sm-6">
+                    <section class="section" data-equalize="layout-columns">
+                        <section class="section">
+                            <h3>Description</h3>
+                            <p>{description}</p>
+                        </section>
+                        {content}
+                    </section>
+                </div><!-- /column -->
+                <div class="col-md-4 col-sm-6">
+                    <section class="section" data-equalize="layout-columns" id="rating-form">
+                        <form class="validate">
+                            <h3>My Rating</h3>
+                            {ratings}
+                            {reflective}
+                            {comments}
+                            {documents}
+                            {risks}
+                            {validations}
+                        </form>
+                    </section>
+                </div><!-- /column -->
+            </div><!-- /row -->
+            {stickybar}
+        </section>
+    </div>
+</div>

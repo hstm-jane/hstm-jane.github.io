@@ -1,0 +1,305 @@
+@urg-nav-width: 25%;
+@urg-nav-width-min: 150px;
+@urg-nav-width-max: 250px;
+
+@urg-color-row: #f9f9f9;
+@urg-color-row-alt: #eee;
+@urg-color-unavailable-bg: #999;
+@urg-color-unavailable-text: #fff;
+@urg-color-available-bg: mix(@urg-color-available-text,#fff,40);
+@urg-color-available-text: #357935;
+@urg-color-conflict-bg: #d9534f;
+@urg-color-conflict-text: #fff;
+@urg-color-border-dark: #999;
+@urg-color-event-line: #f0ad4e;
+
+
+.urg {
+    position: relative;
+    overflow: hidden;
+    font-size: 12px;
+
+    // generic classes
+    &-table {
+        display: table;
+        height: 100%;
+        width: 100%;
+    }
+    &-row {
+        display: table-row;
+    }
+    &-cell {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    &-label {
+        display: inline-block;
+    }
+    &-head {
+        background-color: #fff;
+    }
+    &-subhead {
+        background-color: #ddd;
+
+        .urg-label {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 5px;
+        }
+    }
+
+    // row colors
+    &-item {
+        background-color: @urg-color-row;
+    }
+    &-item-alt {
+        background-color: @urg-color-row-alt;
+    }
+
+
+    // handle horizontal scroll
+    &-scroll {
+        padding-left: @urg-nav-width;
+        overflow: auto;
+    }
+
+    // floating panel
+    &-nav {
+        position: absolute;
+        width: @urg-nav-width;
+        top: 0;
+        left: 0;
+        z-index: 999; //set to 999 so input drop down dosn't get overlapped
+
+        .urg-table {
+            table-layout: fixed;
+            border-right: 1px solid @urg-color-border-dark;
+        }
+
+        .urg-item {
+            padding-right: 35px;
+
+            a {
+                display: block;
+                padding: 5px 40px 5px 5px;
+                vertical-align: middle;
+                cursor:pointer;
+
+                &.urg-indent {
+                    padding-left: 15px;
+                }
+
+                &.urg-limit {
+                    width: 100%;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    word-wrap: normal;
+                }
+            }
+
+            &-edit {
+                position: absolute;
+                top: 50%;
+                right: 33px;
+                display: block;
+                height: 24px;
+                width: 24px;
+                line-height: 20px;
+                text-align: center;
+                margin-top: -12px;
+            }
+
+            > button,
+            &-remove {
+                position: absolute;
+                top: 50%;
+                right: 5px;
+                display: block;
+                height: 24px;
+                width: 24px;
+                line-height: 20px;
+                text-align: center;
+                margin-top: -12px;
+            }
+        }
+    }
+
+
+    // table content
+    &-schedule {
+        position: relative;
+    }
+
+    // dates
+    &-days {
+        position: relative;
+        height: 40px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            position: absolute;
+            top: 0;
+            border-left: 1px solid @urg-color-border-dark;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 0 5px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            word-wrap: normal;
+            overflow: hidden;
+
+            &:first-child {
+                border-color: #fff;
+            }
+        }
+    }
+
+    // time blocks
+    &-times {
+        width: auto;
+    }
+    &-time {
+        border-left: 1px solid #fff;
+
+        &:first-child {
+            border-color: #ddd;
+        }
+
+        .urg-label {
+            width: 59px;
+            white-space: nowrap;
+            padding: 5px;
+            text-align: center;
+        }
+    }
+
+    // event start/end times
+    &-start,
+    &-end {
+        position: absolute;
+        border-width: 0 1px;
+        border-color: @urg-color-event-line;
+        border-style: solid;
+        top: 40px;
+        bottom: 0;
+        margin-left: -1px;
+    }
+
+    // statuses
+    &-status {
+        position: relative;
+        height: 40px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            position: absolute;
+            top: 50%;
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 11px;
+            // cursor: pointer;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 7px;
+            margin-top: -15px;
+        }
+    }
+    &-unavailable {
+        background-color: @urg-color-unavailable-bg;
+        color: @urg-color-unavailable-text;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    }
+    &-available {
+        background-color: @urg-color-available-bg;
+        color: @urg-color-available-text;
+    }
+    &-conflict {
+        background-color: @urg-color-conflict-bg;
+        color: @urg-color-conflict-text;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+.urg-series {
+
+    .urg-schedule {
+
+        // override cell defaults
+        .urg-cell {
+            text-align: center;
+            border-left: 1px solid @urg-color-border-dark;
+
+            &:first-child {
+                border: none;
+            }
+        }
+
+        // handle links in head
+        .urg-head {
+            a {
+                display: block;
+                padding: 5px 10px;
+            }
+
+            span {
+                display: block;
+                white-space: nowrap;
+            }
+        }
+
+
+        // status are labels on the series grid
+        .urg-status {
+            display: inline-block;
+            padding: 10px 30px;
+            margin: 0;
+            cursor: pointer;
+
+            // checkboxes
+            input[type="checkbox"] {
+                margin: 0;
+                line-height: 1;
+                cursor: pointer;
+            }
+        }
+        .urg-conflict {
+            background-color: mix(@urg-color-conflict-bg,@urg-color-row,30); //#F2C8C5;
+        }
+        .urg-item-alt.urg-conflict {
+            background-color: mix(@urg-color-conflict-bg,@urg-color-row-alt,30);
+        }
+    }
+}
+
+@media (max-width: 766px) {
+    .urg-scroll {
+        padding-left: @urg-nav-width-min;
+    }
+    .urg-nav {
+        width: @urg-nav-width-min;
+    }
+    .urg-item {
+        padding-right: 5px !important;
+    }
+    .urg-item-edit {
+        display: none !important;
+    }
+}
+@media (min-width: 1140px) {
+    .urg-scroll {
+        padding-left: @urg-nav-width-max;
+    }
+    .urg-nav {
+        width: @urg-nav-width-max;
+    }
+}

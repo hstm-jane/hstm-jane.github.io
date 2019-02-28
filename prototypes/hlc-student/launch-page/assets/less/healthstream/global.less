@@ -1,0 +1,221 @@
+// --------------------------------------------------
+// IE8 media query fix
+// --------------------------------------------------
+// html.ie8 {
+//   body {
+//     min-width: @screen-md-min;
+//   }
+// }
+
+// --------------------------------------------------
+// Force text break for all long unbroken strings
+// --------------------------------------------------
+
+* {
+    word-wrap: break-word;
+}
+
+
+// --------------------------------------------------
+// Supporting text in headers
+// --------------------------------------------------
+
+h1, h2, h3, h4, h5, h6, legend {
+    small {
+        font-style: italic;
+        font-weight: inherit;
+        color: @theme-neutral-6;
+    }
+}
+
+// --------------------------------------------------
+// Forms
+// --------------------------------------------------
+
+form {
+    display: inline;
+}
+
+form.validate .form-group {
+    .help-block {
+        display: none;
+    }
+    &.has-error .help-block {
+        display: block;
+    }
+}
+.control-label small {
+    font-weight: 500;
+    font-style: italic;
+    color: @theme-neutral-6;
+}
+.form-actions {
+    margin: 30px 0 15px;
+}
+.form-modified {
+    margin-bottom: 15px;
+    font-size: @font-size-small;
+    font-style: italic;
+    color: @theme-neutral-6;
+}
+textarea.form-control {
+    resize: none;
+    overflow: auto;
+}
+
+.form-control-inline {
+    display: inline-block;
+    width: auto;
+}
+.form-group > label {
+    display: block;
+
+    &.label-checkbox,
+    &.radio-inline {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+// --------------------------------------------------
+// Rows
+// --------------------------------------------------
+
+.row-spaced + .row-spaced {
+    margin-top: 10px;
+}
+
+
+// --------------------------------------------------
+// Dropdown Menus
+// --------------------------------------------------
+
+.dropdown-menu.dropdown-menu-right {
+    left: auto;
+    right: 0;
+}
+
+
+// --------------------------------------------------
+// Labels
+// --------------------------------------------------
+
+.label {
+    font-weight: 600;
+}
+
+// --------------------------------------------------
+// Modals
+// --------------------------------------------------
+
+.modal-body {
+    .section {
+        margin: 15px 0 30px;
+    }
+}
+.modal-footer {
+    text-align: left;
+}
+
+
+// --------------------------------------------------
+// Modals
+// --------------------------------------------------
+
+.alert-accent {
+  .alert-variant(@alert-accent-bg; @alert-accent-border; @alert-accent-text);
+  h4 {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+}
+
+// --------------------------------------------------
+// Limit Height
+// --------------------------------------------------
+
+.limit-height {
+    overflow: hidden;
+
+    &.limit {
+        height: 100px;
+    }
+
+}
+
+.limit-height-link {
+    border-top: 1px solid @theme-neutral-4;
+    padding: 5px 0;
+    margin-top: 5px;
+    font-size: @font-size-small;
+}
+
+.nav-tabs > li > a {
+    background-color: @theme-neutral-1;
+    border-color: @theme-neutral-4;
+}
+
+// --------------------------------------------------
+// Lists
+// --------------------------------------------------
+
+.list-pricing {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+
+    li {
+        border-bottom: 1px dotted @theme-neutral-5;
+
+        + li {
+            margin-top: 15px;
+        }
+
+        span {
+            float: right;
+            font-weight: 600;
+        }
+    }
+}
+
+.list-links {
+    list-style: none;
+    padding: 0;
+
+    li {
+        border-left: 2px solid @theme-neutral-5;
+        padding-left: 7px;
+    }
+
+    li + li {
+        margin-top: 10px;
+    }
+}
+
+
+.ajax-container {
+    position: relative;
+
+    .ajax-loading {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url('@{imagePath}/loading-spinner.gif') center center no-repeat;
+        background-color: rgba(255,255,255,.7);
+    }
+}
+
+
+// --------------------------------------------------
+// Other
+// --------------------------------------------------
+
+.timezone {
+    margin-top: 20px;
+    font-size: @font-size-small;
+    color: @theme-neutral-6;
+    font-style: italic;
+}

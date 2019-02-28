@@ -1,0 +1,80 @@
+.ewc-nav {
+    border-top: 5px solid @theme-neutral-8;
+    background: @theme-neutral-6;
+    padding: 10px;
+
+    form {
+        margin: 0;
+        display: inline;
+    }
+
+    .col-sm-6 {
+        margin: 5px 0;
+    }
+
+    table {
+        width: 100%;
+
+        td {
+            vertical-align: middle;
+        }
+    }
+
+    .btn {
+        box-sizing: border-box;
+        white-space: nowrap;
+        font-size: 12px;
+        font-weight: 600;
+        overflow: hidden;
+
+        span {
+            margin: 0 5px;
+        }
+    }
+
+    .ewc-nav-page {
+        padding-right: 15px;
+        white-space: nowrap;
+        color: #FFF;
+    }
+    .ewc-nav-controls,
+    .ewc-nav-controls .btn-group {
+        width: 100%;
+    }
+    .ewc-nav-controls .btn-group .btn {
+        width: 33.333333%;
+    }
+    .ewc-nav-powered {
+        width: 100%;
+        text-align: center;
+        padding: 0px;
+        color: #FFF;
+    }
+    .ewc-nav-logo {
+        margin: auto;
+        width: 120px;
+        height: 30px;
+        background: url('@{imagePath}/ewc-powered-by.png') no-repeat;
+    }
+    .ewc-nav-exit {
+        padding-right: 2px;
+    }
+
+}
+
+@media (max-width:@screen-xs-max) {
+    .ewc-nav .col-sm-6:first-child  {
+        margin-bottom: 10px;
+    }
+    .ewc-nav-controls .btn-group {
+        width: 100%;
+    }
+    .ewc-nav .ewc-nav-logo {
+        margin: 0;
+    }
+}
+@media (max-width:@screen-xs) {
+    .ewc-nav .btn-group span {
+        display: none;
+    }
+}

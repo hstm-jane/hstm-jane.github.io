@@ -1,0 +1,60 @@
+.connect-item {
+    margin-bottom: 20px;
+    position: relative;
+
+    &-text {
+        background: #fff;
+        padding: 15px;
+        position: relative;
+        padding-right: 40px;
+        border: 1px solid #ddd;
+        border-left: 5px solid #09C;
+        margin-left: 1px;
+
+        h2 {
+            font-size: 24px;
+            margin: 0 0 5px;
+        }
+
+        small {
+            display: block;
+            margin-top: 5px;
+        }
+
+        .fa {
+            position: absolute;
+            color: #CCC;
+            right: 15px;
+            top: 50%;
+            font-size: 20px;
+            margin-top: -10px;
+        }
+    }
+
+    &-link {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+}
+
+.layout-unenrolled .enrolled,
+.layout-enrolled .unenrolled {
+    display: none;
+}
+.layout-unenrolled .unenrolled,
+.layout-enrolled .enrolled {
+    display: block;
+}
+
+.layout-unlicensed .licensed,
+.layout-licensed .unlicensed {
+    display: none;
+}
+.layout-unlicensed .unlicensed,
+.layout-licensed .licensed {
+    display: block;
+}

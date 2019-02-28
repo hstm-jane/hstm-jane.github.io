@@ -1,0 +1,499 @@
+.dataTables_wrapper {
+    margin-bottom: 40px;
+}
+
+table.dataTable,
+.display {
+    &.display tbody tr:nth-of-type(odd),
+    &.dataTable.stripe tbody tr:nth-of-type(odd){
+        background-color: #f9f9f9;
+    }
+    thead {
+        th,
+        th.sorting {
+            vertical-align: top;
+            font-weight: 600;
+            background-color: #ddd;
+            font-size: 13px;
+            position: relative;
+            border-bottom: none;
+            &.sorting_asc,
+            &.sorting_desc,
+            {
+                font-weight: 600;
+                background-color: #d3d3d3;
+            }
+            &.unsortable {
+                padding-right: 10px;
+            }
+            &.sorting:after,
+            &.sorting_asc:after,
+            &.sorting_desc:after {
+                position: absolute;
+                top: 9px;
+                right: 8px;
+                display: block;
+                font-family: FontAwesome;
+                opacity: 1;
+                font-size: 10px;
+            }
+            &.sorting:after {
+                content: "\f0dc";
+            }
+            &.sorting_asc:after {
+                content: "\f0de";
+            }
+            &.sorting_desc:after {
+                content: "\f0dd";
+            }
+        }
+    }
+    tr {
+        &:hover td,
+        &.even:hover td.sorting_1,
+        &.odd:hover td.sorting_1 {
+          
+			
+            background-color: #e9e9e9;
+            cursor: pointer;
+        }
+        &:hover td,
+        &.even:hover td.sorting_1.reorder,
+        &.odd:hover td.sorting_1.reorder {
+            cursor: pointer;
+        }
+        // &.uncheckable-dt-row,
+        // // // &.uncheckable-dt-row:hover,
+        // // // &.uncheckable-dt-row.even:hover,
+        // // // &.uncheckable-dt-row.odd:hover,
+        // {
+        //     td {
+        //         color: #999;
+        //     }
+        //  }
+        &.selected {
+            td,
+            &:hover,
+            .sorting_1 {
+                background-color: #d9f0f7;
+                color: #07A;
+            }
+            .checkable-dt {
+                .icon {
+                    background-position: center -90px;
+                }
+            }
+        }
+        &.disabled {
+            .checkable-dt {
+                > .select {
+                    .icon {
+                        background: none;
+                    }
+                    .label {
+                        cursor: default;
+                    }
+                }
+            }
+        }
+    }
+    th,
+    td,
+    {
+        vertical-align: middle;
+    }
+    td {
+        border-bottom: 1px solid #ececec;
+        text-align: left;
+    }
+    .actions {
+        white-space: nowrap;
+        text-align: center;
+        width: 30px;
+        .dropdown-menu-right {
+            text-align: left;
+        }
+    }
+    .odd {
+        .sorting_1 {
+            background-color: #eee;
+        }
+    }
+    .even {
+        .sorting_1 {
+            background-color: #f9f9f9;
+        }
+    }
+    .checkable-dt,
+    .checkable-dt-check-all,
+    .uncheckable-dt {
+        position: relative;
+        margin: 0;
+        width: 23px;
+        text-align: center;
+        > .select {
+            width: 100%;
+            height: 20px;
+            background: none;
+            label {
+                margin: 0;
+                cursor: pointer;
+                text-align: center;
+                overflow: hidden;
+                width: 100%;
+                background: none;
+            }
+            .icon {
+                position: relative;
+                margin-left: 0;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background: url('@{imagePath}/qa-sprite.png') center -60px no-repeat;
+                @media (max-width: @screen-xs-max) {
+                    position: absolute;
+                    top: 50%;
+                    left: 9px;
+                    margin-top: -10px;
+                }
+            }
+            .checkbox,
+            .checkbox-check-all {
+                display: none;
+            }
+        }
+        &.checkable-dt-checked {
+            > .select label {
+                span {
+                    background-position: center -90px;
+                }
+            }
+        }
+    }
+}
+
+table.dataTable.table-no-select,
+.display .table-no-select,
+table.dataTable.table-reorder,
+.display .table-reorder {
+    tr {
+        &:hover td,
+        &.even:hover td.sorting_1,
+        &.odd:hover td.sorting_1 {
+            cursor: default;
+        }
+        &:hover td.reorder,
+        &.even:hover td.sorting_1.reorder,
+        &.odd:hover td.sorting_1.reorder {
+            cursor: move;
+        }
+    }
+}
+
+table.dataTable.display tbody>tr.selected:hover,
+table.dataTable.display tbody>tr>.selected:hover,
+table.dataTable.hover tbody>tr.selected:hover,
+table.dataTable.hover tbody>tr>.selected:hover,
+table.dataTable.display tbody>tr.odd.selected>.sorting_1,
+table.dataTable.order-column.stripe tbody>tr.odd.selected>.sorting_1,
+table.dataTable.display tbody>tr.even.selected>.sorting_1,
+table.dataTable.order-column.stripe tbody>tr.even.selected>.sorting_1 {
+    background-color: #d9f0f7;
+    color: #07A;
+}
+
+.no-more-tables .table.table-reorder>tbody>tr>td:nth-child(1) {
+    text-align: center;
+}
+
+.dataTables_paginate,
+.dataTables_length {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+//may need to remove after UIL merge and new process
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    margin-left: 0;
+    padding: 0;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    margin-left: 0;
+}
+
+//end removal
+.dataTables_length {
+    margin-right: 15px;
+}
+
+.dataTables_wrapper .bottom {
+    text-align: right;
+}
+
+.section-results-header {
+    .alert {
+        padding: 5px;
+    }
+}
+
+#deselect-all-mobile {
+    display: none;
+}
+
+//columns dropdown menu with
+.checkbox-dropdown {
+    label {
+        display: block;
+        padding: 3px 20px;
+        clear: both;
+        font-weight: 400;
+        line-height: 1.428571429;
+    }
+    .checkbox-dropdown-menu {
+        width: 200px;
+        text-align: left;
+        max-height: 300px;
+        overflow: auto;
+    }
+}
+
+.uncheckable-dt-row .actions * {
+    display: none;
+}
+
+.uncheckable-dt {
+    text-align: center;
+}
+
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+    background-image: none;
+}
+
+table.dataTable.no-footer {
+    border-bottom: none;
+}
+
+table.dataTable.row-border tbody th,
+table.dataTable.row-border tbody td,
+table.dataTable.display tbody th,
+table.dataTable.display tbody td {
+    border-top: none;
+}
+
+//end checkable-dt datatables
+@media only screen and (max-width: @screen-xs) {
+	
+	
+
+
+    .roster-seat-table tr
+            {
+
+            border-left: 3px solid #ccc;
+            margin: 3px 0;
+
+
+    &.registered-row {
+
+            border-left: 3px solid @theme-success;
+
+    }
+
+    &.waitlisted-row {
+
+            border-left: 3px solid @theme-warning;
+
+    }
+}
+    .dataTable .checkable-dt .icon {
+        //margin-top: -7px;
+    }
+    .uncheckable-dt,
+    .checkable-dt {
+        height: 30px;
+    }
+    .no-more-tables table {
+        border-bottom: 1px solid #ddd;
+    }
+    .no-more-tables tr td.checkable-dt {
+        position: absolute;
+        z-index: 9;
+        //padding-left: 25px;
+        border-bottom: none;
+        background: none;
+    }
+    .no-more-tables tr td.uncheckable-dt {
+        position: absolute;
+        z-index: 9;
+        padding-left: 10px;
+    }
+    .checkable-dt > .select label {
+        padding-left: 0;
+    }
+    .no-more-tables td:nth-child(2) {
+        padding-left: 50px;
+        min-height: 30px;
+    }
+    .no-more-tables .table-no-select td:nth-child(1),
+    .no-more-tables .table-reorder td:nth-child(1) {
+        padding-left: 20px;
+        min-height: 30px;
+        padding-right: 110px;
+    }
+    .no-more-tables .table.table-reorder>tbody>tr>td:nth-child(1) {
+        position: absolute;
+    }
+    .dataTable tr.even:hover td.sorting_1,
+    .dataTable tr.odd:hover td.sorting_1,
+    .dataTable tr:hover td,
+    .display tr.even:hover td.sorting_1,
+    .display tr.odd:hover td.sorting_1,
+    .display tr:hover td {
+        background-color: none;
+    }
+    .dataTable.display tbody tr.odd > .sorting_1,
+    .dataTable.order-column.stripe tbody tr.odd > .sorting_1,
+    .dataTable.display tbody tr.even > .sorting_1,
+    .dataTable.order-column.stripe tbody tr.even > .sorting_1,
+    .dataTable.display tbody tr.odd.selected > .sorting_1,
+    .dataTable.order-column.stripe tbody tr.odd.selected > .sorting_1 {
+        background-color: inherit;
+    }
+    table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
+    table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+        z-index: 9;
+    }
+    /* Force table to not be like tables anymore */
+    .no-more-tables table,
+    .no-more-tables thead,
+    .no-more-tables tbody,
+    .no-more-tables th,
+    .no-more-tables td,
+    .no-more-tables tr {
+        display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .no-more-tables thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .no-more-tables {
+        .display {
+            tr {
+                &:hover,
+                &.even:hover,
+                &.odd:hover {
+                    td {
+                        color: @theme-neutral-9;
+                        background-color: transparent;
+                        cursor: pointer;
+                        &.sorting_1 {
+                            color: @theme-neutral-9;
+                            background-color: transparent;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                &.selected:hover td {
+                    color: #07A;
+                }
+                &.uncheckable-dt-row,
+                &.uncheckable-dt-row:hover,
+                &.uncheckable-dt-row.even:hover,
+                &.uncheckable-dt-row.odd:hover,
+                {
+                    td {
+                        color: @theme-neutral-6;
+                    }
+                }
+                &.selected,
+                &.selected:hover,
+                &.selected:hover {
+                    .sorting_1 {
+                        td {
+                            background-color: #d9f0f7;
+                            color: #07A;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .no-more-tables .table>tbody>tr>td {
+        /* Behave  like a "row" */
+        border-bottom: none;
+        white-space: normal;
+        text-align: left;
+    }
+    .no-more-tables .table.table-no-select>tbody>tr>td,
+    .no-more-tables .table.table-reorder>tbody>tr>td {
+//        position: relative;
+    }
+	
+	#resultsTable {
+		margin-top:20px;
+		tr {
+			position:relative;
+		}
+		td{
+			position: static;
+		}
+		thead{
+			display:none;
+		}
+		.btn-default{
+			position: absolute;
+			top: 10px;
+			right:10px;
+		}
+	}
+    .no-more-tables td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 30px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: 600;
+    }
+    .no-more-tables tr td:nth-of-type(1) ~ td,
+    .no-more-tables .table-reorder tr td:nth-of-type(1) ~ td {
+//        display: none;
+        padding-left: 50px;
+        position: relative;
+		display:none;
+    }
+	   .no-more-tables tr td:nth-of-type(1) ~ td:last-of-type{
+		display:table-cell;
+	}
+    .no-more-tables .table-no-select tr td:nth-of-type(1) ~ td,
+    {
+        display: none;
+        padding-left: 55%;
+    }
+    .no-more-tables .table-no-select td:nth-of-type(1) ~ td:before {
+        content: attr(data-title);
+    }
+    .no-more-tables td:nth-of-type(2) ~ td:before {
+        content: attr(data-title);
+    }
+}
+
+#studentHeader,
+#instructorCandidateHeader {
+    margin-top: 0;
+}
+
+.table-no-select .mobile-actions {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}

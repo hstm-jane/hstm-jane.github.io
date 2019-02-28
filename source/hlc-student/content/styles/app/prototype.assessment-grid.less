@@ -1,0 +1,345 @@
+
+.ag-chart-holder {
+    position: relative;
+    text-align: center;
+}
+.ag-chart {
+    cursor: pointer;
+}
+.ag-chart-center {
+    position: absolute;
+    vertical-align: middle;
+    top: 45px;
+    left: 50%;
+    width: 90px;
+    margin-left: -45px;
+
+    span {
+        display: block;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+}
+.ag-chart-center-value {
+    font-size: 32px;
+}
+.ag-chart-center-label {
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.ag-header {
+    display: none;
+    width: 100%;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 5px;
+
+    .ag-col {
+        padding: 0 10px;
+        background: none;
+        border: none;
+    }
+    .ag-col-actions {
+        text-align: left;
+    }
+}
+.ag-list {
+    display: table;
+    width: 100%;
+}
+.ag-item {
+    display: table-row;
+}
+
+.ag-col {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px 10px;
+    background: @theme-neutral-1;
+    border-bottom: 1px solid @theme-neutral-3;
+}
+.ag-item-alt .ag-col {
+    background: @theme-neutral-2;
+}
+.ag-col-actions {
+    width: 140px;
+    text-align: right;
+
+    .dropdown-menu {
+        text-align: left;
+    }
+    .action {
+        .btn {
+            width: 120px;
+        }
+    }
+    .action-split {
+        .btn:first-child {
+            width: 90px;
+        }
+        .btn.dropdown-toggle {
+            width: 30px;
+        }
+    }
+    .action-xs .btn {
+        width: 30px !important;
+        padding: 5px 0;
+        text-align: center;
+    }
+}
+.ag-list {
+    border-top: 1px solid @theme-neutral-4;
+}
+
+.ag-employee-label {
+    font-weight: 600;
+    font-size: 16px;
+}
+.ag-rater-label label,
+.ag-state label,
+.ag-peers label,
+.ag-due label {
+    display: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    color: #666666;
+    margin: 0;
+}
+
+.ag-peers ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ag-list,
+.ag-progress {
+    .progress {
+        margin: 0;
+        background-color: @theme-neutral-4;
+        position: relative;
+    }
+    .progress-bar {
+        white-space: nowrap;
+        text-shadow: 1px 1px rgba(0,0,0,.2);
+        font-size: 11px;
+        width: auto;
+        padding: 0 2px;
+        background-color: @theme-info;
+    }
+    .progress-label {
+        display: none;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        font-size: 11px;
+        line-height: 20px;
+        color: @theme-neutral-9;
+    }
+    .progress-start {
+        .progress-label-start {
+            display: block;
+        }
+        .progress-bar {
+            display: none;
+        }
+    }
+    .progress-end {
+        .progress-label-end {
+            display: block;
+            color: #fff;
+        }
+        .progress-bar {
+            height: 20px;
+            text-indent: -999px;
+            overflow: hidden;
+            width: 100% !important;
+            background-color: @theme-success;
+        }
+    }
+}
+
+.ag-progress label {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    color: #666666;
+    margin: 0;
+}
+
+
+.ag-chart-horizontal {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: none;
+    margin: 10px 0;
+
+    &-bar {
+        width: 100%;
+    }
+
+    td {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .chart-label {
+        width: 200px;
+        font-weight: 600;
+    }
+
+    .chart-value table {
+        width: 100%;
+    }
+
+    .chart-tab {
+        display: inline-block;
+        padding: 5px 10px;
+        margin-right: 10px;
+        color: #333;
+        border-bottom: 5px solid transparent;
+        text-decoration: none;
+
+        &:hover {
+            border-color: #ddd;
+        }
+
+        .badge {
+            margin-left: 5px;
+            background-color: #ddd;
+            color: #333;
+        }
+
+        &.active {
+            border-color: #333 !important;
+        }
+    }
+
+    .chart-bar {
+        display: block;
+        padding: 5px 10px;
+        background: #ddd;
+        border-top: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        margin: 3px 0;
+        text-decoration: none;
+        color: #333;
+        white-space: nowrap;
+
+        &.active {
+            border-color: #ddd;
+            box-shadow: 0 0 5px #999;
+            border-radius: 2px;
+        }
+
+        &-green {
+            background-color: @theme-success;
+            color: #fff;
+
+            &.active {
+                border-color: @theme-success;
+            }
+        }
+
+        &-blue {
+            background-color: @theme-info;
+            color: #fff;
+
+            &.active {
+                border-color: @theme-info;
+            }
+        }
+    }
+}
+
+@media (min-width: @screen-md-min) {
+    .ag-header-md {
+        display: table;
+    }
+    .ag-list-overview {
+        .ag-employee-label {
+            font-size: 14px;
+        }
+    }
+}
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .ag-header-sm {
+        display: table;
+    }
+    .ag-list-overview {
+        .ag-rater-label,
+        .ag-rater-progress,
+        .ag-peers {
+            margin-top: 5px;
+        }
+        .ag-rater-label label,
+        .ag-peers label {
+            display: inline-block;
+        }
+        .ag-employee-label {
+            font-size: 14px;
+        }
+    }
+}
+@media (max-width: @screen-xs-max) {
+    .ag-employee-label {
+        margin-bottom: 3px;
+    }
+    .ag-rater-label,
+    .ag-state,
+    .ag-peers,
+    .ag-due {
+        margin-top: 5px;
+
+        label {
+            display: inline-block;
+        }
+    }
+
+    .ag-item .ag-col {
+        border-top: 5px solid #fff;
+    }
+
+    .ag-peers {
+        ul {
+            display: inline;
+        }
+        li {
+            display: inline-block;
+
+            &:after {
+               content: ";";
+            }
+            &:last-child:after {
+                content: "";
+            }
+        }
+    }
+
+    .ag-col-actions {
+        width: 30px;
+        padding-left: 20px;
+
+        .action {
+            .btn {
+                position: relative;
+                width: 30px;
+                height: 30px;
+                overflow: hidden;
+                line-height: 200px;
+                border-radius: 3px;
+            }
+            i {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              text-align: center;
+              line-height: 30px;
+            }
+        }
+    }
+}

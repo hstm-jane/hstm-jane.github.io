@@ -1,0 +1,114 @@
+.search-filter--desktop, .search-filter--mobile, .search-filter--closed .search-filter__control, .search-filter--closed .search-filter__footer {
+    display: none;
+}
+
+.search-filter {
+    padding: 15px 0 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-filter.search-filter--closed {
+    padding: 15px 0;
+}
+
+.search-filter:last-of-type {
+    border-bottom: none;
+}
+
+@media (min-width: @screen-sm) {
+    .search-filter--desktop {
+        display: block;
+    }
+}
+
+@media (max-width: @screen-md) {
+    .search-filter--mobile {
+        display: block;
+    }
+}
+
+.search-filter .search-filter__header {
+    position: relative;
+    padding-right: 40px;
+    margin-bottom: 10px;
+}
+
+.search-filter .search-filter__toggle {
+    cursor: pointer;
+}
+
+.search-filter .search-filter__toggle .search-filter__title {
+    color: #09c;
+    font-weight: normal;
+}
+
+.search-filter .search-filter__title {
+    font-size: 16px;
+    font-weight: 300;
+    color: #555;
+}
+
+.search-filter .search-filter__arrow {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+}
+
+.search-filter .search-filter__arrow i {
+    display: none;
+    text-align: center;
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: #09C;
+}
+
+.search-filter .search-filter__arrow i:first-child {
+    display: block;
+}
+
+.search-filter .search-filter__control label {
+    font-weight: normal;
+}
+
+.search-filter__control + .search-filter__control {
+    margin-top: 10px;
+}
+
+.search-filter__footer {
+    margin-top: 5px;
+}
+
+.search-filter.active {
+    padding-bottom: 20px;
+}
+
+.search-filter--closed .search-filter__header {
+    margin-bottom: 0;
+}
+
+.search-filter--closed .search-filter__arrow i {
+    display: inline-block;
+}
+
+.search-filter--closed .search-filter__arrow i:first-child {
+    display: none;
+}
+
+.section-results-header .search-filter {
+    padding: 0;
+}
+
+#modal-filter .modal-body {
+    padding: 0 20px;
+}
+
+.section-main .section-filters {
+    border-right: 1px solid @theme-neutral-3;
+    padding: 20px 15px 20px 0;
+    margin: 0;
+}

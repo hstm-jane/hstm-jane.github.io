@@ -1,0 +1,572 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <link id="MasterCssFile" href="Product/HLC/style.css" rel="Stylesheet" />
+    <title>
+        HealthStream Browser Check - Results
+    </title>
+    <style>
+    /*
+    Variable Grid System.
+    Learn more ~ http://www.spry-soft.com/grids/
+    Based on 960 Grid System - http://960.gs/
+
+    Licensed under GPL and MIT.
+*/
+
+    div.pc {
+        text-align: left;
+        position: relative;
+        width: 968px;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: white;
+
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+        box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+        min-height: 600px;
+        height: auto !important;
+        height: 600px;
+    }
+
+    div.pb {
+        width: 968px;
+        height: 5px;
+        line-height: 0;
+        font-size: 1px;
+        margin: 0px auto;
+        background: url(../../Content/pb.gif) no-repeat 100% 100%;
+    }
+
+
+    .separator {
+        height: 3px;
+        width: 100%;
+        border-top: 1px solid #45b5da;
+        background-image: -webkit-linear-gradient(top, #26a8d4 0, #40b3d9 100%);
+        background-image: linear-gradient(to bottom, #26a8d4 0, #40b3d9 100%);
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff26a8d4', endColorstr='#ff40b3d9', GradientType=0);
+    }
+
+    p {
+        margin: 10px auto;
+    }
+    /* Containers
+----------------------------------------------------------------------------------------------------*/
+
+    .container_16 {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    grid_1,
+    .grid_2,
+    .grid_3,
+    .grid_4,
+    .grid_5,
+    .grid_6,
+    .grid_7,
+    .grid_8,
+    .grid_9,
+    .grid_10,
+    .grid_11,
+    .grid_12,
+    .grid_13,
+    .grid_14,
+    .grid_15,
+    .grid_16 {
+        display: inline;
+
+        position: relative;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .container_16 .grid_1 {
+        width: 60px;
+    }
+
+    .container_16 .grid_2 {
+        width: 120px;
+    }
+
+    .container_16 .grid_3 {
+        width: 180px;
+    }
+
+    .container_16 .grid_4 {
+        width: 240px;
+    }
+
+    .container_16 .grid_5 {
+        width: 300px;
+    }
+
+    .container_16 .grid_6 {
+        width: 360px;
+    }
+
+    .container_16 .grid_7 {
+        width: 420px;
+    }
+
+    .container_16 .grid_8 {
+        width: 480px;
+    }
+
+    .container_16 .grid_9 {
+        width: 540px;
+    }
+
+    .container_16 .grid_10 {
+        width: 600px;
+    }
+
+    .container_16 .grid_11 {
+        width: 660px;
+    }
+
+    .container_16 .grid_12 {
+        width: 720px;
+    }
+
+    .container_16 .grid_13 {
+        width: 780px;
+    }
+
+    .container_16 .grid_14 {
+        width: 840px;
+    }
+
+    .container_16 .grid_15 {
+        width: 100%;
+    }
+
+    .container_16 .grid_16 {
+        width: 100%;
+    }
+    /* Grid >> Children (Alpha ~ First, Omega ~ Last)
+
+
+
+/* Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+    /* http://sonspring.com/journal/clearing-floats */
+
+    .clear {
+        background: none;
+        border: 0;
+        clear: both;
+        display: block;
+        float: none;
+        font-size: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .Banner {
+        background-repeat: no-repeat;
+        height: 50px;
+    }
+
+    h1 {
+        color: #676767;
+        font-family: Sans-serif;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 50px;
+        padding-left: 15px;
+        margin: 0px;
+        background-color: #09c;
+        color: white;
+        border-top: 5px solid #007aa3;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    body.bd {
+        margin: 0px;
+        padding: 0px;
+        font-family: Arial;
+        background-color: #eee;
+    }
+
+    .message {
+        line-height: 28px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .statusCell {
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .statusCell img {
+        width: 40px;
+    }
+
+    .ImageCellSuccess {
+        background-image: url(../../Content/iconSM_check.gif);
+    }
+
+    .ImageCellError {
+        background-image: url(../../Content/iconSM_Warning.gif);
+    }
+
+    .ImageCellWarning {
+        background-image: url(../../Content/iconSM_Information.gif);
+    }
+
+    .ImageCellUnknown {
+        background-image: url(../../Content/iconSM_unknown.gif);
+    }
+
+    .ImageSmSuccess {
+        background-image: url(../../Content/iconXSM_check.gif);
+    }
+
+    .ImageSmError {
+        background-image: url(../../Content/iconXSM_Warning.gif);
+    }
+
+    .ImageSmWarning {
+        background-image: url(../../Content/iconXSM_Information.gif);
+    }
+
+    .ImageSmUnknown {
+        background-image: url(../../Content/iconXSM_unknown.gif);
+    }
+
+    .inl {
+        background-repeat: no-repeat;
+
+        background-position: top left;
+        vertical-align: text-bottom;
+        display: inline-block;
+        overflow: visible;
+        height: 16px;
+        width: 16px;
+    }
+
+    .MainContent_infoParagraph {
+        padding-left: 20%;
+    }
+    /* tags */
+
+    table {
+        border: 0;
+        padding: 0 15px;
+        margin: 0;
+    }
+    /* text classes */
+
+    .ts {
+        font-size: 90%;
+    }
+
+    .txxs {
+        font-size: 60%;
+    }
+
+    .b {
+        font-weight: bold;
+    }
+    /* validation summary */
+    /* error */
+
+    .vale {
+        padding: 20px 0 20px 55px;
+        color: #000;
+        background-color: #FFF832;
+        background-image: url(../../Content/iconLG_Warning_Yellowbar.gif);
+        background-repeat: no-repeat;
+        background-position: center left;
+    }
+    /* success */
+
+    .vals {
+        padding: 20px 0 20px 55px;
+        color: #FFF;
+        background-color: #009900;
+        background-image: url(../../Content/iconLG_Check_Greenbar.gif);
+        background-repeat: no-repeat;
+        background-position: center left;
+    }
+    /* info */
+
+    .vali {
+        padding: 20px 0 20px 55px;
+        color: #00F;
+        border: solid 1px #00F;
+        background-color: #FFFFFF;
+        background-image: url(../../Content/iconLG_Information.gif);
+        background-repeat: no-repeat;
+        background-position: center left;
+    }
+    /* grid */
+
+    .grd {}
+
+    .grd tr th {
+        font-weight: bold;
+        speak-header: once;
+        border-bottom: dotted 1px #ccc;
+        padding: 0px;
+    }
+    /* header */
+
+    .grd .alt {
+        background-color: #F5F5F5;
+        border: 0px;
+    }
+
+    .pf {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .pf img {
+        vertical-align: middle;
+    }
+    /*Michelle*/
+
+    #MainContent_infoParagraph {
+        padding: 15px;
+    }
+
+    .alert-warning {
+        background-color: #fcf8e3;
+        border-color: #faebcc;
+        color: #8a6d3b;
+    }
+
+    .alert {
+        padding: 15px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        font-size: 18px;
+    }
+
+    .options {
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    .options a {
+        padding: 15px 15px 10px;
+        color: #09c;
+        text-decoration: none;
+
+        display: inline-block;
+    }
+
+    .options p {
+        text-align: left;
+    }
+
+    .options a:hover {
+        text-decoration: underline;
+        color: #006080;
+    }
+
+    .col-half {
+        width: 49%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .legend {
+        /*   width: 250px;*/
+        list-style: none;
+    }
+
+    .legend li {
+        text-align: left;
+    }
+
+    .legend img {
+        vertical-align: middle;
+    }
+    </style>
+</head>
+
+<body id="MasterBody" class="bd">
+    <form method="post" action="./?bhcp=1" id="form1">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTgyNDUyOTI0OWRk8KYCE+7eAsEP7kwyShDb/LDIuABI7WIMj+OCVkRZa8A=" />
+        </div>
+        <div class="aspNetHidden">
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3CC85096" />
+        </div>
+        <div id="MainBody">
+            <div id="pc" class="pc">
+                <div class="container_16">
+                    <div title="Healthstream Logo" class="grid_16 Banner">
+                        <div class="occ">
+                            <h1>
+                    <span id="MainContent_productTitle">Your experience could be better. </span></h1>
+                        </div>
+                        <div class="separator"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div id="MainContent_infoParagraph" class="message">
+                        <div class="grid_16">
+                            <div id="MainContent_validationSummary" class=" alert alert-warning" title="failure">
+                                <span id="MainContent_validationSummaryText">   <img style="width: 50px; vertical-align: middle; margin-right:10px;" src="./content/images/warning.svg"> Your computer is not set up for the best experience while using this site. </span>
+                            </div>
+                            <br/>
+                        </div>
+                        <div class="col-half">
+                            <p>
+                                For the best experience while using our site, we recommend certain software and settings. Check out the list below to compare your system with our recommendations.
+                            </p>
+                        </div>
+                        <div class="col-half" style="text-align:right;">
+                            <ul class="legend">
+                                <li> <img style="width: 20px; margin:5px;" src="./content/images/checkmark.png"> Working in your browser.</li>
+                                <li> <img style="width: 20px; margin:5px;" src="./content/images/caution.png"> Potential issues detected. </li>
+                                <li> <img style="width: 20px; margin:5px;" src="./content/images/unkown.png"> Please enable Javascript and test again.  </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="container_16">
+                    <div class="grid_16">
+                        <div class="occ">
+                            <table id="Table1" class="grd ts">
+                                <tr id="MainContent_ResultsTable_tr1" class="b">
+                                    <th id="MainContent_ResultsTable_th1" style="width: 80px; text-align: left;">Status</th>
+                                    <th id="MainContent_ResultsTable_th2" style="width: 220px; text-align: left;">Item Description</th>
+                                    <th id="MainContent_ResultsTable_th4" style="width: 330px; text-align: left;">Recommended</th>
+                                    <th id="MainContent_ResultsTable_th3" style="width: 330px; text-align: left;">Your System</th>
+                                </tr>
+                                <tr style="height: 26px; line-height: 26px;">
+                                    <td id="MainContent_ResultsTable_ic_0" style="text-align: center;" class="statusCell " title="failure">
+                                        <img style="width: 20px; margin:5px;" src="./content/images/caution.png">
+                                    </td>
+                                    <td>Internet Browser</td>
+                                    <td>Internet Explorer 8.0 or above</td>
+                                    <td>Chrome 60.0.3112.113 </td>
+                                </tr>
+                                <tr class="alt" style="height: 26px; line-height: 26px;">
+                                    <td id="MainContent_ResultsTable_ic_1" style="text-align: center;" class="statusCell ImageCellError" title="failure">
+                                        <img style="width: 20px; margin:5px;" src="./content/images/caution.png">
+                                    </td>
+                                    <td>Operating System</td>
+                                    <td>Windows XP or above</td>
+                                    <td>MacOSX </td>
+                                </tr>
+                                <tr style="height: 26px; line-height: 26px;">
+                                    <td id="MainContent_ResultsTable_ic_2" style="text-align: center;" class="statusCell ImageCellSuccess" title="success">
+                                        <img style="width: 20px; margin:5px;" src="./content/images/caution.png">
+
+                                    </td>
+                                    <td>Popup Blocking</td>
+                                    <td>Popup blocking disabled</td>
+                                    <td>Popups Allowed </td>
+                                </tr>
+                                <tr class="alt" style="height: 26px; line-height: 26px;">
+                                    <td id="MainContent_ResultsTable_ic_3" style="text-align: center;" class="statusCell ImageCellSuccess" title="success">
+                                        <img style="width: 20px; margin:5px;" src="./content/images/checkmark.png">
+                                    </td>
+                                    <td>Cookies</td>
+                                    <td>Cookies enabled</td>
+                                    <td>Enabled </td>
+                                </tr>
+                                <tr style="height: 26px; line-height: 26px;">
+                                    <td id="MainContent_ResultsTable_ic_4" style="text-align: center;" class="statusCell ImageCellSuccess" title="success">
+                                        <img style="width: 20px; margin:5px;" src="./content/images/checkmark.png">
+                                    </td>
+                                    <td>Javascript</td>
+                                    <td>Javascript enabled</td>
+                                    <td>Enabled </td>
+                                </tr>
+                                <tr class="alt" style="height: 26px; line-height: 26px;">
+                                    <td id="MainContent_ResultsTable_ic_5" style="text-align: center;" class="statusCell ImageCellSuccess" title="success">
+                                        <img style="width: 20px; margin:5px;" src="./content/images/checkmark.png">
+                                    </td>
+                                    <td>Speed</td>
+                                    <td>256Kb/s (32 KB/s) or above</td>
+                                    <td>1.4 MBytes/s</td>
+                                </tr>
+                                <tr style="height: 26px; line-height: 26px;">
+                                    <td id="MainContent_ResultsTable_ic_6" style="text-align: center;" class="statusCell ImageCellSuccess" title="success">
+                                        <img style="width: 20px; margin:5px;" src="./content/images/checkmark.png">
+                                    </td>
+                                    <td>Screen Resolution</td>
+                                    <td>1024 x 768 or above</td>
+                                    <td>1920 x 1200 </td>
+                                </tr>
+                                <tr class="alt" style="height: 26px; line-height: 26px;">
+                                    <td id="MainContent_ResultsTable_ic_7" style="text-align: center;" class="statusCell ImageCellSuccess" title="success">
+                                        <img style="width: 20px; margin:5px;" src="./content/images/checkmark.png">
+                                    </td>
+                                    <td>Adobe Flash</td>
+                                    <td>11.0 or above</td>
+                                    <td>26.0 r0 </td>
+                                </tr>
+                                <tr style="height: 26px; line-height: 26px;">
+                                    <td id="MainContent_ResultsTable_ic_8" style="text-align: center;" class="statusCell ImageCellError" title="failure">
+                                        <img style="width: 20px; margin:5px;" src="./content/images/unkown.png">
+                                    </td>
+                                    <td>Adobe Acrobat Reader</td>
+                                    <td>10.0 or above</td>
+                                    <td> </td>
+                                </tr>
+                                <tr class="alt" style="height: 26px; line-height: 26px;">
+                                    <td id="MainContent_ResultsTable_ic_9" style="text-align: center;" class="statusCell ImageCellSuccess" title="success">
+                                        <img style="width: 20px; margin:5px;" src="./content/images/checkmark.png">
+                                    </td>
+                                    <td>SSL enabled</td>
+                                    <td>SSL enabled</td>
+                                    <td>Enabled </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="options">
+                        <p>
+                            <b>Need Help?</b> If you are having problems or your system doesn’t meet the recommended requirements, please contact your internal technical support group or HealthStream Customer Service.
+                        </p>
+                        <a id="MainContent_lnkRetest" href="Default.aspx?isRetest=1&amp;product=HLC&amp;Mode=4">Test Again</a>
+                        <a href="JavaScript:window.close()">Close this Window</a>
+                    </div>
+                </div>
+                <div id="pb" class="pb">&nbsp;</div>
+                <div class="container_16">
+                    <div class="grid_16">
+                        <div id="pf" class="pf">
+                            <div class="txxs">
+                                <a href="http://www.healthstream.com/" target="_blank">
+                        <img src="Content/logo.gif" style="border:0px;" alt="HealthStream" /></a> &nbsp;Copyright 2017 HealthStream, Inc. All Rights Reserved.
+                                <br /> Build: <span id="footerBuildVersion">12.4.10.700</span>
+                                <br />
+                                <br /> IP: <span id="footerIP">67.90.152.197</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="hiddenBody">
+                <div id="BHContent_hiddenRedirect"></div>
+                <div id="BHContent_bhimageDiv">
+                </div>
+            </div>
+    </form>
+</body>
+
+</html>

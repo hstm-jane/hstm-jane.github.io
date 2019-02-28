@@ -1,0 +1,64 @@
+/*!===============================================================
+  _    _            _ _   _         _
+ | |  | |          | | | | |       | |
+ | |__| | ___  __ _| | |_| |__  ___| |_ _ __ ___  __ _ _ __ ___
+ |  __  |/ _ \/ _` | | __| '_ \/ __| __| '__/ _ \/ _` | '_ ` _ \
+ | |  | |  __/ (_| | | |_| | | \__ \ |_| | |  __/ (_| | | | | | |
+ |_|  |_|\___|\__,_|_|\__|_| |_|___/\__|_|  \___|\__,_|_| |_| |_|
+
+==================================================================
+
+*/
+
+
+
+// ------------------------------------
+// THEME COLORS
+// ------------------------------------
+
+@theme-primary: #09C;
+@theme-primary-lightest: mix(#fff, @theme-primary, 60%);
+@theme-primary-lighter: mix(#fff, @theme-primary, 30%);
+@theme-primary-light: mix(#fff, @theme-primary, 10%);
+@theme-primary-dark: mix(#000, @theme-primary, 10%);
+@theme-primary-darker: mix(#000, @theme-primary, 20%);
+@theme-primary-darkest: mix(#000, @theme-primary, 50%);
+// @theme-primary-btn: #09c;
+@theme-accent: #fc7b00;
+@theme-focus-btn: #5cb85c;
+@theme-focus-btn-text: #FFF;
+@theme-focus-btn-border: #FFF;
+@theme-pass:    #1B8E00;
+@theme-fail:    #D91800;
+@theme-success: #5cb85c;
+@theme-warning: #f0ad4e;
+@theme-danger:  #d9534f;
+@theme-info:    #5bc0de;
+
+
+// ------------------------------------
+// PATHS
+// ------------------------------------
+
+// the app-specific image path relative to the app-specific compiled css
+@imagePath: "../images";
+
+// the app-specific font path relative to the app-specific compiled css
+@fontPath: "../fonts";
+
+// the shared less path relative to the app-specific uncompliled output
+@sharedLessPath: "../../../shared/content/styles";
+
+
+// --------------------------------------------------
+// SHARED VARIABLES AND MIXINS
+// --------------------------------------------------
+@import "@{sharedLessPath}/app/variables.less";
+@import "@{sharedLessPath}/app/mixins.less";
+
+
+// --------------------------------------------------
+// ADDITONAL/OVERRIDING VARIABLES AND MIXINS
+// --------------------------------------------------
+//@import "../app/variables.less";
+//@import "../app/mixins.less";

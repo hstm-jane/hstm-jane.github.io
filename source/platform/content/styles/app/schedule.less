@@ -1,0 +1,800 @@
+#resource-picker-backdrop {
+    display: none;
+    position: fixed;
+    z-index: @zindex-modal-background;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.resource-picker {
+    position: relative;
+    margin-bottom: 5px;
+    .resource-picker-search {
+        position: relative;
+    }
+    .resource-picker-type {
+        position: absolute;
+        top: 50%;
+        right: 44px;
+        text-align: right;
+        margin-top: -11px;
+        .dropdown-menu-right {
+            left: auto; // Reset the default from `.dropdown-menu`
+            right: 0;
+        }
+    }
+    #resource-picker-input {
+        padding-right: 100px;
+    }
+    .resource-picker-overlay {
+        position: relative;
+        top: 100%;
+        z-index: @zindex-modal;
+        width: 100%;
+        background: #fff;
+        padding: 5px;
+        margin: 2px 0 0;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        .box-shadow(0 6px 12px rgba(0, 0, 0, 0.175));
+        background-clip: padding-box;
+        display: none;
+        &.active {
+            display: block;
+        }
+        .resource-picker-holder {
+            position: relative;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-height: 200px;
+        }
+    }
+    .resource-picker-overlay:before {
+        border-bottom: 7px solid rgba(0, 0, 0, 0.2);
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        content: "";
+        display: inline-block;
+        left: 9px;
+        position: absolute;
+        top: -7px;
+    }
+    .resource-picker-overlay:after {
+        border-bottom: 6px solid #fff;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        content: "";
+        display: inline-block;
+        left: 10px;
+        position: absolute;
+        top: -6px;
+    }
+    .resource-picker-clear {
+        border-top: 1px dotted #ccc;
+        padding: 5px 10px 0;
+        font-size: 12px;
+        text-align: right;
+    }
+    .resource-picker-noresults {
+        padding: 20px;
+    }
+    .slat {
+        margin: 0px 0;
+        border-left: none;
+        & + .slat {
+            border-top: 1px dotted #ccc;
+        }
+        .title {
+            font-size: 14px;
+        }
+        .btn {
+            width: 40px;
+            padding: 3px 3px;
+        }
+        .meta-type {
+            font-size: 11px;
+            background: #fff;
+        }
+        .meta-label {
+            font-size: 11px;
+        }
+        .meta-value {
+            font-size: 13px;
+        }
+        .slat-default .btn-group .schedule-btns {
+            min-width: 50px;
+        }
+    }
+}
+
+.remove-left-padding {
+    padding: 0px 0px !important;
+}
+
+.dropdown-menu button:hover,
+.dropdown-menu button:focus {
+    background-color: #006b8f;
+    color: #ffffff;
+}
+
+.dropdown-menu button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: none;
+    background: none;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #FFFFFF;
+    white-space: nowrap;
+    background-image: -webkit-linear-gradient(top, #0099cc 0%, #006b8f 100%);
+    background-image: linear-gradient(to bottom, #0099cc 0%, #006b8f 100%);
+    //filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff0099cc', endColorstr='#ff006b8f', GradientType=0);
+    //filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    border-color: #006385;
+}
+
+.input-group-addon {
+    cursor: pointer;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: table-cell;
+}
+
+.rth {
+    overflow-x: scroll;
+    position: relative;
+}
+
+#pp-datatable_wrapper,
+#grading-datatable_wrapper {
+    .table > thead > tr > th {
+        border-bottom: 2px solid #ddd !important;
+    }
+    .table > thead > tr > th,
+    .table > tbody > tr > th,
+    .table > tfoot > tr > th,
+    .table > thead > tr > td,
+    .table > tbody > tr > td,
+    .table > tfoot > tr > td {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        
+    }
+    td {
+        text-align: left;
+    }
+}
+
+.rth-table {
+    width: 100%;
+    th,
+    td {
+        font-size: @font-size-small;
+        text-align: left;
+        vertical-align: middle;
+        font-weight: 400;
+        padding: 5px 10px;
+        border-left: 1px solid #fff;
+        position: relative;
+        min-height: 32px;
+        &:first-child {
+            text-align: left;
+        }
+    }
+    th {
+        font-weight: 600;
+        background-color: @theme-neutral-4;
+        &.rth-header {
+            border: none;
+        }
+    }
+    tr:first-child th {
+        font-size: @font-size-base;
+        text-align: left;
+        background-color: #fff;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    tbody tr {
+        background-color: @theme-neutral-1;
+        &:nth-child(even) {
+            background-color: @theme-neutral-3;
+        }
+        .rth-block {
+            padding: 0;
+        }
+    }
+    .rth-resource {
+        border-left: none;
+        min-width: 100px;
+    }
+    .rth-options {
+        border-left: none;
+        height: 32px;
+        padding: 5px 5px 5px 0;
+    }
+    .rth-divider {
+        border-color: @theme-neutral-6;
+    }
+    .rth-indent {
+        padding: 0 5px;
+    }
+    .rth-block {
+        font-size: 11px;
+    }
+    .rth-conflict {
+        background-color: @theme-danger;
+        color: #fff;
+        text-align: left;
+        padding: 3px 10px;
+        cursor: pointer;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
+        white-space: nowrap;
+    }
+    .rth-unavailable {
+        background-color: #777;
+        color: #fff;
+        text-align: left;
+        padding: 3px 10px;
+        cursor: pointer;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
+        white-space: nowrap;
+    }
+    .rth-proposed {
+        background-color: mix(@theme-success, #fff, 70%);
+        padding: 3px 10px;
+        cursor: pointer;
+        text-align: left;
+        color: darken(@theme-success, 20%);
+        white-space: nowrap;
+    }
+    .rth-conflict + .rth-proposed {
+        display: none;
+    }
+    .rth-item-conflict {
+        .rth-resource {
+            background-color: mix(@theme-danger, @theme-neutral-3, 20%);
+            a {
+                color: darken(@theme-danger, 20%);
+            }
+        }
+        .rth-options {
+            background-color: mix(@theme-danger, @theme-neutral-3, 20%);
+        }
+    }
+}
+
+.rth-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, .7);
+    background-image: url('@{imagePath}/loading-spinner.gif');
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+.rg {
+    position: relative;
+}
+
+.rg-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    background-color: #fff;
+    border-right: 1px solid @theme-neutral-6;
+}
+
+.rg-schedule {
+    padding-left: 159px;
+    overflow-x: scroll;
+}
+
+.rg-schedule-wrap {
+    position: relative;
+    float: left;
+}
+
+.rg-header {
+    position: relative;
+    font-weight: 600;
+}
+
+.rg-head {
+    font-size: @font-size-base;
+    height: 30px;
+    .rg-label {
+        padding: 0 5px;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
+.rg-schedule .rg-head .rg-label {
+    position: absolute;
+    top: 0;
+    height: 60px;
+    border-left: 1px solid @theme-neutral-6;
+}
+
+.rg-subhead {
+    // height: 20px;
+    background-color: @theme-neutral-4;
+    .rg-label {
+        height: 24px;
+        line-height: 24px;
+        padding: 0 5px;
+        font-size: 11px;
+    }
+}
+
+.rg-times {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.rg-times-wrap {
+    display: table-row;
+}
+
+.rg-time {
+    display: table-cell;
+    width: 60px;
+    height: 24px;
+    padding: 0 5px;
+    line-height: 24px;
+    font-size: 11px;
+    font-weight: 600;
+    border-left: 1px solid #fff;
+    background-color: @theme-neutral-4;
+    &:first-child {
+        border-left: none;
+    }
+}
+
+.rg-start,
+.rg-end {
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    width: 2px;
+    background: @theme-warning;
+}
+
+.rg-start {
+    left: 300px;
+}
+
+.rg-end {
+    left: 600px;
+}
+
+.rg-item {
+    position: relative;
+    height: 30px;
+    line-height: 32px;
+    font-size: @font-size-small;
+    background-color: @theme-neutral-1;
+    font-size: 11px;
+    &.rg-item-alt {
+        background-color: @theme-neutral-3;
+    }
+}
+
+.rg-unavailable,
+.rg-conflict,
+.rg-available {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    // height: 26px;
+    line-height: 22px;
+    padding: 0 5px;
+    overflow: hidden;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.rg-unavailable {
+    background-color: @theme-neutral-6;
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
+}
+
+.rg-conflict {
+    background-color: @theme-danger;
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
+}
+
+.rg-available {
+    background-color: mix(@theme-success, #fff, 70%);
+    color: darken(@theme-success, 20%);
+}
+
+.rg-nav .rg-item {
+    padding: 0 30px 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    &.rg-item-conflict {
+        background-color: mix(@theme-danger, @theme-neutral-3, 20%);
+        a {
+            color: darken(@theme-danger, 20%);
+        }
+    }
+}
+
+.rg-nav .rg-item .btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.rg-rel {
+    position: relative;
+}
+.rg-dark {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+.rg-dark span {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.rg-dark img {
+    vertical-align: middle;
+}
+
+.rp-input {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+.rp-scheduling-row {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top:10px;
+}
+.remove-left-padding {
+    padding-left: 0 !important;
+}
+.remove-right-padding {
+    padding-right: 0 !important;
+}
+.small-negative-margins {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.small-negative-right-margins {
+    margin-right: -5px;
+}
+.table-parent {
+    display: table;
+    table-layout: fixed;
+}
+.table-child {
+    display:table-cell; 
+    vertical-align:middle; 
+    float:none;
+}
+.time-zone-display {
+    font-size: @font-size-small; 
+    color: @theme-neutral-6;
+    list-style: none;
+    font-style: italic; 
+    float: right;
+}
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.field-validation-valid{ 
+    display: none;
+
+}
+.field-validation-valid{ 
+    display: none;
+
+}
+.validation-summary-valid{ 
+    display: none;
+
+}
+.event-conflict{
+    color:#ff0000;
+}
+.timepicker-picker .table-condensed {
+
+    margin-top: 37px;
+
+}
+
+.bootstrap-datetimepicker-widget a[data-action] {
+
+    padding: 0;
+
+    line-height: 1;
+
+}
+
+.timepicker-picker .table-condensed .separator {
+
+    width: 10px;
+
+}
+
+.timepicker-picker .table-condensed td, .timepicker-picker .table-condensed td span {
+
+    padding: 0;
+
+    height: 22px;
+
+    width: 25px;
+
+    line-height: 22px;
+
+    margin: 0;
+
+}
+.bootstrap-datetimepicker-widget div.timepicker div.timepicker-picker table.table-condensed {
+    width: 70%;
+    margin-left:15%; 
+    margin-right:15%;
+}
+.bootstrap-datetimepicker-widget div.timepicker div.timepicker-picker table.table-condensed tbody tr td.separator {
+    width: 2px;
+}
+.btn-slat {
+    min-width:125px;
+}
+.event-slat-well {
+    padding-top:5px;
+    min-height:20px;
+    background:none;
+}
+.event-slat {
+    margin:0 0 10px 0;
+}
+@media (max-width: @screen-xs-max) {
+    #btnAddEvent {
+        display: none !important;
+    }
+}
+.fa-green{
+    color: #5cb85c;
+}
+.fa-blue{
+    color: #006385;
+}
+.fa-red{
+    color: #c12e2a;
+}
+@media (max-width: @screen-xs-max) {
+    #grading-datatable_wrapper {
+        tr .btn-group > .btn {
+            width: 90px !important;
+            border-radius: @border-radius-base !important;
+        }
+
+        i.fa-check-circle {
+            margin-top: 0px !important;
+        }
+
+        i.fa-minus {
+            margin-top: 35px !important;
+        }
+
+        i.fa-ban {
+            margin-top: 70px !important;
+        }
+    }
+}
+
+
+@media (min-width: @screen-xs-max) {
+    #grading-datatable_wrapper .btn-group {
+        white-space: nowrap;
+        .btn {
+            float: none;
+            display: inline-block;
+        }
+        .btn:last-child:not(:first-child) {
+            margin-left: 10px !important;
+            border-radius: @border-radius-base !important;
+        }
+        .btn:nth-last-child(2) {
+            border-top-right-radius: @border-radius-base !important;
+            border-bottom-right-radius: @border-radius-base !important;
+        }
+    }
+}
+#btnPreventEnter {
+    position:absolute; 
+    left:-999px; 
+    height:0;
+    width:0;
+}
+
+#btnDeleteCurrentEvent {
+    margin-left: 4px;
+}
+ #btnDeleteEventSeries {
+    margin-left: 4px;
+}
+ .margin-top-zero{
+     margin-top: 0;
+ }
+ .cursor-hand
+ { cursor: pointer; cursor: hand; }
+
+//Recurrence Modal Styles
+.patternTimeUnit {
+    margin: 6px 0px 0px 5px;
+    display: none;
+}
+
+#lblWeekInc {
+    display: inline-block;
+}
+
+// Added styles from edit event scheduling page - Davis Dolezal
+nav.nav-focus .nav i {
+    top: -21px;
+}
+
+nav.nav-focus .nav li.active i,
+nav.nav-focus .nav li:hover.active i {
+    color: #0099CC;
+}
+
+.resource-picker .slat {
+    cursor: pointer;
+    margin: 3px 0;
+    border-left: 3px solid #cccccc;
+    padding: 6px;
+    background-color: #F9F9F9;
+}
+
+.resource-picker .slat:hover {
+    border-left: 3px solid #0099cc;
+    background-color: #E6E6E6;
+}
+
+.select2-slats .select2-highlighted,
+.select2-checklist .select2-highlighted {
+    background-color: transparent !important;
+}
+
+.select2-results .select2-highlighted {
+    color: white;
+    background-color: #428bca;
+}
+
+.select2-results .select2-highlighted {
+    background: #3875d7;
+    color: #fff;
+}
+
+.resource-picker-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.show-when-recurrence,
+.show-when-recurrence-updated,
+.all-occurrences-list,
+#manualRecurrenceSection {
+    display: none;
+}
+
+
+
+.recurrenceLink {
+    margin-left: 15px;
+}
+
+.has-success .help-block {
+    display: block;
+    text-align: right;
+}
+
+.occurrenceListItem {
+    margin-top: 10px;
+}
+
+.reccurrenceRowsHeader div {
+    font-weight: 600;
+    padding-bottom: 7px;
+    padding-top: 20px;
+    font-size: 16px;
+}
+
+.occurrenceNumber {
+    font-weight: 600;
+}
+
+.occurrenceStatementSpan {
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.table-clickable {
+    min-height: 58px;
+}
+
+.resource-title {
+    min-width: 150px;
+}
+
+.all-occurrences-date {
+    background-color: #eee;
+    min-width: 175px;
+    font-weight: normal;
+}
+
+.all-occurrences-blank-date {
+    background-color: #eee;
+}
+
+.table-scroll {
+    overflow-x: scroll;
+}
+
+.minimize-modal-section {
+    margin: 0 !important;
+}
+
+table.dataTable tbody tr.new{
+    border-color: #6ec5e3;
+    background-color: #99d6eb;
+    color: #666;
+}
+
+table.dataTable thead .sorting {
+    background: url('@{imagePath}/sort_both.png') no-repeat center right;
+}
+table.dataTable thead .sorting_asc {
+    background: url('@{imagePath}/sort_asc.png') no-repeat center right;
+}
+table.dataTable thead .sorting_desc {
+    background: url('@{imagePath}/sort_desc.png') no-repeat center right;
+}

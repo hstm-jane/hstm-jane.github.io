@@ -1,0 +1,48 @@
+.hs-table {
+    font-size: 13px;
+    margin-bottom: 15px;
+    overflow: auto;
+
+    &__table {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    &__action {
+        width: 1%;
+        white-space: nowrap;
+        text-align: right;
+    }
+
+    th,
+    td {
+        text-align: left;
+        vertical-align: middle;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-width: 1px 0;
+    }
+
+    th {
+        text-transform: uppercase;
+        font-weight: 600;
+        border: none;
+    }
+
+    tbody tr:nth-child(2n+1) td {
+        background-color: #f9f9f9;
+    }
+}
+
+.hs-table--seat-allocation {
+    th,
+    td,
+    .form-control-inline {
+        text-align:center;
+    }
+
+    th:first-child,
+    td:first-child {
+        text-align: left;
+    }
+}

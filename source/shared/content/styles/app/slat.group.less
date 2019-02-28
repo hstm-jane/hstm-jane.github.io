@@ -1,0 +1,53 @@
+.slat-group {
+
+    &-header {
+        display: table;
+        width: 100%;
+    }
+
+    &-header-title {
+        display: table-cell;
+        vertical-align: bottom;
+
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+        }
+    }
+
+    &-header-actions {
+        display: table-cell;
+        vertical-align: bottom;
+        text-align: right;
+        width: 40%;
+        white-space: nowrap;
+    }
+
+    &-content {
+        margin: 10px 0 5px;
+        border: 1px solid #eee;
+        padding: 0 7px;
+        border-radius: 3px;
+
+        .collapse-group .slat:first-child {
+            margin-top: 0;
+        }
+
+        .collapse-toggle {
+            display: inline-block;
+            margin: 0 0 7px;
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+    }
+
+    &-footer {
+        .timestamp {
+            font-size: 12px;
+            color: #999;
+            font-style: italic;
+        }
+    }
+}

@@ -1,0 +1,473 @@
+// BASE REPORT LESS FILE ============================================//
+// GENERAL STYLES =========================== //
+h1 {
+    position: static;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 32px;
+    line-height: 56px;
+    font-weight: 300;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 300;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+
+p { margin-bottom: 5px; }
+
+.top-link {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.red { color: #d40202; }
+
+.text-align-right { text-align: right ; }
+
+.print-only { display: none; }
+
+span.icon {
+    padding-right: 0;
+    white-space: nowrap;
+    width: 1px;
+    font-size: 21px;
+    color: #bbb;
+
+    &.i { font-size: 21px; }
+}
+
+// FORM MODALS =========================== //
+
+.radio-block {
+    display: block;
+    font-weight: normal;
+
+    input {
+        margin-right: 7px;
+    }
+}
+.checkbox-label {
+    font-weight: normal;
+    padding: 1px 5px;
+    display: block;
+
+    input {
+        margin-right: 7px;
+    }
+
+    &.stripe {
+        background-color: #eee;
+    }
+    &.checkbox-label-inline {
+        display: inline-block !important;
+    }
+}
+.checkbox-results-container-table {
+    font-size: 12px;
+    width: 100%;
+
+    tr.stripe {
+        background-color: #eee;
+    }
+}
+.secondary-label {
+    font-weight: normal;
+}
+
+.checkbox-results-container {
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 1px;
+    width: 100%;
+    display: block;
+
+    &.fixed-height {
+        height: 170px;
+        overflow: scroll;
+    }
+}
+.block-label {
+    display: block;
+}
+.affiliations-options-container {
+    float: left;
+    margin-bottom: 15px;
+    width: 100%;
+    padding-top: 10px;
+
+    a {
+        margin-right: 20px;
+    }
+}
+
+.student-links, .assignment-links {
+    margin-bottom: 15px;
+}
+
+.stylish-input-group {
+    margin-bottom: 15px;
+}
+
+.stylish-input-group .input-group-addon{
+    background: white !important;
+}
+.stylish-input-group .form-control{
+    border-right:0;
+    box-shadow:0 0 0;
+    border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+.search-option-links {
+    text-align: center;
+}
+.or-divider {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.tab-content.report-modals {
+    padding: 10px 0;
+}
+
+.nav.alpha > li > a {
+  padding: 3px 3px;
+  margin-bottom: 10px;
+}
+.checkbox-results-container-titlebar {
+    text-align: center;
+}
+
+.report-modals .main-pagniation-block {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#tree-container {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.modal-footer.alt {
+    display: none;
+}
+
+.student-group-results, .assignment-results, .courses-results, .assessment-results, .student-results, .classes-results, .simulation-results, .affiliation-results  {
+    display: none;
+}
+
+label {
+    .label-description {
+        font-size: 11px;
+        display: block;
+
+        &.indented {
+            margin-left: 20px;
+            color: #999;
+        }
+    }
+}
+
+#cert-select {
+    display: none
+}
+
+table.checkbox-results-container {
+    margin-bottom: 15px;
+    margin-top: 0 !important;
+}
+.modal-table-wrapper {
+    min-width: 550px;
+}
+.modal-table-wrapper-lg {
+    min-width: 768px;
+}
+
+.disabled-radio {
+    color: #ddd;
+    text-align: center;
+}
+.report-tables table tr th.text-left, .report-tables table tr td.text-left {
+    text-align: left;
+}
+// PAGE HEADER =========================== //
+
+.print-logo-header {
+    text-align: center;
+    display: none;
+}
+
+.focus-pageheader {
+    .fph-cell-icon {
+        i {
+            font-size: 36px;
+            margin-top: -3px;
+        }
+
+        @media screen and (max-width: @screen-xs-max) {
+            right: 10px;
+            top: 10px;
+
+            i { font-size: 28px; }
+        }
+    }
+
+    .fph-cell-button {
+        width: 280px;
+
+        .btn-group { width: 100%; }
+
+        .btn-focus {
+            width: 50%;
+            min-width: 100px;
+            padding: 8px;
+
+            &.btn-export {
+                margin-left: -2px;
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+            }
+        }
+    }
+}
+
+// REPORT SETTINGS AREA =========================== //
+.report-settings {
+    display: block;
+    margin: 5px 0 20px 0;
+    padding: 0 0 0 10px;
+
+    h3 {
+        margin-top: 0;
+        border-bottom: 1px dotted #999;
+        padding-bottom: 10px;
+    }
+
+    ul {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 50px;
+    }
+    .checkbox-label {
+        font-weight: normal;
+    }
+}
+
+.btn.btn-default.btn-settings {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 20px;
+    background: none #eee;
+    border: none;
+    color: @theme-primary;
+}
+
+// - LAZY LOAD
+
+.btn-loading {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+
+}
+.btn-loading img {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.white-page-bg {
+    background-color: #fff;
+}
+
+.centered {
+    width: 300px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -150px;
+    text-align: center;
+}
+
+.report-tables-extra-margin {
+    margin-bottom: 30px;
+
+    .report-totals {
+
+        margin-top: 0;
+    }
+}
+
+.additional-info.no-border {
+    border: none;
+}
+
+
+// BELOW HERE THERE BE MEDIA QUERIES ==================== //
+// Media Query 767
+@media (max-width: 767px) {
+    .focus-pageheader {
+        .fph-icon i {
+            line-height: 48px;
+            font-size: 28;
+        }
+
+        .fph-cell-icon { top: 0; }
+    }
+    .focus-pageheader .fph-cell-button {
+        width: 100%;
+        padding: 0 0 15px 0;
+        margin: 0;
+    }
+}
+
+// Media Query 479
+@media (max-width: 479px) {
+    .focus-pageheader .fph-cell-icon { top: 10px; }
+
+}
+
+// Media Query Print
+@media print {
+    body { background-color: #fff; }
+
+    .print-logo-header {
+        display: inline-block;
+        float: right;
+    }
+
+    .focus {
+        border: none;
+        background-color: #fff;
+        color: #333;
+    }
+
+    .focus-promo { padding: 0; }
+
+    .focus-pageheader {
+        margin: 0 0 20px 0;
+        padding: 0;
+        border-bottom: 2px solid #000;
+
+        .fph-separator {
+            display: none;
+        }
+
+        .fph-primary {
+            h1 {
+                text-shadow: none;
+                color: #000;
+            }
+
+            padding: 10px 0 0 0;
+        }
+
+        .fph-secondary {
+            color: #000;
+            text-shadow: none;
+            padding-top: 0;
+
+            h2 {
+                background-color: #fff;
+                box-shadow: none;
+            }
+        }
+
+        .meta { color: #000; }
+
+        .fph-cell {
+            &.fph-cell-text {
+                margin: 0;
+                padding: 0;
+            }
+
+            &.fph-cell-icon {
+                display: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            &.fph-cell-button { display: none; }
+        }
+    }
+
+    .section-main { padding: 0; }
+
+    .layout { margin-top: 0; }
+
+    .body-section { box-shadow: none; }
+
+    .report-settings {
+        display: none !important;
+
+        h3 {
+            padding-bottom: 0;
+            margin-bottom: 5px;
+            border: none;
+            font-size: 18px;
+        }
+
+        ul, ul.list-unstyled {
+            li {
+                display: inline-block;
+                padding-right: 20px;
+                font-size: 11px;
+
+                &.list-subtitle { padding-right: 5px; }
+
+                h4 {
+                    margin: 0 0 0 0;
+                    padding: 0 0 0 0;
+                    font-size: 12px;
+                    font-weight: 700;
+                }
+
+                b { font-weight: 400; }
+            }
+        }
+    }
+
+    .section-box { box-shadow: none; }
+
+    .site-footer .legal .divider { border: none; margin-bottom: 0; }
+
+    .footer-band {
+        background-color: #000;
+        border-top: 5px solid #000;
+        height: 1px;
+    }
+
+    .footer-logo { margin-left: 20px; }
+
+    .btn {
+        display: none;
+
+        &.btn-default { display: none; }
+    }
+
+    .top-link { display: none; }
+
+    .print-only { display: block; }
+
+    .site-footer .logo { display: none; }
+
+
+}

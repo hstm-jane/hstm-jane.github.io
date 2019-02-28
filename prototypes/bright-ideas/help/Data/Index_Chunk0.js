@@ -1,0 +1,1 @@
+define({'Assignments':{e:{'Completing':{l:[{u:'/Content/Student/Courses/Completing_Courses.htm#kanchor1',t:'Completing Courses'}]}}},'Courses':{l:[{u:'/Content/Student/Courses/Completing_Courses.htm#kanchor1',t:'Completing Courses'},{u:'/Content/Student/Courses/Resuming_Courses.htm#kanchor2',t:'Resuming Courses'}]}});

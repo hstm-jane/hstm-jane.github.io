@@ -1,0 +1,426 @@
+// --------------------------------------------------
+// IE8 ONLY RULES
+// --------------------------------------------------
+
+html.ie8 {
+
+//
+// Headings
+// --------------------------------------------------
+
+
+    h1, h2, h3, h4, h5 {
+        // font-weight: bold !important;
+    }
+
+
+
+
+//
+// Focus Bar
+// --------------------------------------------------
+
+
+    .fph-separator {
+        height: 5px !important;
+    }
+    .fph-cell-icon {
+        // display: none !important;
+
+        .fph-icon {
+            box-shadow: none;
+
+            i {
+                display: block;
+                width: 75px;
+                height: 75px;
+                background-position: 0 0;
+                background-repeat: none;
+            }
+        }
+
+        .hs-icons-assessment {
+            background-image: url('@{imagePath}/hsicons/assessment.png');
+        }
+        .hs-icons-attachment {
+            background-image: url('@{imagePath}/hsicons/attachment.png');
+        }
+        .hs-icons-checklist {
+            background-image: url('@{imagePath}/hsicons/checklist.png');
+        }
+        .hs-icons-class-live {
+            background-image: url('@{imagePath}/hsicons/class-live.png');
+        }
+        .hs-icons-class-virtual {
+            background-image: url('@{imagePath}/hsicons/class-virtual.png');
+        }
+        .hs-icons-course {
+            background-image: url('@{imagePath}/hsicons/course.png');
+        }
+        .hs-icons-curriculum {
+            background-image: url('@{imagePath}/hsicons/curriculum.png');
+        }
+        .hs-icons-equivalent {
+            background-image: url('@{imagePath}/hsicons/equivalent.png');
+        }
+        .hs-icons-evaluation {
+            background-image: url('@{imagePath}/hsicons/evaluation.png');
+        }
+        .hs-icons-learning-event {
+            background-image: url('@{imagePath}/hsicons/learning-event.png');
+        }
+        .hs-icons-moc {
+            background-image: url('@{imagePath}/hsicons/moc.png');
+        }
+        .hs-icons-online {
+            background-image: url('@{imagePath}/hsicons/online.png');
+        }
+        .hs-icons-profile-activity {
+            background-image: url('@{imagePath}/hsicons/profile-activity.png');
+        }
+        .hs-icons-sim {
+            background-image: url('@{imagePath}/hsicons/sim.png');
+        }
+        .hs-icons-test {
+            background-image: url('@{imagePath}/hsicons/test.png');
+        }
+        .hs-icons-video {
+            background-image: url('@{imagePath}/hsicons/video.png');
+        }
+    }
+
+
+
+// Test Results
+
+    .results-header-icon {
+        vertical-align: middle;
+    }
+
+    .results-header.results-failed {
+        .results-icon-failed {
+            display: block;
+            width: 57px;
+            height: 57px;
+            background: url('@{imagePath}/fa/custom/results-header-failed.png') center center no-repeat !important;
+        }
+        .results-icon-passed {
+            display: none !important;
+        }
+    }
+    .results-header.results-passed {
+        .results-icon-passed {
+            display: block;
+            width: 57px;
+            height: 57px;
+            background: url('@{imagePath}/fa/custom/results-header-passed.png') center center no-repeat !important;
+        }
+        .results-icon-failed {
+            display: none !important;
+        }
+    }
+
+
+//
+// Catalog
+// --------------------------------------------------
+
+    .hs-item-text .fa {
+        display: block;
+        height: 20px;
+        width: 12px;
+    }
+    .cc-col-icon .fa {
+        display: inline-block;
+        height: 20px;
+        width: 12px;
+    }
+
+
+//
+// Font Awesome
+// --------------------------------------------------
+
+
+    .fa {
+        display: inline-block;
+        line-height: 1;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('@{imagePath}/fa/black-16/chevron-right.png');
+    }
+
+    .fa-fw {
+        width: (18em / 14);
+    }
+
+    .avatar .fa {
+        width: 38px;
+        height: 48px;
+        background-image: url('@{imagePath}/fa/custom/user-md-lg.png');
+    }
+    .nav-account-open .avatar .fa {
+        width: 49px;
+        height: 58px;
+    }
+    .site-header-open .avatar .fa {
+        width: 26px;
+        height: 30px;
+        background-image: url('@{imagePath}/fa/custom/user-md-sm.png');
+    }
+
+    .trigger-open-account .fa {
+        height: 25px;
+        width: 20px;
+    }
+    .trigger-open-header .fa {
+        height: 19px;
+    }
+
+    .trigger-close .fa {
+        height: 20px;
+        width: 20px;
+    }
+
+    .site-header-open .trigger-close .fa {
+        background-image: url('@{imagePath}/fa/white-16/times.png') !important;
+    }
+
+    .fph-cell-button .btn-focus .fa-chevron-right {
+        height: 20px;
+        width: 20px;
+        background-image: url('@{imagePath}/fa/white-16/chevron-right.png');
+    }
+
+    .nav-focus li.active a {
+        background: url('@{imagePath}/fa/custom/nav-focus-active.png') top center no-repeat;
+    }
+
+    .nav-mobile a .fa {
+        width: 20px;
+        height: 19px;
+        background: url('@{imagePath}/fa/white-16/bars.png') top center no-repeat;
+        margin-top: 3px;
+    }
+
+    .btn .fa {
+        height: 20px;
+        width: 12px;
+        margin-bottom: -5px;
+    }
+
+    .btn-sm .fa {
+        height: 13px;
+        width: 12px;
+        margin-bottom: -2px;
+    }
+
+    .btn-lg .fa {
+        height: 24px;
+        width: 20px;
+        margin-bottom: -2px;
+    }
+
+    .input-group-addon .fa {
+        height: 20px;
+        width: 22px;
+        margin-bottom: -5px;
+    }
+
+    .input-group-btn .fa {
+        width: 22px;
+    }
+
+    .modal-header .close .fa {
+        display: inline-block;
+        line-height: 1;
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-proto > a:hover .fa {
+        display: block;
+        height: 25px;
+        width: 20px;
+        margin: 0;
+
+        &.fa-bug {
+            background-image: url('@{imagePath}/fa/white-16/bug.png');
+        }
+        &.fa-sitemap {
+            background-image: url('@{imagePath}/fa/white-16/sitemap.png');
+        }
+    }
+
+    .collapse-toggle .fa {
+        height: 8px;
+        width: 12px;
+        margin-left: 3px;
+    }
+
+    #startTour .fa {
+        width: 20px !important;
+    }
+
+    .popover.tour .popover-close .fa {
+        width: 20px;
+        height: 30px;
+        background-image: url('@{imagePath}/fa/white-16/times.png');
+    }
+
+    .slat-modal .btn-sm .fa {
+        height: 30px;
+        width: 30px;
+    }
+
+    .bootstrap-timepicker-widget .fa {
+        height: 20px;
+        width: 22px;
+    }
+
+    .fa.additional-ratings__tab-icon {
+        display: none;
+    }
+
+    @media (max-width: 766px) {
+        .slat .btn-sm .fa,
+        .ag-col-actions .btn-sm .fa {
+            height: 30px;
+            width: 30px;
+        }
+    }
+
+    // dark, in alphabetical order
+
+    .fa-angle-down {
+        background-image: url('@{imagePath}/fa/black-16/angle-down.png');
+    }
+    .fa-bars {
+        background-image: url('@{imagePath}/fa/black-16/bars.png');
+    }
+    .fa-calendar {
+        background-image: url('@{imagePath}/fa/black-16/calendar.png');
+    }
+    .fa-caret-down {
+        background-image: url('@{imagePath}/fa/black-16/caret-down.png');
+    }
+    .fa-caret-up {
+        background-image: url('@{imagePath}/fa/black-16/caret-up.png');
+    }
+    .fa-clock-o {
+        background-image: url('@{imagePath}/fa/black-16/clock-o.png');
+    }
+    .fa-chevron-down {
+        background-image: url('@{imagePath}/fa/black-16/chevron-down.png');
+    }
+    .fa-chevron-left {
+        background-image: url('@{imagePath}/fa/black-16/chevron-left.png');
+    }
+    .fa-chevron-right {
+        background-image: url('@{imagePath}/fa/black-16/chevron-right.png');
+    }
+    .fa-chevron-up {
+        background-image: url('@{imagePath}/fa/black-16/chevron-up.png');
+    }
+    .fa-cog {
+        background-image: url('@{imagePath}/fa/black-16/times.png');
+    }
+    .fa-download {
+        background-image: url('@{imagePath}/fa/black-16/download.png');
+    }
+    .fa-info {
+        background-image: url('@{imagePath}/fa/black-16/info.png');
+    }
+    .fa-filter {
+        background-image: url('@{imagePath}/fa/black-16/filter.png');
+    }
+    .fa-lock {
+        background-image: url('@{imagePath}/fa/black-16/lock.png');
+    }
+    .fa-map-marker {
+        background-image: url('@{imagePath}/fa/black-16/map-marker.png');
+    }
+    .fa-pencil {
+        background-image: url('@{imagePath}/fa/black-16/pencil.png');
+    }
+    .fa-plus {
+        background-image: url('@{imagePath}/fa/black-16/plus.png');
+    }
+    .fa-print {
+        background-image: url('@{imagePath}/fa/black-16/print.png');
+    }
+    .fa-search {
+        background-image: url('@{imagePath}/fa/black-16/search.png');
+    }
+    .fa-sort {
+        background-image: url('@{imagePath}/fa/black-16/sort.png');
+    }
+    .fa-times {
+        background-image: url('@{imagePath}/fa/black-16/times.png');
+    }
+
+
+    // light
+
+    .gritter-close .fa {
+        width: 30px;
+        height: 30px;
+
+        &.fa-times {
+            background-image: url('@{imagePath}/fa/white-16/times.png');
+        }
+    }
+
+
+    .btn-success,
+    .btn-danger,
+    .btn-info,
+    .checklist-score {
+        .fa-car {
+            background-image: url('@{imagePath}/fa/white-16/car.png');
+        }
+        .fa-caret-down {
+            background-image: url('@{imagePath}/fa/white-16/caret-down.png');
+        }
+        .fa-caret-up {
+            background-image: url('@{imagePath}/fa/white-16/caret-up.png');
+        }
+        .fa-check {
+            background-image: url('@{imagePath}/fa/white-16/check.png');
+        }
+        .fa-chevron-left {
+            background-image: url('@{imagePath}/fa/white-16/chevron-left.png');
+        }
+        .fa-chevron-right {
+            background-image: url('@{imagePath}/fa/white-16/chevron-right.png');
+        }
+        .fa-chevron-up {
+            background-image: url('@{imagePath}/fa/white-16/chevron-up.png');
+        }
+        .fa-chevron-down {
+            background-image: url('@{imagePath}/fa/white-16/chevron-down.png');
+        }
+        .fa-times {
+            background-image: url('@{imagePath}/fa/white-16/times.png');
+        }
+
+    }
+
+    .slat-select2-action .success.fa.fa-check {
+        background-image: url('@{imagePath}/fa/white-16/check.png') !important;
+    }
+    .slat-select2-action .danger.fa.fa-times {
+        background-image: url('@{imagePath}/fa/white-16/times.png') !important;
+    }
+
+    .tag .fa.fa-times {
+        display: block;
+        width: 8px;
+        height: 10px;
+        background-image: url('@{imagePath}/fa/white-16/times.png');
+    }
+
+
+// close the html.ie8 tag
+
+}

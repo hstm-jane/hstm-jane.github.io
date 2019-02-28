@@ -1,0 +1,97 @@
+<div class="assessment-header">
+    <div class="assessment-return">
+        <a href="assessment-overview.php"><i class="fa fa-fw fa-chevron-left"></i>Return to Rater Overview</a>
+    </div>
+</div>
+
+ <section class="section assessment-action-section" id="jump-signoff">
+    <h3>
+    <img src="/content/images/hourglass.png"/>
+    Waiting for Employee Sign Off</h3>
+    <p>You cannot proceed until the Employee has signed off on their ratings.</p>
+    <button class="btn btn-default">Return</button>
+</section>
+
+<section class="section page-header">
+   
+   <!--Assessment Title and Subtitle-->
+    <h2 >{assessmentTitle}
+    <!-- <a  class="btn btn-success btn-lg pull-right " href="#"  >Print </a> -->
+        <span class="assessment-subtitle">
+            {assessmentAverage}
+            {assessmentApprovalHistory}
+        </span>
+    </h2>
+    <!--/Assessment Title and Subtitle-->
+    
+    <!--Meta Boxes-->
+    <div class="meta-box">
+        <div class="mb-table">
+            <div class="mb-row">
+                <div class="mb-cell" data-equalize="mb-cell">
+                    <div style="float:left;margin-right:10px;">
+                        <div class="fph-icon" style="overflow:hidden;"><img src="/content/images/avatar.jpg" width="100%" height="100%"></div>
+                    </div>
+                    <div>
+                        <span class="meta-box-label">Employee</span>
+                        <span class="meta-box-value">{EmployeeName}</span> 
+                    </div>
+                </div>
+                <div class="mb-cell" data-equalize="mb-cell">
+                    <div style="float:left;margin-right:10px;">
+                        <div class="fph-icon" style="overflow:hidden;">
+                        <img src="/content/images/prototype-actors/allisongrayce.jpg" width="100%" height="100%">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="meta-box-label">Rater</span>
+                        <span class="meta-box-value">{RaterName}</span>
+                    </div>
+                </div>
+                <div class="mb-cell equalized">
+                    <span class="meta-box-label">State</span> 
+                    <span class="meta-box-value">{State}</span> 
+                </div>
+                <div class="mb-cell equalized">
+                    <span class="meta-box-label"> Due</span> 
+                    <span class="meta-box-value">{DueDate}</span>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/Meta Boxes-->
+
+    <!--Assessment Description-->
+    <div class="assessment-description">
+        <h4>Description</h4>
+        <p>{description}</p>
+    </div>
+    <!--/Assessment Description-->
+
+    <!--Assessment Instructions-->
+    <div class="assessment-instructions">
+        <div class="assessment-instructions__header">
+            <h4>
+                Instructions
+            </h4>
+        </div>
+        <div id="assessment-instructions-body" class="collapse-group in">
+            <div class="assessment-instructions__content">
+                For this evaluation, please consider employee performance from March 1st, 2012 through February 28th, 2013.
+                <br><br>
+                <b>Employees:</b> If your manager requests a self-evaluation, please complete all sections of the self-assessment as soon as possible after receiving the assignment. You must select Submit after you have finalized your ratings.
+                <Br><b>Peers:</b> If a manager requests you rate another employee, please complete the peer evaluation as soon as possible after receiving the assignment. You are not required to complete the entire assessment. Complete only the areas where you have experience with the employee.
+                <Br><b>Manager:</b> Please complete all sections of your employee’s assessment and select Submit when you have finalized your ratings. Please assure the employee and peers (if applicable) have completed their ratings prior to submitting the assessment. After approval from your manager (if required), you may review the assessment with your employee. After the employee review, please sign off the assessment with the employee to complete your responsibilities. Note: For certain overall assessment ratings, you will be required to configure a Reflective Plan before sign off.
+            </div>
+        </div>
+        <a href="#assessment-instructions-body"  class="assessment-instructions__toggle collapse-toggle" data-toggle-text="Show instructions|Hide instructions">Hide instructions</a>
+    </div> 
+    <!--/Assessment Instructions-->
+
+
+</section>
+{sections}
+<section class="section"><hr></section>
+<section class="section">
+    <a href="#jump-signoff" class="btn btn-default">Return to Top</a>
+</section>

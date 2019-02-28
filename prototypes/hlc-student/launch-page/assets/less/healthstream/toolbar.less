@@ -1,0 +1,207 @@
+.toolbar {
+    .clearfix();
+    text-align: center;
+    margin: 20px 0;
+
+    .form-group {
+        margin: 0;
+    }
+
+    &.toolbar-sm {
+        .toolbar-actions a,
+        .toolbar-pagination li a {
+            &:extend(.btn-sm all);
+        }
+    }
+
+    .toolbar-actions {
+        display: inline-block;
+        margin-right: 10px;
+        > ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            display: inline-block;
+        }
+        a {
+            text-decoration: none;
+            &:extend(.btn all, .btn-default all);
+
+            &.danger {
+                &:extend(.btn-danger all);
+            }
+            &.success {
+                &:extend(.btn-success all);
+            }
+        }
+
+    }
+    .toolbar-rows {
+        display: inline-block;
+        > span {
+            position: relative;
+            > a {
+                text-decoration: none;
+                &:extend(.btn all, .btn-default all);
+            }
+        }
+        .dropdown-menu {
+            left: auto;
+            right: 0;
+            text-align: left;
+        }
+    }
+    .toolbar-pagination {
+        display: inline-block;
+        margin-left: 10px;
+        > ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 0;
+            white-space: nowrap;
+            margin-left: 4px;
+        }
+        li {
+            display: inline-block;
+            margin-left: -5px;
+            a {
+                &:extend(.btn all, .btn-default all);
+                border-radius: 0;
+                position: relative;
+
+                &:hover,
+                &:active {
+                  z-index: 2;
+                }
+            }
+        }
+        li:first-child a {
+            .border-left-radius(@border-radius-base);
+        }
+        li:last-child a {
+            .border-right-radius(@border-radius-base);
+        }
+
+        li.active a {
+            background: @theme-primary;
+            color: #fff;
+            text-shadow: none;
+            border-color: @theme-primary;
+            &:hover,
+            &:active {
+                z-index: 0;
+                cursor: default;
+            }
+        }
+        li.disabled a {
+            background: @theme-neutral-2;
+            color: @theme-neutral-5;
+            &:hover,
+            &:active {
+                border-color: @btn-default-border;
+                cursor: not-allowed;
+                z-index: 0;
+            }
+        }
+
+    }
+
+    &.toolbar-sm {
+        .toolbar-actions a,
+        .toolbar-rows > span > a {
+            &:extend(.btn-sm all);
+        }
+        .toolbar-pagination li {
+            a {
+                &:extend(.btn-sm all);
+                border-radius: 0;
+            }
+            &:first-child a {
+                .border-left-radius(@border-radius-base);
+            }
+            &:last-child a {
+                .border-right-radius(@border-radius-base);
+            }
+        }
+    }
+    &.toolbar-lg {
+        .toolbar-actions a,
+        .toolbar-rows > span > a {
+            &:extend(.btn-lg all);
+        }
+        .toolbar-pagination li {
+            a {
+                &:extend(.btn-lg all);
+                border-radius: 0;
+            }
+            &:first-child a {
+                .border-left-radius(@border-radius-base);
+            }
+            &:last-child a {
+                .border-right-radius(@border-radius-base);
+            }
+        }
+    }
+
+    &.toolbar-bottom {
+        .toolbar-rows .dropdown-menu {
+            top: auto;
+            bottom: 100%;
+            margin-bottom: 1px;
+        }
+    }
+    &.toolbar-top {
+        .toolbar-rows .dropdown-menu {
+            top: 100%;
+            bottom: auto;
+            margin-top: 1px;
+        }
+    }
+    &.toolbar-paging {
+        .toolbar-pagination li {
+            display: none;
+            &.previous,
+            &.next {
+                display: inline-block;
+            }
+        }
+    }
+    &.toolbar-left {
+        text-align: left;
+    }
+    &.toolbar-right {
+        text-align: right;
+    }
+    &.toolbar-justified {
+        text-align: right;
+        .toolbar-actions {
+            float: left;
+        }
+
+    }
+
+    @media (max-width: @screen-xs-max) {
+        &.toolbar-left,
+        &.toolbar-right,
+        &.toolbar-justified {
+            text-align: center;
+            .toolbar-actions {
+                float: none;
+            }
+        }
+        .form-group {
+            margin: 0 5px 15px;
+        }
+        &.toolbar-paging-sm {
+            .toolbar-pagination li {
+                display: none;
+                &.previous,
+                &.next {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

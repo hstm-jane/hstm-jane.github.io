@@ -1,0 +1,159 @@
+    .pp-status-btns {
+        margin-top: 0.38em;
+    }
+
+    .a-select {
+        color: green;
+    }
+
+    .total-field {
+        padding: 6px 12px;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1;
+        color: #555;
+        text-align: center;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        border-left: 0px;
+        height: 34px;
+    }
+
+    .fa-green {
+        color: @theme-success;
+    }
+
+    .fa-red {
+        color: @theme-danger;
+        ;
+    }
+
+    .fa-blue {
+        color: #006385;
+    }
+
+    .btn:focus {
+        outline: none;
+    }
+
+    .hidden-print {
+        overflow-y: hidden;
+    }
+
+    .find-stu-row {
+        margin-top: 2em;
+    }
+
+    .no-show-btn.active,
+    .no-show-btn:active {
+        background-color: #666;
+        color: white;
+    }
+
+    .grading-actions {
+        &.btn-group {
+            white-space: nowrap;
+        }
+        &.btn-group>.btn {
+            float: none;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+    }
+
+    .grading-actions .numeric-grade-actions {
+        width: 175px;
+        .numeric-grade-input {
+            width: 60px;
+            padding-right: 25px;
+        }
+        .status-icon {
+            margin: auto 5px;
+            height: 20px;
+            position: absolute;
+            right: 0;
+            top: 5px;
+            width: 1px;
+            background-repeat: no-repeat;
+        }
+        .status-icon.fa-times-circle {
+            color: @theme-danger;
+        }
+        .status-icon.fa-check-circle {
+            color: @theme-success;
+        }
+        &.passing-value {
+            .numeric-grade-input {
+                color: @theme-success;
+            }
+            .status-icon {
+                background-image: url("@{imagePath}/qa-sprite.png");
+                background-position: 0 -120px;
+                width: 20px;
+            }
+        }
+        &.failing-value {
+            .numeric-grade-input {
+                color: @theme-danger;
+            }
+            .status-icon {
+                background-image: url("@{imagePath}/qa-sprite.png");
+                background-position: 0 -150px;
+                width: 20px;
+            }
+        }
+    }
+
+    #passingGrade {
+        margin-top: 0;
+        text-align: right;
+    }
+
+    .mobile-actions {
+        &.numeric-grade-actions {
+            width: 85px;
+            .numeric-grade-input {
+                width: 40px;
+                padding-right: 0
+            }
+        }
+        &.pass-fail-actions,
+        &.attendance-actions {
+            width: 85px;
+            text-align: right;
+            .mobile-grade-view {
+                width: 35px;
+                display: inline-block;
+                margin-right: 5px;
+                margin-top: 3px;
+                span {
+                    background-color: #666;
+                    padding: 5px;
+                    border-radius: 5px;
+                    margin-top: 5px;
+                    color: white;
+                    font-weight: 600;
+                    display: none;
+                    position: relative;
+                    top: 3px;
+                }
+            }
+            .dropdown-menu {
+                text-align: left;
+            }
+        }
+    }
+
+    .passing-value {
+        .numeric-grade-input {
+            color: @theme-success;
+        }
+    }
+
+    .failing-value {
+        .numeric-grade-input {
+            color: @theme-danger;
+        }
+    }

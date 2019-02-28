@@ -1,0 +1,106 @@
+<nav class="nav-focus">
+    <div class="nav-mobile">
+        <span><i class="fa fa-caret-down"></i><span>Ratings</span></span> <a href="#nav-main" class="toggle"><i class="fa fa-bars"></i></a></div>
+    <ul class="nav">
+        <li class="active"><a href="#tab-1"><i class="fa fa-caret-down"></i>Ratings</a></li>
+        <li><a href="#tab-2"><i class="fa fa-caret-down"></i>Approval Activity</a></li>
+    </ul>
+</nav>
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="tab-1">
+        {assessment}
+    </div>
+    <div class="tab-pane fade" id="tab-2">
+        <h2>Approval Activity</h2>
+
+        <div class="slat">
+            <div class="slat-default">
+                <div class="title">HR Approver</div>
+                <ul class="meta">
+                    <li><span class="meta-label">Role:</span><span class="meta-value">HR Approver</span></li>
+                    <li><span class="meta-label">Status:</span><span class="meta-value">Pending</span></li>
+                </ul>
+                <div class="status status-pending"></div>
+            </div>
+        </div>
+
+        <div class="slat">
+            <div class="slat-default">
+                <div class="title">Smith, Carolyn D.</div>
+                <ul class="meta">
+                    <li><span class="meta-label">Role:</span><span class="meta-value">Education Approver</span></li>
+                    <li><span class="meta-label">Status:</span><span class="meta-value">Approved</span></li>
+                    <li class="meta-callout"><span class="meta-label">Date: </span><span class="meta-value">{date-1}</span></li>
+                </ul>
+                <div class="status status-accepted"></div>
+            </div>
+        </div>
+
+        <div class="slat">
+            <div class="slat-default">
+                <div class="title">Delta, Meredith S.</div>
+                <ul class="meta">
+                    <li><span class="meta-label">Role:</span><span class="meta-value">Manager Level 3</span></li>
+                    <li><span class="meta-label">Status:</span><span class="meta-value">Approved</span></li>
+                    <li class="meta-callout"><span class="meta-label">Date: </span><span class="meta-value">{date-2}</span></li>
+                </ul>
+                <div class="status status-success"></div>
+            </div>
+        </div>
+
+        <div class="slat">
+            <div class="slat-default">
+                <div class="title">Barker, Aaron L.</div>
+                <ul class="meta">
+                    <li><span class="meta-label">Role:</span><span class="meta-value">Manager Level 2</span></li>
+                    <li><span class="meta-label">Status:</span><span class="meta-value">Approved</span></li>
+                    <li class="meta-callout"><span class="meta-label">Date: </span><span class="meta-value">{date-3}</span></li>
+                </ul>
+                <div class="status status-success"></div>
+            </div>
+        </div>
+
+        <div class="slat">
+            <div class="slat-default">
+                <div class="title">Peeples, Misty R.</div>
+                <ul class="meta">
+                    <li><span class="meta-label">Role:</span><span class="meta-value">Manager Level 1</span></li>
+                    <li><span class="meta-label">Status:</span><span class="meta-value">Approved</span></li>
+                    <li class="meta-callout"><span class="meta-label">Date: </span><span class="meta-value">{date-4}</span></li>
+                </ul>
+                <div class="status status-success"></div>
+            </div>
+            <div class="slat-nested">
+                <div class="collapse-group collapse">
+                    <section class="section">
+                        <h5>Comments</h5>
+                        <p>Thank you, approved</p>
+                    </section>
+                </div>
+                <a href="#" class="collapse-toggle" data-toggle-text="Show Comments|Hide Comments">Show Comments</a>
+            </div>
+        </div>
+
+        <div class="slat">
+            <div class="slat-default">
+                <div class="title">Peeples, Misty R.</div>
+                <ul class="meta">
+                    <li><span class="meta-label">Role:</span><span class="meta-value">Manager Level 1</span></li>
+                    <li><span class="meta-label">Status:</span><span class="meta-value">Rejected</span></li>
+                    <li class="meta-callout"><span class="meta-label">Date: </span><span class="meta-value">{date-5}</span></li>
+                </ul>
+                <div class="status status-fail"></div>
+            </div>
+            <div class="slat-nested">
+                <div class="collapse-group collapse">
+                    <section class="section">
+                        <h5>Comments</h5>
+                        <p>More details please. She had a large jump in multiple areas.</p>
+                    </section>
+                </div>
+                <a href="#" class="collapse-toggle" data-toggle-text="Show Comments|Hide Comments">Show Comments</a>
+            </div>
+        </div>
+
+    </div>
+</div>

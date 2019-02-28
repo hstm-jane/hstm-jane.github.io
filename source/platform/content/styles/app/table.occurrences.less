@@ -1,0 +1,86 @@
+/*********** table.occurrences.less **********/
+
+.table-dropdown{
+    height: 24px;
+}
+.instructor-label {
+    background-color: grey;
+    display: inline-block;
+    padding: 3px 4px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 10px;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: 3px;
+    border: none;
+}
+.rth-table .rth-resource .title{
+    color: #0099cc;
+}
+.table-responsive{
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+}
+
+.table-responsive>.fixed-column {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+
+}
+@media(max-width:768px) {
+    .table-responsive>.fixed-column {
+        display: none;
+    }
+}
+.all-occurrences-table {
+    
+    background-color: #eeeeee;
+    margin-bottom: 0px;
+}   
+.all-occurrences-table  .resource-title {
+    color: #0099cc;
+    
+}
+.all-occurrences-table .all-occurrences-body .occurrences-row td{
+    border: 1px solid #fff;
+    border-top: none;
+    font-size: 12px;
+
+}
+.all-occurrences-table .all-occurrences-body .occurrences-row .resource-title{
+
+    border-right:1px solid #868686;
+}
+.all-occurrences-dates{
+    border: 1px solid #fff;
+
+}
+.all-occurrences-dates .all-occurrences-date{
+    border: 1px solid #fff;
+    border-bottom: none !important;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: bottom;
+}
+.all-occurrences-dates .all-occurrences-blank-date{
+    border-color: #999999;
+    border-right: 1px solid #868686;
+    border-bottom: none !important;
+    padding-left: .75em;
+    font-weight: 600;
+    font-size: 12px;
+    vertical-align: bottom;
+
+}
+.all-occurrences-dates th{
+    background-color: #dddddd;
+}
+table.all-occurrences-table th:last-child, table.table-bordered td:last-child {
+    border-right-width: 1px;
+}

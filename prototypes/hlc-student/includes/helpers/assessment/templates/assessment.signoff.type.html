@@ -1,0 +1,147 @@
+<!--Return Link-->
+<div class="assessment-header">
+    <div class="assessment-return">
+        <a href="assessment.php?assessment=competency-7&user=rater&state=1">
+            <i class="fa fa-fw fa-chevron-left"></i>
+            Return to Assessment Summary
+        </a> 
+    </div>
+</div>
+
+
+
+<section class="section page-header">
+    <h2> Sign Off</h2>
+    <div class="form-group">
+        <ul class="list-unstyled">
+            <li><label class="radio"><input type="radio" name="signoff-type" value="together" checked> <strong>Together:</strong> all parties are available to sign off together</label></li>
+            <li><label class="radio"><input type="radio" name="signoff-type" value="remote-1"> <strong>Remote with Employee Sign Off:</strong> all parties are not available to sign off together</label></li>
+            <li><label class="radio"><input type="radio" name="signoff-type" value="remote-2"> <strong>Remote without Employee Sign Off:</strong> Rater/Manager will perform all duties</label></li>
+        </ul>
+    </div>
+</section>
+<div class="tab-content">
+    <div class="tab-pane signoff-type active signoff-type-together" id="signoff-type-together">
+        <form class="validate">
+            <div class="row">
+                <div class="col-md-6">
+                    <section class="section">
+                        <h3>Rater</h3>
+                        <div class="form-group">
+                            <label class="control-label">User ID</label>
+                            <input type="text" class="form-control">
+                            <span class="help-block">Required</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Password</label>
+                            <input type="text" class="form-control">
+                            <span class="help-block">Required</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Comments <small>Optional</small></label>
+                            <textarea class="form-control"></textarea>
+                            <span class="help-block">Required</span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-info">
+                        <h4>REQUIRED: Employee or Witness Sign Off</h4>
+                        <p>Either the Employee's or a Witness's user ID and password are required to complete the Assessment sign off. If a Witness signs-off, the Witness will be required to document Comments to indicate the reason for the Witness sign off and any other important information.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <section class="section">
+                        <div class="form-group">
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-default active">
+                                    <input type="radio" name="participant-type" value="employee" checked> Employee
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="participant-type" value="witness"> Witness
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="tab-pane participant-type active participant-type-employee" id="participant-type-employee">
+                                <h3>Employee</h3>
+                                <div class="form-group">
+                                    <label class="control-label">User ID:</label>
+                                    <input type="text" class="form-control">
+                                    <span class="help-block">Required</span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Password</label>
+                                    <input type="text" class="form-control">
+                                    <span class="help-block">Required</span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Comments <small>Optional</small></label>
+                                    <textarea class="form-control"></textarea>
+                                    <span class="help-block">Required</span>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane participant-type participant-type-witness" id="participant-type-witness">
+                                <h3>Witness</h3>
+                                <div class="form-group">
+                                    <label class="control-label">User ID:</label>
+                                    <input type="text" class="form-control">
+                                    <span class="help-block">Required</span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Password</label>
+                                    <input type="text" class="form-control">
+                                    <span class="help-block">Required</span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Comments</label>
+                                    <textarea class="form-control"></textarea>
+                                    <span class="help-block">Required</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <a href="#" class="btn btn-success js-signoff">Sign Off</a>
+                            <a href="#" class="btn btn-success js-signoff">Sign Off and Print</a>
+                            <a href="{back}" class="btn btn-default">Cancel</a>
+                        </div>
+                    </section>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="tab-pane signoff-type" id="signoff-type-remote-1">
+        <div class="alert alert-info">
+            <p>Please click Continue Sign Off below to allow the employee to sign off on this Assessment.</p>
+        </div>
+        <div class="form-actions">
+            <a href="#" class="btn btn-success js-signoff-remote">Continue Sign Off</a>
+            <a href="{back}" class="btn btn-default">Cancel</a>
+        </div>
+    </div>
+    <div class="tab-pane signoff-type" id="signoff-type-remote-2">
+        <form class="validate">
+            <div class="alert alert-info">
+                <p>Please click Sign Off below to complete your responsibilities for this Assessment.</p>
+                <p>When you click Sign Off below, you will no longer be able to make changes to this Assessment.</p>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Comments</label>
+                <textarea class="form-control"></textarea>
+                <span class="help-block">Required</span>
+            </div>
+            <div class="form-actions">
+                <a href="#" class="btn btn-success js-signoff">Sign Off</a>
+                <a href="#" class="btn btn-success js-signoff">Sign Off and Print</a>
+                <a href="{back}" class="btn btn-default">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

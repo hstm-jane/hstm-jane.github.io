@@ -1,0 +1,280 @@
+<?php
+
+include "includes/helpers/helpers.php";
+
+
+$patterns['start']['title'] = 'Assessment Results by User';
+$patterns['focus']['title'] = 'Assessment Results by User';
+
+$patterns['header'];
+$patterns['search']['filters'] = array(
+	array(
+		'visible' => 'mobile',
+		'header' => 'Sort',
+		'controls' => array(
+			'<select class="form-control js-select2"><option>Name</option><option>ID</option><option>Department</option></select>',
+		),
+	),
+	array(
+		"state" => 'open', // static / open / closed
+		"header" => 'Name',
+		"controls" => array(
+			'<label class="control-label">First Name</label><input type="text" class="form-control" placeholder="">',
+			'<label class="control-label">Middle Name</label><input type="text" class="form-control" placeholder="">',
+			'<label class="control-label">Last Name</label><input type="text" class="form-control" placeholder="">',
+
+		),
+	),
+	array(
+		"state" => 'open', // static / open / closed
+		"header" => 'Account',
+		"controls" => array(
+			'<label class="control-label">Username</label><input type="text" class="form-control" placeholder="">',
+			'<label class="control-label">Affiliation</label>
+                            <select class="form-control js-affiliation-select" >
+                            <option></option>
+                                  <option value="1">Arkham Asylum </option>
+                                  <option value="2">All Saints Hospital</option>
+                                  <option value="3">Brookhaven Hospital</option>
+                                  <option value="4">Chicago Hope</option>
+                                  <option value="5">Holby City Hospital</option>
+                                  <option value="6">James Rivers Hospital </option>
+                                  <option value="7">Kingdom Hospital</option>
+                                  <option value="8">Mayfield Psychiatric Hospital</option>
+                                  <option value="9">New Bedlam Rest Home for the Emotionally Interesting</option>
+                                  <option value="10">Princeton-Plainsboro Teaching Hospital</option>
+                                  <option value="11"> Richmond Trinity Hospital</option>
+                                  <option value="12">Sacred Heart Hospital </option>
+                                  <option value="13">Shady Acres Mental Hospital</option>
+                                  <option value="14">Springfield General Hospital </option>
+                              </select>',
+			'<label class="control-label">Department(s) </label>
+
+                                    <select class="form-control js-department-select  data-placeholder="Type 1 to see slats" >
+                                    <option></option>
+                                    <option value="1">
+                                            This is a really long department name that could show up here.
+                                        </option>
+                                        <option value="1">
+                                            Admissions
+                                        </option>
+                                        <option value="2">
+                                            Anesthetics
+                                        </option>
+                                        <option value="3">
+                                            Cardiology
+                                        </option>
+                                        <option value="4">
+                                            Critical Care
+                                        </option>
+                                        <option value="5">
+                                            Diagnostic Imaging
+                                        </option>
+                                        <option value="6">
+                                            General Surgery
+                                        </option>
+                                        <option value="7">
+                                            Gynecology
+                                        </option>
+                                        <option>
+                                            Haematology
+                                        </option>
+                                        <option>
+                                            Human Resources
+                                        </option>
+                                        <option>
+                                            Neonatal
+                                        </option>
+                                        <option>
+                                            Neurology
+                                        </option>
+                                        <option value="8">
+                                            Radiology
+                                        </option>
+                                        <option value="9">
+                                            Labor and Delivery
+                                        </option>
+                                        <option value="10">
+                                            Obstetrics
+                                        </option>
+                                    </select>',
+		),
+	),
+
+);
+?>
+
+
+
+
+<?=createSiteStart($patterns['start']);?>
+<?=createHeader($patterns['header']);?>
+<?=createFocus($patterns['focus']);?>
+
+<div class="layout layout-search">
+  <div class="container">
+    <section class="section section-main section-box">
+      <div class="row">
+          <div class="col-md-3 hidden-xs hidden-sm">
+              <section class="section section-filters" data-equalize="layout-columns">
+              <h2>Refine</h2>
+              <?=createSearch($patterns['search']);?>
+              <div class="search-filter">
+              <button class="btn btn-default ">Apply Filters</button>
+              </div>
+              </section>
+          </div>
+          <!--/column-->
+          <div class="col-md-9">
+              <section class="section section-results">
+                  <section class="section section-results-header">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h2>View Results by User <small>Showing 1-50 of 300</small></h2>
+
+                      </div>
+                      <div class="col-md-6 hidden-xs hidden-sm">
+                        <div class="section-results-header-sort">
+                          <div class="dropdown">
+                            <a class="btn btn-default" data-toggle="dropdown" href="#">Sort: Name <i class="fa fa-sort"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                              <li class="active"><a href="#">Name A - Z</a></li>
+                              <li><a href="#">Name Z - A</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="section">
+                      <?php
+
+    for ($x = 0; $x <= 50; $x++) {
+      sort($actors);
+      if ($actors[$x] == "Augustus, Daren"){
+        $slat = array(
+        'title' => '<a href="user-edit.php">'. $actors[$x] . '</a>',
+        'meta' => array(
+
+          array(
+            'label' => 'Username:',
+            'value' => 'user12' . $x ,
+
+          ),
+        ),
+        'action' => array(
+          'type' => 'action-single',
+          'content' => 'View Results <i class="fa fa-plus visible-xs"></i>',
+          'link' => '#pathway-modal',
+        ),
+      );
+
+echo createSlat($slat);
+
+      }
+
+      else{
+
+      $slat = array(
+      	'title' => '<a href="user-edit.php">'. $actors[$x] . '</a>',
+      	'meta' => array(
+
+      		array(
+      			'label' => 'Username:',
+      			'value' => 'user12' . $x ,
+
+      		),
+      	),
+      	'action' => array(
+      		'type' => 'action-single',
+      		'content' => 'View Results <i class="fa fa-plus visible-xs"></i>',
+      		'link' => '/jon-doe-results.php',
+      	),
+      );
+
+echo createSlat($slat);
+}
+
+}
+
+?>
+                  </section>
+                <?php
+$stickybar = array(
+  'sets' => array(
+
+    array(
+      'position' => 'right',
+      'classes' => array('hidden-xs', 'hidden-sm'),
+      'html' => '
+                                                <label class="stickybar-text">Showing 51 - 100 of 3000</label>
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-default"><i class="fa fa-chevron-left"></i></a>
+                                                <a href="#" class="btn btn-default"><i class="fa fa-chevron-right"></i></a>
+                                            </div>
+                                        ',
+    ),
+
+  ),
+);
+echo createStickybar($stickybar);
+?>
+              </section>
+              <!-- /section-main -->
+          </div>
+          <!-- /column -->
+      </div>
+      <!-- /row -->
+    </section>
+  </div>
+<!-- /container -->
+</div>
+
+
+ <div id="modal-refine" class="modal fade" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+            <h4 class="modal-title">Refine Results</h4>
+          </div>
+          <div class="modal-body">
+            <section class="section section-refinement-options">
+
+                <?=createSearch($patterns['search']);?>
+
+
+            </section>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" data-dismiss="modal">Apply</button>
+            <button class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- /modal -->
+
+
+
+  <?=createFooter($patterns['footer']);?>
+  <?=createPrototypeNav();?>
+  <?=createSiteScripts();?>
+<script>
+       $(document).on('click', '.search-filter__toggle', function() {
+                $(this).closest('.search-filter').toggleClass('search-filter--closed');
+                $(window).resize();
+          });
+
+               $(".js-affiliation-select").select2({
+                  placeholder: "Select an Affiliation",
+                  allowClear: true
+            });
+        $(".js-department-select").select2({
+                placeholder: "Select a Department",
+                allowClear: true
+            });
+
+</script>
+<?=createSiteEnd();?>

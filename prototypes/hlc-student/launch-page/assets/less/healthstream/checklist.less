@@ -1,0 +1,136 @@
+.checklist-item {
+    display: table;
+    width: 100%;
+    background: @theme-neutral-1;
+    border: 1px solid rgba(0,0,0,.05);
+    border-left: 3px solid @theme-neutral-5;
+
+    & + .checklist-item {
+        margin-top: 5px;
+    }
+
+    &:nth-child(2n+1) {
+        background: @theme-neutral-3;
+    }
+}
+.checklist-row {
+    display: table-row;
+}
+.checklist-col {
+    display: table-cell;
+    padding: 10px;
+}
+.checklist-number {
+    width: 20px;
+    padding-right: 0;
+    span {
+        display: inline-block;
+        background: @theme-neutral-6;
+        .square(20px);
+        text-align: center;
+        border-radius: 50%;
+        font-size: 11px;
+        line-height: 20px;
+        color: #fff;
+    }
+}
+.checklist-description {
+    width: 100%;
+    word-break: break-word;
+}
+.checklist-actions {
+    vertical-align: middle;
+    text-align: right;
+    white-space: nowrap;
+
+    .btn {
+        outline: none;
+    }
+}
+.checklist-score {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 15px;
+    border-left: 1px dashed @theme-neutral-5;
+
+    i {
+        font-size: 18px;
+        .square(30px);
+        line-height: 30px;
+        border-radius: 50%;
+        background: @theme-neutral-5;
+        color: #fff;
+    }
+    span {
+        display: block;
+        margin-top: 2px;
+        font-weight: 600;
+    }
+
+    &.checklist-score-pass {
+        i {
+            background-color: @theme-pass;
+        }
+        span {
+            color: @theme-pass;
+        }
+    }
+    &.checklist-score-fail {
+        i {
+            background-color: @theme-fail;
+        }
+        span {
+            color: @theme-fail;
+        }
+    }
+}
+.checklist-actions {
+    .btn.disabled,
+    .btn.disabled:hover {
+        background: #CCC;
+        border-color: #CCC;
+        color: #999;
+        outline: none;
+        text-shadow: none;
+        pointer-events: none;
+    }
+    border-left: 1px dashed @theme-neutral-5;
+}
+.checklist-comments {
+    display: none;
+    h5 {
+        margin: 0 0 5px;
+    }
+    .form-modified {
+        margin: 10px 0 0;
+    }
+}
+.checklist-item-selected .checklist-comments,
+.checklist-item-locked .checklist-comments {
+    display: block;
+}
+.checklist-item-locked .checklist-actions .btn {
+    pointer-events: none;
+}
+
+@media only screen and (max-width:@screen-xs-max) {
+    .checklist-item-review {
+        padding-bottom: 45px;
+        position: relative;
+    }
+    .checklist-actions {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border: none;
+
+        .btn {
+            width: 49%;
+        }
+    }
+    .checklist-score span {
+        display: none;
+    }
+}

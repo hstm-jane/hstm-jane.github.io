@@ -1,0 +1,81 @@
+
+// CUSTOM STYLES FOR THE HSTREAM VALUE PROPOSITION MODAL
+.modal-valprop {
+    // Slightly larger modal window on desktop
+    .modal-dialog {
+        
+        .modal-content.value-prop {
+            @media (max-width: @screen-xs-max) { 
+                width: 100%;
+            }
+            width: 746px;
+        }
+    }
+    // Remove background color and center position logo
+    .modal-header {
+        border: 0;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .content-container {
+        .clearfix();
+        > div {
+            float: left;
+        }
+    }
+
+    .accent-valprop {
+        @media (max-width: @screen-xs-max) { 
+         display: none;   
+        }
+        float: left;
+    }
+
+    .content-valprop {
+        @media (max-width: @screen-xs-max) { 
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;  
+           }
+        padding-left: 30px;
+        width: 55%;
+        
+        button {
+            width: 175px;
+        }
+        ul { 
+            list-style: none;
+            padding-left: 0px;
+            margin-bottom: 50px;
+        }
+        li {
+            display: table-row;
+            margin-bottom: 15px;
+
+            strong {
+                display: block;
+                
+            }
+
+            .container-icon {
+                display: table-cell;
+                position: relative;
+                width: 40px;
+
+                i {
+                    font-size: 2.5rem;
+                    position: absolute;
+                    top: 2px;
+                    color: #5DA6D5;
+                }
+            }
+            .container-value {
+                display: table-cell;
+            }
+            
+        }
+        
+    }
+
+}

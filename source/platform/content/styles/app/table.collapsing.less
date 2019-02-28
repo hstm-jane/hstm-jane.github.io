@@ -1,0 +1,215 @@
+
+.collapsable-table {
+    display: table;
+    width: 100%;
+    border-collapse:collapse;
+}
+.collapsable-table-header {
+    display: table-row;
+    background-color: @theme-neutral-4 !important;
+
+    .collapsable-cell {
+        font-size: @font-size-small;
+    }
+}
+
+.collapsable-row {
+    display: table-row;
+    position: relative;
+    background-color: @theme-neutral-1;
+    border: 1px solid #e1e1e1;
+}
+.collapsable-row:nth-child(odd) {
+    background-color: @theme-neutral-3;
+}
+.collapsable-cell {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 12px 10px;
+}
+
+.collapsable-cell-label {
+    display: none;
+    font-size: @font-size-small;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: @theme-neutral-6;
+    margin-right: 5px;
+}
+
+.collapsable-limit {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 400px;
+    vertical-align: text-bottom;
+}
+
+
+.collapsable-check,
+.collapsable-remove {
+    text-align: center;
+}
+
+.collapsable-check-label,
+.collapsable-options,
+.collapsable-options-label,
+.collapsable-options-icon {
+    display: none;
+}
+
+// Muting the text to simulate a deleted row
+.collapsable-muted {
+    color: @theme-neutral-5;
+    pointer-events: none;
+
+    a,
+    .collapsable-cell-label {
+        color: @theme-neutral-5;
+    }
+    .btn {
+        display: none;
+    }
+}
+
+// Disabled for read only view
+.collapsable-table.collapsable-table-disabled {
+    .collapsable-remove {
+        display: none;
+    }
+}
+
+// Attention Row
+@media (min-width: @screen-md) {
+    .collapsable-row-attention {
+        background-color: mix(@theme-accent,@theme-neutral-1,20%);
+        border-bottom: 1px solid mix(@theme-accent,@theme-neutral-1,60%);
+        .collapsable-name {
+            a {
+                color: @theme-accent;
+            }
+        }
+        .collapsable-cell {
+            border-top: 1px solid mix(@theme-accent,@theme-neutral-1,60%);
+        }
+    }
+}
+
+
+// In a modal
+.modal-body .collapsable-table {
+    display: table;
+
+    .collapsable-check {
+        display: table-row;
+        border: 1px solid darken(@theme-neutral-3,5%);
+        background-color: @theme-neutral-1;
+        &:nth-child(even) {
+            background-color: @theme-neutral-3;
+        }
+    }
+
+    .collapsable-check-label,
+    .collapsable-checkbox {
+        display: table-cell;
+        padding: 12px 10px;
+        text-align: left;
+    }
+
+    .collapsable-check-label label {
+        margin: 0px;
+        font-weight: normal;
+    }
+
+    .collapsable-checkbox {
+        text-align: right;
+    }
+}
+// Up to tablet portrait
+@media (max-width: @screen-sm-max) {
+    .collapsable-table {
+        display: block;
+    }
+    .collapsable-row {
+        position: relative;
+        border-left: 3px solid @theme-neutral-5;
+        margin-bottom: 5px;
+        display: block;
+        padding: 10px;
+    }
+    .collapsable-table-header,
+    .collapsable-remove,
+    .collapsable-check {
+        display: none;
+    }
+
+    .collapsable-name {
+        display: block;
+        font-size: @font-size-large;
+        font-weight: 600;
+        padding: 0;
+        margin-bottom: 2px;
+    }
+    .collapsable-meta {
+        display: block;
+        padding: 0;
+    }
+    .collapsable-cell-label {
+        display: inline;
+    }
+    .collapsable-limit {
+        max-width: 80%;
+    }
+    .collapsable-options {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        margin-top: -15px;
+        padding: 0;
+    }
+    .collapsable-row-attention {
+        border-left-color: @theme-accent;
+        .collapsable-name a {
+            color: @theme-accent;
+        }
+    }
+}
+// Only tablet portrait
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+    .collapsable-row {
+        padding-right: 150px;
+    }
+    .collapsable-options > button {
+        width: 120px;
+    }
+    .collapsable-options-label {
+        display: inline-block;
+    }
+}
+// Up to phone landscape
+@media (max-width: @screen-xs-max) {
+    .collapsable-row {
+        padding-right: 60px;
+    }
+    .collapsable-cell-label {
+        display: inline;
+    }
+    .collapsable-options-label {
+        display: none;
+    }
+    .collapsable-options-icon {
+        display: inline-block;
+    }
+}
+
+// Hack for detecting older versions of IE that can't handle
+// containing and truncating text in responsive layouts
+html.no-flexbox .collapsable-limit {
+    display: inline;
+    overflow: inherit;
+    white-space: inherit;
+    max-width: auto;
+    vertical-align: baseline;
+}

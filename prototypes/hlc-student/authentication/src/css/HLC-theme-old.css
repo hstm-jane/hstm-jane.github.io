@@ -1,0 +1,253 @@
+/* Defaults for body */
+body
+{
+    font-family:Arial;
+    font-size:90%;
+}
+a
+{
+    color:#0000ff;
+}
+/* Section headers */
+h2
+{
+    font-size:110%;
+    font-weight:bold;
+    padding:0;
+    margin:10px 0 0 0;
+}
+h3
+{
+    font-size:100%;
+    font-weight:bold;
+    padding:0;
+    margin:10px 0 0 0;
+}
+/* Page header */
+.ph
+{
+    background-repeat: no-repeat;
+    background-image: url(../images/logo_Healthstream1.png);
+    height: 122px;
+    padding-bottom: 20px;
+    width:100%;
+}
+
+/* Required field indicator */
+span.required
+{
+    font-size:medium;
+    color:#F60;
+}
+/* Buttons */
+input.button-login
+{
+    cursor: pointer;
+    width:80px;
+    height:35px;
+    border: solid 0px #ffffff;
+    background: #ffffff url(src/images/login.gif) no-repeat scroll center center;
+    z-index:2;
+}
+input.button-submit
+{
+    cursor: pointer;
+    width:101px;
+    height:35px;
+    border: solid 0px #ffffff;
+    background: #ffffff url(src/images/submit.gif) no-repeat scroll center center;
+    z-index:2;
+}
+
+/* Validation summary error */
+span.error
+{
+    display:block;
+    margin-bottom:5px;
+    padding:15px 0 15px 45px;
+    color:#FFF;
+    background-color:#F60;
+    background-image:url(src/images/iconLG_Error.gif);
+    background-repeat:no-repeat;
+    background-position:center left;
+}    
+/* Validation summary info */
+span.info
+{
+    display:block;
+    margin-bottom:5px;
+    padding:15px 0 15px 45px;
+    color:#00F;
+    border:solid 1px #00F;
+    background-color:#FFF;
+    background-image:url(src/images/iconLG_Info.gif);
+    background-repeat:no-repeat;
+    background-position:center left;
+}
+/* Validation error msg */
+span.validate-error
+{
+    color:#F60;
+    margin-left:8px;
+}
+/* Validation error icon */
+div.validate-error-icon
+{
+    width:24px;
+    height:22px;
+    display:inline-block;
+    vertical-align:middle;
+    background-repeat: no-repeat;
+    background-image: url(src/images/iconSM_errorc.gif);
+}
+
+/* Browsercheck non-compliant message */
+span.browsercheck-noncompliant
+{
+    display:block;
+    background-color: #FFFFCB;
+    background-image: url(src/images/iconLG_Info.gif);
+    background-position:left center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #000000;
+    margin: 0;
+    padding: 15px 0 15px 40px;    
+}
+
+/* Institution selector grid */
+.grid-row a
+{
+    color:#0000ff ! important;
+}
+
+
+// New Styles for hStream Login button
+.button {
+    padding: 7px 12px;
+    font-size: 16px;
+    line-height: 1.33;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    text-decoration: none;∏
+
+  
+}
+.button-big {
+    padding: 7px 12px;
+    font-size: 16px;
+    line-height: 1.33;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    -webki  t-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    text-decoration: none;
+
+  
+}
+
+.button-primary {
+    background-image: -webkit-linear-gradient(top, #5cb85c 0, #419641 100%);
+    background-image: linear-gradient(to bottom, #5cb85c 0, #419641 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff419641', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    background-repeat: repeat-x;
+    border:1px solid #3e8f3e;
+    background-color: #5cb85c;
+    color:#fff;
+    text-shadow: 1px 1px 0 #357935;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 1px 1px rgba(0,0,0,0.075);
+}
+
+.button-default {
+    background-image: -webkit-linear-gradient(top, #fff 0, #e0e0e0 100%);
+    background-image: linear-gradient(to bottom, #fff 0, #e0e0e0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    background-repeat: repeat-x;
+    border:1px solid #dbdbdb;
+    text-shadow: 0 1px 0 #fff;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 1px 1px rgba(0,0,0,0.075);
+    color:#999;
+}
+
+.button-block {
+    display:block;
+}
+
+.login-with-hstream-old {
+  position: relative;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #ccc;
+  // display: table;
+  // margin: auto;
+  width: 330px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.login-with-hstream-old .login-or {
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+  left: 42%;
+  bottom: -20px;
+  font-weight: 600;
+}
+.login-with-hstream-old .button-hstream {
+  color: #696969;
+  padding: 0px;
+  width: 100%;
+  text-align: center;
+}
+.login-with-hstream-old .button-hstream .button-hstream-logo {
+  float: left;
+  border-right: 1px #c5c5c5 solid;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.login-with-hstream-old .button-hstream .button-hstream-logo img {
+  margin: 10px 15px 7px 15px;
+  height: 30px;
+}
+.login-with-hstream-old .button-hstream .button-hstream-text {
+  margin: 15px 25px 7px 15px;
+  color: #696969;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+/*new hStream utility styles*/
+
+.link-body {
+    padding:0px 20px;
+}
+.collapse {
+    display:none;
+}
+
+

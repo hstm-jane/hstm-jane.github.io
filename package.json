@@ -1,0 +1,23 @@
+{
+  "name": "healthstream-uil",
+  "version": "1.0.0",
+  "description": "User Interface Library",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.1",
+    "postcss": "^6.0.22",
+    "stylelint": "^9.2.1",
+    "jquery-knob": "1.2.11"
+  },
+  "devDependencies": {
+    "stylelint-config-recommended": "^2.1.0"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "author": "Marc Sexton"
+}

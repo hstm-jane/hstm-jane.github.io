@@ -1,0 +1,827 @@
+// --------------------------------------------------
+// Base Slats
+// --------------------------------------------------
+.slat {
+    position: relative;
+    padding: 10px;
+    background-color: @theme-neutral-3;
+    border: 1px solid darken(@theme-neutral-3, 5%);
+    border-left: 3px solid @theme-neutral-5;
+    margin: 7px 0;
+    &:nth-of-type(odd) {
+        background-color: @theme-neutral-1;
+        border: 1px solid darken(@theme-neutral-1, 5%);
+        border-left: 3px solid @theme-neutral-5;
+        .slat-nested .slat {
+            border: 1px solid @theme-neutral-3;
+            border-left: 2px solid @theme-neutral-5;
+        }
+    }
+    &.slat-callout,
+    &.slat-callout-w,
+    &.slat-callout-wr {
+        > .slat-default {
+            padding-right: 50%;
+        }
+    }
+    &.slat-callout-w {
+        > .slat-default .meta .meta-callout {
+            width: 43%;
+        }
+        > .slat-default > .btn,
+        > .slat-default > .btn-group {
+            display: none;
+        }
+    }
+    &.slat-callout-wr {
+        > .slat-default .meta .meta-callout {
+            width: 43%;
+            text-align: right;
+        }
+        > .slat-default > .btn,
+        > .slat-default > .btn-group {
+            display: none;
+        }
+    }
+    &.slat-meta-stacked {
+        > .meta {
+            li {
+                display: block;
+            }
+        }
+        > .slat-default{
+            .meta {
+                li {
+                    display: block;
+                }
+                .meta-type{
+                    display:inline-block;
+                }
+            }
+        }
+    }
+    form {
+        margin: 0;
+        display: inline;
+    }
+    .slat-message {
+        text-align: center;
+        padding: 10px;
+        h3 {
+            margin: 0 0 5px;
+        }
+        .btn {
+            margin: 10px 0;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .slat-message-sm {
+        padding: 5px;
+        h3 {
+            font-size: 18px;
+        }
+        .btn {
+            margin: 5px 0;
+        }
+    }
+    .slat-default {
+        position: relative;
+        padding-right: 140px;
+        &.slat-meta-stacked {
+            .meta {
+                li {
+                    display: block;
+                }
+            }
+        }
+        .title {
+            font-size: @font-size-large;
+            font-weight: 600;
+            .badge {
+                font-size: 10px;
+                margin-left: 5px;
+                text-transform: uppercase;
+            }
+        }
+        .description {
+            // font-size: @font-size-small;
+            font-weight: 400;
+            font-style: italic;
+            margin-bottom: 3px;
+            color: @theme-neutral-7;
+        }
+        > .btn,
+        > form > .btn {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin-top: -15px;
+            width: 120px;
+        }
+        .action {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin-top: -15px;
+            width: 120px;
+            .active a {
+                color: #fff;
+            }
+            .btn {
+                display: block;
+                width: 100%;
+            }
+            .btn-group {
+                display: block;
+            }
+            .dropdown-menu {
+                left: auto;
+                right: 0;
+                > li > a,
+                > li > form > a {
+                    display: block;
+                    padding: 3px 20px;
+                    clear: both;
+                    font-weight: normal;
+                    line-height: @line-height-base;
+                    color: @dropdown-link-color;
+                    white-space: nowrap; // prevent links from randomly breaking onto new lines
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        color: @dropdown-link-hover-color;
+                        background-color: @dropdown-link-hover-bg;
+                    }
+                }
+                > li.active > a,
+                > li.active > form > a {
+                    color: #fff;
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        color: #fff;
+                        background-color: @theme-primary;
+                    }
+                }
+            }
+            &.action-split {
+                .btn-group {
+                    display: inline-block;
+                    .btn {
+                        width: 91px;
+                    }
+                    .btn.dropdown-toggle {
+                        width: 30px;
+                        margin-left: -1px;
+                    }
+                }
+            }
+            &.action-multi {
+                .btn {
+                    float: none;
+                }
+            }
+        }
+        @media (max-width: @screen-xs-max) {
+            .action {
+                width: 30px;
+            }
+        }
+        .status {
+            position: absolute;
+            top: 50%;
+            right: 45px;
+            margin-top: -15px;
+            width: 30px;
+            height: 30px;
+            background: url('@{imagePath}/sprite-status.png') no-repeat;
+            &.status-complete {
+                background-position: 0 0;
+            }
+            &.status-warning {
+                background-position: 0 -30px;
+            }
+            &.status-fail {
+                background-position: 0 -60px;
+            }
+            &.status-pending {
+                background-position: 0 -90px;
+            }
+            &.status-planned {
+                background-position: 0 -120px;
+            }
+        }
+        .meta {
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline-block;
+                margin: 3px 7px 0 0;
+                &.meta-hide-xs {
+                    @media ( max-width: @screen-sm ) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .meta-2 {
+        padding: 0;
+        margin: 10px 0 0 0;
+        li {
+            list-style: none;
+
+            .meta-label {
+                text-transform: none;
+            }
+        }
+    }
+        .meta-type {
+            display: inline-block;
+            padding: 2px 4px;
+            font-size: @font-size-small;
+            font-weight: 600;
+            line-height: 14px;
+            text-transform: uppercase;
+            color: @theme-neutral-7;
+            border-radius: 4px;
+            border: 1px solid @theme-neutral-5;
+            i:before {
+                font-size: 12px;
+                line-height: 14px;
+                vertical-align: top;
+            }
+        }
+        .meta-label {
+            font-size: @font-size-small;
+            text-transform: uppercase;
+            margin-right: 5px;
+            font-weight: 700;
+            color: #666666;
+            @media (max-width: @screen-xs-max) {
+                .visible-xs {
+                    display: inline-block !important;
+                }
+            }
+            @media (min-width: @screen-sm) {
+                .hidden-xs {
+                    display: inline-block !important;
+                }
+            }
+        }
+        .meta .meta-callout {
+            position: absolute;
+            left: 57%;
+            top: 50%;
+            height: 50px;
+            width: 25%;
+            margin: -25px 0 0 0;
+            line-height: 50px;
+            .meta-label {
+                display: none;
+            }
+            .meta-value {
+                display: inline-block;
+                white-space: normal;
+                vertical-align: middle;
+                line-height: 1.4;
+                width: 100%;
+            }
+            .meta-callout-label {
+                margin-right: 4px;
+            }
+            a {
+                display: block;
+            }
+        }
+    }
+    .slat-nested {
+        margin-top: 10px;
+        .slat,
+        .section {
+            + div {
+                .slat:first-child,
+                .section:first-child {
+                    padding-top: 10px;
+                }
+            }
+        }
+        .slat {
+            .slat-default {
+                padding-right:0px;
+            }
+
+        }
+
+        .slat-callout > .slat-default {
+            padding: 0;
+            padding-right: 50%;
+
+        }
+
+        .action {
+            width: 110px;
+            &.action-split {
+                .btn-group {
+                    .btn {
+                        width: 71px;
+                    }
+                    .btn + .btn {
+                        width: 30px;
+                        margin-left: -1px;
+                    }
+                }
+            }
+        }
+        @media (min-width: @screen-sm) {
+            .btn {
+                font-size: 11px;
+                padding: 5px;
+            }
+        }
+        @media (max-width: @screen-xs-max) {
+            .action {
+                width: 30px;
+            }
+        }
+    }
+    .section {
+        margin: 10px 0;
+        padding: 0;
+        &:first-child {
+            margin: 0;
+        }
+        h5 {
+            margin-bottom: 5px;
+        }
+        .label-location {
+            display: inline-block;
+            padding: 3px 4px;
+        }
+    }
+    .collapse-toggle {
+        font-size: @font-size-small;
+    }
+    .slat {
+        // padding: 10px 10px;
+        background-color: #fff;
+        border: 1px solid @theme-neutral-3;
+        border-left: 2px solid @theme-neutral-5;
+        margin: 5px 0;
+        &:first-child {
+            margin: 0 0 5px;
+        }
+        .slat-default {
+            .title {
+                font-size: @font-size-base;
+                margin-bottom: 0;
+            }
+            > .btn,
+            > form > .btn {
+                width: 100px;
+            }
+            .status {
+                right: 35px;
+            }
+        }
+        .flag
+        {
+
+            padding: 3px 7px;
+            margin-left: -15px;
+            margin-top: 0;
+            position: absolute;
+            top: -25px;
+            left: -7px;
+            width: auto;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: normal;
+            background: @theme-primary;
+            text-shadow: 1px 1px 0 #007aa3;
+            font-size:12px;
+
+            .arrowLeft
+            {
+               width: 0; height: 0;
+               line-height: 0;
+               border-left: 11px solid transparent;
+               border-top: 7px solid @theme-primary-darker;
+               top: 100%;
+               left: 0;
+               position: absolute;
+           }
+
+       }
+   }
+}
+
+.slat-nested-alert {
+    display: inline-block;
+    padding: 2px 5px;
+    background-color:#fff;
+    border: 1px solid rgba(0,0,0,.05);
+    color: @theme-accent;
+    border-radius: 4px;
+    font-size: @font-size-small;
+
+    &:hover {
+        color: @theme-accent;
+        text-decoration: none;
+    }
+}
+
+// --------------------------------------------------
+// Slat Variations
+// --------------------------------------------------
+.slat-muted {
+    background: @theme-neutral-1;
+    border-color: @theme-neutral-3;
+    color: @theme-neutral-5;
+    .meta-type,
+    .meta-label,
+    .meta-value,
+    .title,
+    .title a {
+        color: @theme-neutral-5 !important;
+    }
+    .btn,
+    .status,
+    .slat-nested,
+    .show-more {
+        display: none;
+    }
+}
+
+.slat-simple {
+
+    background-color: @theme-neutral-1;
+    background: none;
+    border: 1px solid darken(@theme-neutral-1, 5%);
+    border-left: 2px solid @theme-neutral-5;
+    font-size: @font-size-small;
+    padding: 5px 10px;
+    margin:5px 0;
+    .slat-default {
+        padding: 0;
+
+        .title {
+            font-size: @font-size-base;
+            display:block !important;
+        }
+        .meta li {
+            white-space: normal;
+        }
+        .meta-type {
+            display: inline-block;
+            padding: 2px 4px;
+            font-size: @font-size-small;
+            font-weight: 600;
+            line-height: 14px;
+            text-transform: uppercase;
+            color: @theme-neutral-7;
+            border-radius: 4px;
+            border: 1px solid @theme-neutral-5;
+            i:before {
+                font-size: 12px;
+                line-height: 14px;
+                vertical-align: top;
+            }
+        }
+    }
+
+    .btn,
+    .status,
+    .slat-nested {
+        // display: none;
+    }
+    &:nth-child(2n+1) {
+        background-color: @theme-neutral-1;
+        border: 1px solid darken(@theme-neutral-3, 5%);
+        border-left: 2px solid @theme-neutral-5;
+    }
+
+}
+
+.slat-attention {
+    border-left-color: @theme-accent !important;
+    &.slat-spaced {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        +.slat-attention.slat-spaced {
+            margin-top: -13px;
+        }
+    }
+    > .slat-default .meta-callout {
+        color: @theme-accent;
+    }
+    > .slat-default .title {
+        color: @theme-accent;
+    }
+    > .slat-default .title a {
+        color: @theme-accent;
+        &:hover {
+            color: darken( @theme-accent, 15%);
+        }
+    }
+}
+
+.slat-danger {
+    border-color: mix(@theme-danger, @theme-neutral-3, 20%) !important;
+    border-left-color: @theme-danger !important;
+    background-color: mix(@theme-danger, @theme-neutral-1, 10%) !important;
+    &.slat-spaced {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        +.slat-attention.slat-spaced {
+            margin-top: -13px;
+        }
+    }
+    .meta-callout {
+        color: @theme-danger;
+    }
+    .title:first-child a {
+        color: @theme-danger;
+        &:hover {
+            color: darken( @theme-danger, 15%);
+        }
+    }
+}
+
+.slat-nudge {
+    border-color: mix(@theme-primary, @theme-neutral-3, 20%) !important;
+    border-left-color: @theme-primary !important;
+    background-color: mix(@theme-primary, @theme-neutral-1, 10%) !important;
+    &.slat-spaced {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        +.slat-attention.slat-spaced {
+            margin-top: -13px;
+        }
+    }
+    .badge {
+        background-color: @theme-primary;
+    }
+    .meta-callout {
+        color: @theme-primary;
+    }
+    .title:first-child a {
+        color: @theme-primary;
+        &:hover {
+            color: darken( @theme-primary, 15%);
+        }
+    }
+}
+
+.slat-select2 {
+    position: relative;
+    margin: -3px -2px 0 -7px;
+    padding: 5px 5px;
+    border-left-width: 2px;
+    overflow: hidden;
+    color: @theme-neutral-9;
+    .title {
+        font-weight: 600;
+        span {
+            font-size: @font-size-small;
+            font-weight: 400;
+            color: @theme-neutral-7;
+        }
+    }
+    .meta {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        background: none !important;
+        li {
+            display: block;
+            margin-right: 10px;
+        }
+    }
+    .meta-label {
+        font-size: @font-size-small;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-right: 5px;
+    }
+    .meta-value {
+        font-size: @font-size-base;
+    }
+    .meta-value-unavailable {
+        color: #d14;
+    }
+    &.slat-select2-action {
+        padding-right: 40px;
+        .action {
+            position: absolute;
+            top: 50%;
+            right: 7px;
+            .square(26px);
+            margin-top: -13px;
+            .btn {
+                .square(26px);
+                line-height: 26px;
+                padding: 0;
+                text-align: center;
+                font-size: @font-size-small;
+            }
+            .icon {
+                .square(26px);
+                border-radius: 50%;
+                line-height: 26px;
+                text-align: center;
+                &.success {
+                    background-color: @theme-success;
+                    color: #fff;
+                }
+                &.danger {
+                    background-color: @theme-danger;
+                    color: #fff;
+                }
+                &.disabled {
+                    color: #ccc;
+                }
+            }
+        }
+    }
+    &.slat-select2-nowrap {
+        .meta li {
+            display: block;
+            margin-right: 10px;
+            max-width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            word-wrap: normal;
+        }
+    }
+}
+
+.select2-slats .select2-highlighted,
+.select2-checklist .select2-highlighted {
+    background-color: transparent !important;
+    .slat-select2 {
+        border-left-color: @theme-primary;
+        background-color: @theme-neutral-3;
+        .title {
+            color: @theme-primary-darker;
+        }
+    }
+}
+
+.slat-modal {
+    .slat-default .action,
+    .slat .slat-default .action {
+        width: 30px;
+    }
+    .slat-default .btn,
+    .slat .slat-default .btn,
+    .slat-default .action .btn,
+    .slat .slat-default .action .btn {
+        height: 30px;
+        width: 30px;
+        overflow: hidden;
+        line-height: 200px;
+        i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            line-height: 30px;
+            display: block !important;
+        }
+    }
+    .slat-default .meta .meta-callout {
+        width: 35%;
+    }
+    .slat-default .status {
+        right: 0;
+    }
+}
+
+.slat-preference {
+    .slat-default .title {
+        font-size: @font-size-large;
+        font-weight: 400;
+    }
+    input[maxlength="2"] {
+        display: inline-block;
+        width: 40px;
+        text-align: center;
+    }
+}
+
+
+.verified-slats{
+    .verified {
+        display: inline-block;
+
+
+        .fa-stack {
+            width: 1.5em;
+            height: 1.5em;
+        }
+
+        .fa-certificate {
+            color: #5cb85c;
+            font-size: 1.5em;
+        }
+
+        .fa-check {
+            font-size: 0.8em;
+            top: -4px;
+        }
+
+        .verified--label {
+            font-style: italic;
+            font-size: 0.88em;
+            color: #5cb85c;
+            display: inline-block;
+            margin-left: -3px;
+        }
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    .slat {
+        .slat-default,
+        &.slat-callout > .slat-default,
+        &.slat-callout-w > .slat-default,
+        &.slat-callout-wr > .slat-default {
+            padding: 0;
+            padding-right: 50px;
+        }
+        &.slat-status > .slat-default {
+            padding-right: 40px;
+            .status {
+                display: block;
+                right: 0;
+            }
+        }
+        .slat-default .btn,
+        .slat .slat-default .btn {
+            height: 30px;
+            width: 30px;
+            overflow: hidden;
+            line-height: 200px;
+            i {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                line-height: 30px;
+            }
+        }
+        .slat-default .btn-group {
+            width: 30px;
+            .btn {
+                border-radius: 3px !important;
+            }
+        }
+        .slat-default .status {
+            right: 0;
+        }
+        .slat-default,
+        &.slat-callout > .slat-default,
+        &.slat-callout-w > .slat-default,
+        &.slat-callout-wr > .slat-default {
+            .meta li {
+                white-space: normal;
+            }
+            .meta .meta-callout {
+                position: relative;
+                display: inline;
+                left: auto;
+                top: auto;
+                height: auto;
+                width: auto;
+                margin: 3px 7px 0 0;
+                line-height: inherit;
+                text-align: left;
+                .meta-label {
+                    display: inline-block;
+                }
+                .meta-value {
+                    display: inline;
+                    vertical-align: baseline;
+                }
+                .meta-callout-label {
+                    display: none;
+                    width: auto;
+                }
+                a {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+

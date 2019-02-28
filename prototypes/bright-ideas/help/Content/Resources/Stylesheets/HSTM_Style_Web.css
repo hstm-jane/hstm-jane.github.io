@@ -1,0 +1,341 @@
+﻿/*<meta conditions="Default.Exportable" />*/
+
+img
+{
+	border: none;
+}
+
+a.Popup
+{
+	
+}
+
+p
+{
+	font-family: verdana;
+	font-size: 12pt;
+	word-spacing: 0em;
+	color: #000000;
+	line-height: 175%;
+	margin-top: 18pt;
+	margin-bottom: 18pt;
+}
+
+p.Reset_Numbering
+{
+	counter-reset:level1;
+}
+
+h1
+{
+	font-family: 'Trebuchet MS';
+	font-size: 24pt;
+	color: #000000;
+	line-height: 125%;
+	word-spacing: 0em;
+	margin: 0;
+	margin-bottom: 18pt;
+	margin-top: 12pt;
+	font-weight: normal;
+	counter-reset:level1;
+}
+
+h2
+{
+	color: #000000;
+	font-family: 'Trebuchet MS';
+	font-size: 20pt;
+	line-height: 125%;
+	word-spacing: 0em;
+	margin: 0;
+	margin-bottom: 12pt;
+	margin-top: 12pt;
+	font-weight: normal;
+	counter-reset:level1;
+}
+
+h3
+{
+	color: #000000;
+	font-family: 'Trebuchet MS';
+	font-size: 16pt;
+	line-height: 125%;
+	word-spacing: 0em;
+	margin: 0;
+	margin-bottom: 12pt;
+	margin-top: 12pt;
+	font-weight: normal;
+	counter-reset:level1;
+}
+
+span.PageName
+{
+	
+}
+
+span.ScreenLiteral
+{
+	font-weight: bold;
+}
+
+span.KeyboardLiteral
+{
+	font-variant: small-caps;
+}
+
+p.Print_Cover_Title
+{
+	font-family: 'Trebuchet MS';
+	font-size: 36pt;
+	text-align: right;
+}
+
+p.Print_Cover_SubTitle
+{
+	font-family: 'Trebuchet MS';
+	font-size: 24pt;
+	text-align: right;
+}
+
+span.Superscript
+{
+	vertical-align: super;
+}
+
+body
+{
+	background-color: #f5f5f5;
+}
+
+MadCap|popup
+{
+	background-color: #f5f5f5;
+}
+
+MadCap|popupBody
+{
+	background-color: #f5f5f5;
+}
+
+MadCap|popupHead
+{
+	background-color: #f5f5f5;
+}
+
+img.bordered
+{
+	border-color: #000000;
+	border: solid 2px;
+}
+
+MadCap|toggler
+{
+	font-variant: small-caps;
+	text-decoration: underline;
+	color: #4169e1;
+}
+
+ol
+{
+	font-family: verdana;
+	font-size: 12pt;
+	line-height: 125%;
+	margin-bottom: 12pt;
+	margin-top: 12pt;
+	list-style-type: none;
+	counter-reset: level1;
+}
+
+ol.Continue
+{
+	counter-reset: none;
+}
+
+ol ol,
+ol.Continue ol
+{
+	counter-reset: level2;
+	list-style-type: none;
+}
+
+ol ol.Continue,
+ol.Continue ol.Continue
+{
+	counter-reset: none;
+	list-style-type: none;
+}
+
+ol li:before
+{
+	counter-increment: level1;
+	content: counter(level1) ". ";
+}
+
+ol li
+{
+	text-indent: -1.3em;
+	padding-left: 1em;
+}
+
+ol ol li:before
+{
+	counter-increment: level2;
+	content: counter(level1) "." counter(level2) ". ";
+}
+
+ol ol li
+{
+	text-indent: -2.5em;
+	padding-left: 2em;
+}
+
+li
+{
+	margin-bottom: 10pt;
+	margin-top: 8pt;
+	font-family: verdana;
+	font-size: 12pt;
+	line-height: 175%;
+}
+
+ul
+{
+	margin-top: 12pt;
+	margin-bottom: 12pt;
+}
+
+p.Task_Header
+{
+	font-size: 13pt;
+	font-weight: bolder;
+	counter-reset: level1;
+}
+
+ul.Indented
+{
+	margin-left: 60px;
+}
+
+span.Emphasis
+{
+	font-style: italic;
+}
+
+span.OptionName
+{
+	font-style: oblique;
+}
+
+p.second_level_pseudo_bullet
+{
+	margin-left: 100px;
+	margin-top: 8pt;
+	margin-bottom: 10pt;
+}
+
+p.second_level_pseudo_bullet:before
+{
+	content: '\2014 ';
+}
+
+p.Indented_first_level
+{
+	margin-left: 60px;
+}
+
+p.Indented_second_level
+{
+	margin-left: 75px;
+}
+
+td
+{
+	font-family: verdana;
+	font-size: 12pt;
+	line-height: 175%;
+}
+
+span.Bold
+{
+	font-weight: bold;
+}
+
+span.Question_For_Reviewers
+{
+	color: #ff0000;
+}
+
+p.Numbered_List_Level_1
+{
+	counter-reset:level2;
+	padding-left:22px;
+	text-indent:-23px;
+	margin-left:22px;
+	margin-bottom: 10pt;
+	margin-top: 8pt;
+	font-family: verdana;
+	font-size: 12pt;
+	line-height: 175%;
+}
+
+p.Numbered_List_Level_1_Ten_Plus
+{
+	counter-reset:level2;
+	padding-left:22px;
+	text-indent:-33px;
+	margin-left:22px;
+	margin-bottom: 10pt;
+	margin-top: 8pt;
+	font-family: verdana;
+	font-size: 12pt;
+	line-height: 175%;
+}
+
+p.Numbered_List_Level_1:before
+{
+	counter-increment:level1;
+	content: counter(level1) ".  ";
+}
+
+p.Numbered_List_Level_1_Ten_Plus:before
+{
+	counter-increment:level1;
+	content: counter(level1) ".  ";
+}
+
+
+p.Numbered_List_Level_2
+{
+
+	padding-left:38px;
+	margin-left:38px;
+	text-indent:-34px;
+
+}
+
+p.Numbered_List_Level_2:before
+{
+	content: counter(level1) "." counter(level2)"  ";
+	counter-increment:level2;
+}
+
+li
+{
+	font-family: verdana;
+	font-size: 12pt;
+	word-spacing: 0em;
+	color: #000000;
+	line-height: 175%;
+	margin-top: 18pt;
+	margin-bottom: 18pt;
+}
+
+ul.Indent_Level_1
+{
+	margin-left:24px;
+}
+
+ul.Indent_Level_2
+{
+	margin-left:50px;
+}

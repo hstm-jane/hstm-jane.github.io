@@ -1,0 +1,162 @@
+a {
+    color: #09C;
+    text-decoration: none;
+}
+a:focus, a:hover { 
+    color: #006080;
+    text-decoration: none;
+}
+
+.site-header.hstream-validate-header .branding {
+    display: table;
+}
+
+.site-header.hstream-validate-header .branding>div {
+    display: table-cell;
+}
+
+.site-header.hstream-validate-header .branding .logo {
+    display: table;
+    padding-left: 10px;
+}
+
+.site-header.hstream-validate-header .branding .logo-large {
+    width: 200px !important;
+}
+
+.site-header.hstream-validate-header .branding .logo-text {
+    display: table-cell;
+    font-size: 28px;
+    padding-bottom: 10px;
+    margin-left: 15px;
+    vertical-align: bottom;
+    color: #000;
+}
+
+.site-header.hstream-validate-header .branding .logo-text span {
+    border-left: 1px solid black;
+    padding-left: 10px;
+    margin-left: 12px;
+}
+
+.site-header.hstream-validate-header .branding .hstream-brand {
+    font-size: 28px;
+    padding-bottom: 10px;
+    margin-left: 15px;
+    vertical-align: bottom;
+    color: #000;
+}
+
+.site-header.hstream-validate-header .branding .hstream-brand>span {
+    border-left: 1px solid black;
+    padding-left: 10px;
+    margin-left: 12px;
+}
+
+.layout.hstream-validate {
+    border-top: 5px solid #007aa3;
+}
+
+.layout.hstream-validate .container {
+    padding: 15px 30px;
+}
+
+.panel {}
+
+.alert-header {
+    color: #858993;
+    border-bottom: 1px solid #D8D8D8;
+    position: relative;
+    height:55px;
+}
+
+.alert-header .alert-title {
+    font-size: 21px;
+    font-weight: 500;
+    padding-top:5px;
+    position: absolute;
+    left:0;
+    top:0;
+}
+
+.alert-header .alert-count {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    right:0;
+    top:0;
+}
+
+.alert-count .alert-value {
+    font-size: 36px;
+    font-weight: 500;
+    position: absolute;
+    right: 5px;
+    top: -10px;
+}
+
+.alert-count .alert-type {
+    font-size: 11px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+
+
+.flags {
+    display: table;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 21px;
+    margin: 10px 15px 10px 5px;
+    width: 100%;
+    padding-right: 10px;
+}
+
+.flags .flag {
+    display: table-row;
+}
+
+.flags .flag div {
+    display: table-cell;
+}
+
+.flags .flag.red-flag {
+    color: #CA5B54;
+}
+
+.flags .flag.orange-flag {
+    color: #f3ca06;
+}
+
+.flags .flag.yellow-flag {
+    color: #9B9B9B;
+}
+
+.flags .flag .value {
+    text-align: right;
+}
+
+
+
+.help-hover {
+    font-size: 12px;
+}
+.opentip-container canvas {
+
+    width:450px !important;
+}
+.tooltip-container .help-item{
+    margin:15px 10px 10px 15px ;
+}
+.tooltip-container .help-item .help-value{
+    font-weight:600;
+}
+.tooltip-content {
+    display:none;
+}
+
+
+

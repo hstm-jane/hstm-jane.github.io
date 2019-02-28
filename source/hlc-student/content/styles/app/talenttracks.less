@@ -1,0 +1,154 @@
+
+// FOCUS BAR
+.focus-talenttracks {
+    .fph-cell-search-label {
+        background: url('@{imagePath}/talenttracks-icon.png') no-repeat left 3px;
+    }
+    .fph-cell-search-label h1 {
+        padding-left: 56px;
+    }
+
+    @media screen and (max-width: @screen-sm) {
+        .fph-cell-search-label {
+            background: url('@{imagePath}/talenttracks-icon.png') no-repeat right 5px;
+            background-size: 40px;
+        }
+        .fph-cell-search-label h1 {
+            padding: 5px 0 0 0;
+            height: 40px;
+        }
+    }
+}
+
+
+.layout-talenttracks {
+
+    // TALENT TRACKS HEADER
+    .talenttracks__header {
+        display: none;
+        margin: 0 0 20px;
+    }
+
+    .talenttracks__message {
+        width: 25%;
+        display: table-cell;
+        padding: 0 40px 0 25px;
+        color: #fff;
+        text-align: left;
+        background: @theme-primary url('@{imagePath}/talenttracks-message.png') no-repeat right;
+        font-size: 16px;
+        vertical-align: middle;
+        font-weight: 600;
+    }
+
+    .talenttracks__survey {
+        width: 25%;
+        display: table-cell;
+        padding: 0 20px;
+        font-weight: 600;
+        vertical-align: middle;
+        background: #eee;
+        color: #666;
+        text-align: center;
+        height: 113px;
+        border-right: 10px solid #fff;
+    }
+    .talenttracks__survey--last {
+        border-right: none;
+    }
+    .talenttracks__survey .btn {
+        font-weight: 600;
+        margin-top: 7px;
+        border: none !important;
+        box-shadow: 0 0 0 2px white;
+    }
+    .talenttracks__survey .btn i {
+        font-size: 10px;
+    }
+
+    .talenttracks__survey.active {
+        text-align: left;
+        width: 75%;
+
+        .date {
+            font-size: 11px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 3px;
+            color: #999;
+        }
+
+        p {
+            font-weight: normal;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        h4 {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+        }
+
+        .survey-button {
+            width: 30%;
+            margin: 18px 0 0 10px;
+        }
+        .survey-info {
+            width: 60%;
+        }
+    }
+
+    .talenttracks__header--small  {
+        .btn-group,
+        .dropdown-menu {
+            width: 100%;
+        }
+
+        .btn {
+            margin: 0 auto;
+            font-size: 14px;
+            padding: 10px;
+            font-weight: 600;
+        }
+
+        .btn-survey i {
+            margin-left: 5px;
+        }
+
+        .talenttracks__survey.active {
+            min-height: none;
+            height: auto;
+            padding: 10px;
+            text-align: center;
+
+            .btn {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    @media screen and (min-width: @screen-sm-max) {
+        .talenttracks__header--large {
+            display: table;
+        }
+    }
+    @media screen and (max-width: @screen-md) {
+        .talenttracks__header--small {
+            display: block;
+        }
+    }
+
+
+    // CATEGORIES
+    nav.catalog-categories li a.active {
+        color: #fff;
+        font-weight: 600;
+        background-color: @theme-primary;
+    }
+    nav.catalog-categories li a.active:hover {
+        background-color: @theme-primary;
+    }
+    nav.catalog-categories li a.active div.cc-col {
+        padding: 10px 10px;
+    }
+}

@@ -1,0 +1,110 @@
+.layout-search {
+
+    .section-refinement-options {
+        border-right: 1px solid @theme-neutral-3;
+        padding-right: 20px;
+    }
+    .section-refinement-group {
+        border-top: 1px solid @theme-neutral-3;
+        padding: 20px 0 0;
+        margin: 20px 0;
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+    .section-refinement-group-first {
+        margin-top: 0;
+        border: none;
+        padding-top: 5px;
+    }
+    .section-refinement-applied {
+        margin: 0;
+
+        h3 {
+            font-size: 13px;
+            font-weight: 400;
+            margin: 0;
+            color: @theme-neutral-7;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            display: inline-block;
+            margin-top: 4px;
+        }
+    }
+    .section-results-header {
+        padding: 0;
+        margin: 0 0 20px;
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .section-results-header-sort {
+            text-align: right;
+
+            .btn i {
+                margin-left:5px;
+            }
+
+            .dropdown-menu {
+                text-align: right;
+                right: 0;
+                left: auto;
+            }
+        }
+
+        @media (min-width: @screen-md) {
+            .section-refinement-applied {
+                display: none;
+            }
+        }
+    }
+
+    .date-range__custom {
+        margin-top: 20px;
+        display: none;
+    }
+    .date-range__custom--open {
+        display: block;
+    }
+}
+
+.modal {
+    .section-refinement-options {
+        padding: 0;
+        margin: 0;
+    }
+    .section-refinement-group {
+        padding: 10px 0 0;
+        margin: 15px 0 20px;
+
+        &:first-child {
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        + .section-refinement-group {
+            border-top: 1px solid @theme-neutral-3;
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+    }
+
+    .date-range__custom {
+        margin-top: 20px;
+        display: none;
+    }
+    .date-range__custom--open {
+        display: block;
+    }
+}
+

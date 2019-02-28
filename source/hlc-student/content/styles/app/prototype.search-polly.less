@@ -1,0 +1,124 @@
+
+.search-polly2 .badge {
+    background-color: transparent;
+    color: #999;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+.search-polly {
+
+    .fix-height {
+        max-height: 640px;
+        overflow: scroll;
+    }
+
+    .poo {
+        height: auto;
+    }
+
+    .no-border {
+        border-top: none;
+    }
+
+    .section-main {
+        .section-filters {
+            border-right: 1px solid #ddd;
+            padding: 20px 15px 20px 0;
+            margin: 0;
+        }
+
+        .section-results {
+            margin: 0;
+            padding: 20px 0 20px;
+        }
+    }
+
+    .search-filter {
+        padding: 15px 0 20px;
+        border-bottom: 1px solid #ddd;
+
+        &.search-filter-closed { padding: 15px 0; }
+
+        &:last-of-type { border-bottom: none; }
+
+        &.active { padding-bottom: 20px; }
+
+        &.no-border {
+            border-bottom: none;
+        }
+    }
+
+    .search-filter-desktop, .search-filter-mobile, .search-filter-closed .search-filter-control, .search-filter-closed .search-filter-footer { display: none; }
+
+    .search-filter-control .control-label {
+        font-weight: bold;
+
+        & + .list-unstyled { margin-top: -10px; }
+    }
+
+    .search-filter-header {
+        position: relative;
+        padding-right: 40px;
+        margin-bottom: 10px;
+    }
+
+    .search-filter-toggle { cursor: pointer; }
+
+    .search-filter-title {
+        font-size: 16px;
+        font-weight: 300;
+        color: #555;
+    }
+
+    .search-filter-arrow {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
+    }
+
+    .search-filter-arrow i {
+        display: none;
+        text-align: center;
+        font-size: 14px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        color: #09C;
+
+        &:first-child { display: block; }
+    }
+
+    .search-filter-control {
+        label { font-weight: normal; }
+
+        & + .search-filter-control { margin-top: 10px; }
+    }
+
+    .search-filter-closed {
+        .search-filter-header { margin-bottom: 0; }
+
+        .search-filter-arrow i {
+            display: inline-block;
+
+            &:first-child { display: none; }
+        }
+    }
+
+    .search-filter-footer { margin-top: 5px; }
+
+    .section-results-header .search-filter { padding: 0; }
+
+    @media (min-width: 767px) {
+        .search-filter-desktop { display: block; }
+    }
+
+    @media (max-width: 766px) {
+        .search-filter-mobile { display: block; }
+    }
+}
+
+#modal-filter .search-polly-modal-filter .modal-body { padding: 0 20px; }

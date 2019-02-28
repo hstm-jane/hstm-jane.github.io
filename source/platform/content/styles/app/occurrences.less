@@ -1,0 +1,112 @@
+    h2.page-header .badge {
+        vertical-align: middle;
+    }
+
+    .undo-delete {
+        display: none;
+    }
+
+    tr.delete-row {
+        .remove-button {
+            display: none;
+        }
+        .undo-delete {
+            display: inline;
+        }
+
+        td {
+            background-color: mix(#fff, @theme-warning, 80%) !important;
+        }
+    }
+
+
+
+    @media (min-width: @screen-sm) {
+        .page-header-options {
+            float: right;
+        }
+    }
+
+    @media (max-width: @screen-xs-max) {
+        .page-header-options {
+            display: block;
+            margin-top: 10px;
+        }
+    }
+
+    .event-occurrences {
+        width: 100%;
+        margin-bottom: 10px;
+        @media (max-width: @screen-xs-max ) {
+            thead {
+                display: none;
+            }
+        }
+        >thead th {
+            background-color: #ddd;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 8px;
+            font-size: 12px;
+        }
+        >tbody >tr >td {
+            vertical-align: middle !important;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        .event-occurrence:nth-child(odd) >td {
+            background-color: #f9f9f9;
+        }
+        .event-occurrence__start,
+        .event-occurrence__end {
+            margin: 0;
+        }
+        .event-occurrence__registered {
+            font-size: 12px;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .event-occurrence__actions {
+            white-space: nowrap;
+            text-align: left;
+        }
+        .page-header-options {
+            button {
+                vertical-align: top;
+            }
+        }
+        .event-occurrence__actions {
+            .btn {
+                margin-right: 5px;
+            }
+        }
+        input[type="text"]:disabled + .input-group-addon {
+            cursor: not-allowed;
+        }
+        @media (min-width: @screen-sm) {
+            .event-occurrence__actions .btn {
+                width: 80px;
+                text-align: center;
+            }
+        }
+        @media (max-width: @screen-md-max) {
+            .event-occurrence__start {
+                margin-bottom: 5px;
+            }
+        }
+        @media (max-width: @screen-sm-max) {
+            .event-occurrence__start {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    #modal-recurrence .datetime-input {
+        width: 150px;
+    }
+
+    @media (max-width: @screen-sm) {
+        #modal-recurrence .datetime-input {
+            width: 100%;
+        }
+    }

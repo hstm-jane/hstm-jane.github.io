@@ -1,0 +1,254 @@
+ .section-details {
+     display: none;
+     padding-top: 30px;
+
+     .text-light {
+         color: #CCC;
+     }
+
+     .feedback {
+         border: 1px solid #ececec;
+         border-left: 3px solid #ccc;
+         padding: 15px;
+         margin: 25px auto;
+
+         > div > ul li {
+             padding: 5px 0;
+         }
+
+         .progress {
+             margin-bottom: 0;
+             /*color:white;*/
+             text-align: center;
+             font-size: 12px;
+             line-height: 20px;
+             background-color: rgba(0, 0, 0, .1);
+             :not(.progress-bar-success):not(.progress-bar-warning):not(.progress-bar-danger) {
+                 background-color: #09C; //#6FD9F8;
+             }
+         }
+
+
+         .col-percentage-correct {
+             text-align: center;
+         }
+
+         .assessment-results__section {
+             margin: 15px;
+         }
+
+         .categories {
+             .row {
+                 padding: 7px 0;
+                 border-bottom: 1px solid #eee;
+             }
+
+             &.danger {
+                 background-color: #F2DAB0;
+             }
+
+             .categories__header {
+                 background-color: #eee;
+                 font-weight: 600;
+             }
+         }
+
+     }
+ }
+
+ .index-container {
+     text-align: center;
+
+     .index-score {
+         color: #09c;
+         font-size: 60px;
+         font-family: 'Merriweather', serif;
+         line-height: 1;
+         padding-top: 20px;
+     }
+     .index {
+         text-align: center;
+         margin-left: 2px;
+     }
+
+     .index-label {
+         font-size: 12px;
+         margin-top: 2px;
+         font-weight: 600;
+     }
+
+ }
+
+
+ .assessment-metrics {
+     > .row > div:not(:first-child) {
+         border-left: 1px solid #ededed;
+     }
+
+
+     .segment-score {
+         text-align: center;
+         display: block;
+         font-size: 32px;
+         color: #09C; //#0D75A1; //#26CCDA;
+         font-weight: bold;
+         font-family: 'Merriweather', serif;
+     }
+
+     .assessment-metric {
+         padding: 10px 4px;
+         text-align: center;
+
+         .segment-percentile {
+             font-size: 12px;
+         }
+         .empty-state-img {
+             margin: 35px auto;
+         }
+         .empty-state-unavailable-img {
+             width: 40%;
+             margin: 15px auto 25px;
+         }
+     }
+
+
+
+
+     h2 {
+         text-align: center;
+
+     }
+     .chart-container {
+         height: 120px;
+         margin-top: 0;
+     }
+     &.selected {
+
+         background-color: #f9f9f9;
+         border-bottom: 2px solid #ddd;
+
+         > .row > div:not(:first-child) {
+             border-left: none;
+         }
+
+
+         .assessment-metric {
+
+             &.selected {
+
+                 border-left: 2px solid #ddd;
+                 border-top: 2px solid #ddd;
+                 border-right: 2px solid #ddd;
+                 border-top-left-radius: 5px;
+                 border-top-right-radius: 5px;
+                 margin-bottom: -4px;
+                 background-color: white;
+
+
+             }
+
+         }
+
+     }
+
+
+ }
+
+ .table--working-prefs {
+
+     th {
+         background-color: #eee;
+         border: none !important;
+     }
+     td {
+         vertical-align: middle;
+     }
+
+     th,
+     td:nth-child(3),
+     td:nth-child(4),
+     td:nth-child(5) {
+         text-align: center;
+     }
+
+     td:nth-child(2) {
+         font-size: .825em;
+         text-align: right;
+     }
+     td:nth-child(6) {
+         font-size: .825em;
+     }
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+ @media ( max-width: 991px) {
+     .table--working-prefs th:nth-child(2),
+     .table--working-prefs th:nth-child(6),
+     .table--working-prefs td:nth-child(2),
+     .table--working-prefs td:nth-child(6) {
+         display: none;
+     }
+ }
+
+
+
+
+
+
+ @media (max-width: 767px) {
+     .btn-path-results-report {
+         text-align: center;
+         width: 100%;
+         display: block;
+         margin-bottom: 20px;
+     }
+     .student-name {
+         text-align: center;
+     }
+ }
+
+
+ @media ( max-width: 991px) {
+     .btn-path-results-report {
+         text-align: center;
+     }
+
+     .col-percentage-correct {
+         text-align: left;
+     }
+     .assessment-metrics .segment-score {
+         font-size: 20px
+     }
+     .assessment-metrics h2 {
+         font-size: 20px
+     }
+
+     .assessment-metrics .chart-container {
+         height: 90px;
+     }
+
+     .js-btn-view-details {
+         margin-top: 10px;
+     }
+
+     .segment-percentile {
+         display: block;
+     }
+
+     .section-details h2 {
+         font-size: 20px
+     }
+     .section-details h3 {
+         font-size: 18px;
+     }
+ }

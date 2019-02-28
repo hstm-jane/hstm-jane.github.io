@@ -1,0 +1,51 @@
+.nav-collapsing-tabs {
+
+    .nav-header {
+        display: none;
+        padding: 10px;
+        line-height: 24px;
+        color: @text-color;
+        text-decoration: none;
+
+        i {
+            line-height: 24px;
+            float: right;
+            color: @theme-neutral-7;
+        }
+    }
+
+    @media (max-width: @screen-xs-max) {
+        border: 1px solid @theme-neutral-5;
+        border-radius: 3px;
+
+        .nav-header {
+            display: block;
+        }
+
+        ul.nav-tabs.nav-justified {
+            display: none;
+            padding: 5px;
+
+            > li > a {
+                margin: 0;
+                text-align: left;
+                border-radius: 0;
+                border: 0;
+                background-color: #fff;
+
+                &:hover {
+                    background-color: @theme-neutral-2;
+                }
+            }
+            > li.active > a,
+            > li.active > a:hover {
+                background-color: @theme-primary;
+                color: #fff;
+                border: 0;
+            }
+        }
+        &.in ul.nav-tabs.nav-justified {
+            display: block;
+        }
+    }
+}
